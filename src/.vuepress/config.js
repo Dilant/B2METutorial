@@ -38,7 +38,7 @@ module.exports = {
         link: "/advanced/preface",
       },
       {
-        text: "M++ 语法",
+        text: "M++ 文档",
         link: "/mpp/",
       },
       {
@@ -61,12 +61,25 @@ module.exports = {
               path: "texture-system",
             },
             {
-              title: "自定义材质",
+              title: "自定义元件",
               path: "custom-mesh",
             },
             {
               title: "触发器系统",
               path: "trigger-system",
+            },
+          ],
+        },
+      ],
+      "/mpp/": [
+        {
+          title: "M++ 文档",
+          path: "/mpp/",
+          collapsable: false,
+          children: [
+            {
+              title: "Executor",
+              path: "executor",
             },
           ],
         },
