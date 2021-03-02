@@ -11,13 +11,6 @@ module.exports = {
   description: description,
 
   /**
-   * Extra tags to be injected to the page HTML `<head>`
-   *
-   * ref：https://v1.vuepress.vuejs.org/config/#head
-   */
-  head: [["meta", { name: "theme-color", content: "#ff9711" }]],
-
-  /**
    * Theme configuration, here is the default theme configuration for VuePress.
    *
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
@@ -28,6 +21,7 @@ module.exports = {
     docsDir: "src",
     editLinkText: "在 GitHub 上编辑此页",
     lastUpdated: "上次更新",
+    sidebarDepth: 2,
     nav: [
       {
         text: "起步",

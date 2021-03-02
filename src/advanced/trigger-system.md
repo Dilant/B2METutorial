@@ -2,7 +2,9 @@
 
 触发器系统分为触发器与执行器两块内容，一个触发器可以对应触发多个执行器，同一个执行器也可以被多个触发器触发。
 
-## 触发器 `0_Extras → Functional → Trigger`
+## 触发器
+
+`0_Extras → Functional → Trigger`
 
 触发器可以通过玩家球触发，或通过指定物体触发，也可以被执行器强制触发。触发器必须关联执行器，否则没有任何意义。
 
@@ -58,7 +60,9 @@
 
 冷却时间。特别地，对于 `Stay` 类型的触发器，当 `triggerCoolDown == 0` 时，触发器将在**每个物理帧**使能一次。
 
-## 执行器 `0_Extras → Functional → Executor`
+## 执行器
+
+`0_Extras → Functional → Executor`
 
 执行器可以被触发器触发，也可以关联执行器实现链式触发。
 

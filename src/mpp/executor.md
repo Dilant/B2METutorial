@@ -37,7 +37,7 @@ Executor ChangeWeather[autoExecute = false, weatherType = 0] -> ExecutorID [15, 
 - `Delay`：延迟。
 - `PauseExecutor`：暂停执行。
 - `ResumeExecutor`：继续执行。
-- `Transform`：变换。需要配合路点系统使用
+- `Transform`：变换。需要配合路点系统使用。
 
 ## 通用参数
 
@@ -62,7 +62,7 @@ Executor ChangeWeather[autoExecute = false, weatherType = 0] -> ExecutorID [15, 
 | `0`         | 恒力场                 | 恒冲量发生器 |
 | `1`         | 恒加速度场             | 恒速度附加器 |
 
-### `forceIntensity`
+### `forceIntensity` <badge text="必填" type="warning"/>
 
 - 类型：`float`
 - 默认值：`0`
@@ -80,7 +80,7 @@ Executor ChangeWeather[autoExecute = false, weatherType = 0] -> ExecutorID [15, 
 - 类型：`float` `float` `float`
 - 默认值：`0` `0` `0`
 
-施力方向。仅当 `falloffShape == 0` 时有效；三者构成 `Vector3`，转换为单位向量后作为相对方向。
+施力方向。仅当 `falloffShape == 0` 时有效；三者构成 `Vector3`，转换为单位向量后作为**相对于触发器**的方向。
 
 ::: tip
 
@@ -113,7 +113,7 @@ Executor ChangeWeather[autoExecute = false, weatherType = 0] -> ExecutorID [15, 
 
 - 类型：`int...`
 - 默认值：`null`
-- 限制：`x: x > 0`
+- 限制：`i: i > 0`
 
 目标物体 ID 列表。当触发器使能时，这些物体会受力 **（无论它们在哪里）**。
 
@@ -122,3 +122,229 @@ Executor ChangeWeather[autoExecute = false, weatherType = 0] -> ExecutorID [15, 
 ![](./executor-addforce.gif)
 
 :::
+
+## `ChangePhysicsBody`
+
+::: danger
+
+`ChangePhysicsBody` 和 `Transform` 不可对同一物体使用。
+
+:::
+
+### `objects` <badge text="必填" type="warning"/>
+
+- 类型：`int...`
+- 默认值：`null`
+- 限制：`i: i > 0`
+
+目标物体 ID 列表。
+
+### `isKinematic`
+
+- 类型：`bool`
+- 默认值：`false`
+
+改变为运动学物体（是）或刚体（否）。
+
+### `mass`
+
+- 类型：`float`
+- 默认值：`1`
+- 限制：`m: m > 0`
+
+质量。仅在 `isKinematic == false` 时有效。
+
+### `linearDamping`
+
+- 类型：`float`
+- 默认值：`0`
+- 限制：`x: x >= 0`
+
+位移阻尼。仅在 `isKinematic == false` 时有效。
+
+### `angularDamping`
+
+- 类型：`float`
+- 默认值：`0`
+- 限制：`x: x >= 0`
+
+旋转阻尼。仅在 `isKinematic == false` 时有效。
+
+### `gravityFactor`
+
+- 类型：`float`
+- 默认值：`1`
+
+重力增益比。仅在 `isKinematic == false` 时有效；`1` 为正常重力，`0` 为无重力，负数为反重力。
+
+## `ChangeTime`
+
+### `targetTime` <badge text="必填" type="warning"/>
+
+- 类型：`float`
+- 默认值：`0`
+- 限制：`t: 0 <= t < 24`
+
+目标时间。单位为小时。
+
+### `duration` <badge text="必填" type="warning"/>
+
+- 类型：`float`
+- 默认值：`0`
+- 限制：`t: t >= 0`
+
+动画时长。
+
+## `ChangeTimeSpeed`
+
+::: tip
+
+该执行器控制的是游戏场景昼夜变换的速度，并非物理引擎时间流速。
+
+![](./change-time-speed-mush.png)
+
+:::
+
+### `timeSpeed`
+
+- 类型：`float`
+- 默认值：`0`
+- 限制：`t: 0 <= t <= 3600`
+
+时间流速比。为现实中 1 秒对于游戏中的秒数，`0` 表示禁用时间流动。
+
+## `ChangeWeather`
+
+### `weatherType` <badge text="必填" type="warning"/>
+
+- 类型：`enum{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}`
+- 默认值：`0`
+
+目标天气编号。
+
+| 编号 | 名称           | 含义 |
+| ---- | -------------- | ---- |
+| `0`  | `Sunny`        | 晴   |
+| `1`  | `Overcast`     | 阴   |
+| `2`  | `Foggy`        | 雾   |
+| `3`  | `LightRain`    | 小雨 |
+| `4`  | `MediumRain`   | 中雨 |
+| `5`  | `HeavyRain`    | 大雨 |
+| `6`  | `Thunderstorm` | 雷暴 |
+| `7`  | `LightSnow`    | 小雪 |
+| `8`  | `MediumSnow`   | 中雪 |
+| `9`  | `HeavySnow`    | 大雪 |
+| `10` | `Hail`         | 冰雹 |
+
+## `Delay`
+
+### `delayTime` <badge text="必填" type="warning"/>
+
+- 类型：`float`
+- 默认值：`0`
+- 限制：`t: t >= 0`
+
+延迟时长。
+
+## `PauseExecutor`
+
+### `executors` <badge text="必填" type="warning"/>
+
+- 类型：`int...`
+- 默认值：`null`
+- 限制：`i: i > 0`
+
+目标执行器 ID 列表。
+
+## `ResumeExecutor`
+
+### `executors` <badge text="必填" type="warning"/>
+
+- 类型：`int...`
+- 默认值：`null`
+- 限制：`i: i > 0`
+
+目标执行器 ID 列表。
+
+## `Transform`
+
+### `loopExecute`
+
+- 类型：`bool`
+- 默认值：`false`
+
+是否循环执行。
+
+### `wayPointManager` <badge text="必填" type="error"/>
+
+- 类型：`int`
+- 默认值：`0`
+- 限制：`i: i > 0`
+
+目标路线管理器 ID。决定运动路径或刚体跟踪路径。
+
+### `objects` <badge text="必填" type="warning"/>
+
+- 类型：`int...`
+- 默认值：`null`
+- 限制：`i: i > 0`
+
+目标物体 ID 列表。
+
+### `forceRetrigger`
+
+- 类型：`bool`
+- 默认值：`false`
+
+是否强制重新触发。
+
+### `useRelativePosition`
+
+- 类型：`bool`
+- 默认值：`false`
+
+是否相对移动。
+
+### `useRelativeRotation`
+
+- 类型：`bool`
+- 默认值：`false`
+
+是否相对旋转。
+
+### `rotationAlignTangent`
+
+- 类型：`bool`
+- 默认值：`false`
+
+朝向是否跟随路径切线。
+
+### `rotationAlignOffsetX` `rotationAlignOffsetY` `rotationAlignOffsetZ`
+
+- 类型：`float` `float` `float`
+- 默认值：`0` `0` `0`
+
+旋转偏移。
+
+### `rigidBodyMode`
+
+- 类型：`bool`
+- 默认值：`false`
+
+是否使用刚体模式。在刚体模式下，存在一个中心由 `wayPointManager` 控制移动，力度受 `controlRigidbodyStrength` 影响，半径由 `controlRigidbodyDistance` 决定的向心恒力场，`objects` 中的刚体在这一恒力场的牵引下跟随路径运动。
+
+### `controlRigidbodyStrength` <badge text="必填" type="warning"/>
+
+- 类型：`float`
+- 默认值：`0`
+- 限制：`x: x >= 0`
+
+刚体跟随力度。仅在 `rigidBodyMode == true` 时有效。
+
+### `controlRigidbodyDistance` <badge text="必填" type="warning"/>
+
+- 类型：`float`
+- 默认值：`0`
+- 限制：`x: x >= 0`
+
+刚体最远跟随距离。仅在 `rigidBodyMode == true` 时有效。
