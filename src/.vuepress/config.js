@@ -10,10 +10,7 @@ module.exports = {
    */
   description: description,
 
-  head: [
-    ["link", { rel: "icon", href: "/ballex.ico" }],
-    ["meta", { name: "charset", content: "UTF-8" }],
-  ],
+  head: [["link", { rel: "icon", href: "/ballex2.ico" }]],
 
   /**
    * Theme configuration, here is the default theme configuration for VuePress.
