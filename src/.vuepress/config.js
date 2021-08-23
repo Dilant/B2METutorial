@@ -7,17 +7,18 @@ module.exports = {
     "/": {
       lang: "zh-CN",
       title: "Ballex² 制图教程",
-      description: "基于 Ballex Map Editor Pro 0.4.1b2 编写",
+      description: "基于 Ballex Map Editor Pro 0.6.3b8 编写",
     },
     "/en/": {
       lang: "en-US",
       title: "Ballex² Mapping Tutorial",
-      description: "Based on Ballex Map Editor Pro 0.4.1b2",
+      description: "Based on Ballex Map Editor Pro 0.6.3b8",
     },
   },
 
   themeConfig: {
     repo: "Dilant/B2METutorial",
+    docsBranch: "master",
     docsDir: "src",
     contributors: false,
     selectLanguageText: "语言 / Languages",
@@ -79,19 +80,11 @@ module.exports = {
               children: [
                 "preface.md",
                 "texture-system.md",
-                "custom-mesh.md",
+                "mesh-system.md",
                 "trigger-system.md",
                 "trigger.md",
                 "executor.md",
               ],
-            },
-          ],
-          "/mpp/": [
-            {
-              isGroup: true,
-              text: "M++ 文档",
-              link: "/mpp/",
-              children: ["executor.md"],
             },
           ],
           "/": [""],
@@ -150,19 +143,11 @@ module.exports = {
               children: [
                 "preface.md",
                 "texture-system.md",
-                "custom-mesh.md",
+                "mesh-system.md",
                 "trigger-system.md",
                 "trigger.md",
                 "executor.md",
               ],
-            },
-          ],
-          "/en/mpp/": [
-            {
-              isGroup: true,
-              text: "M++ Document",
-              link: "/en/mpp/",
-              children: ["executor.md"],
             },
           ],
           "/en/": [""],
@@ -176,7 +161,7 @@ module.exports = {
   },
 
   plugins: [
-    ["shiki", { theme: "dark_plus" }],
+    ["@vuepress/plugin-shiki", { theme: "dark-plus" }],
     [
       "@vuepress/plugin-search",
       {

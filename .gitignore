@@ -107,3 +107,4 @@ src/.vuepress/.cache
 
 # Custom
 deploy.sh
+.vscode/

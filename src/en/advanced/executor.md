@@ -2,6 +2,11 @@
 
 ## Universal Parameters
 
+### `Executor Type`
+
+- Type: `enum{Add Force, Play Audio, Set Spawn Point, Player Death, Game Over, Level Complete, Follow Way Path, Break Joint}`
+- Default: `Add Force`
+
 ### `Next Executor ID`
 
 - Type: `int`
@@ -15,6 +20,7 @@
 
 - Type: `Tuple<int, int[]>`
 - Default: `(0, [])`
+- Constrain: `(n, l): n >= 0`
 
 开始执行时，这些物体会受力 **（无论它们在哪里）**。
 
@@ -26,8 +32,8 @@
 
 ### `Force Mode`
 
-- Type: `enum`
-- Default: `附加加速度`
+- Type: `enum{Apply Constant Force, Set Speed, Append Acceleration}`
+- Default: `Append Acceleration`
 
 | 施力模式   | 触发器类型为停留时 | 否则         |
 | ---------- | ------------------ | ------------ |
@@ -37,8 +43,8 @@
 
 ### `Force Direction`
 
-- Type: `enum`
-- Default: `朝向 Y 轴`
+- Type: `enum{To AxisY, To Center}`
+- Default: `To AxisY`
 
 ### `Force Value`
 
@@ -81,4 +87,18 @@ _待补充_
 ### `Transform Mark`
 
 - Type: `str`
-- Default: 空
+- Default: empty
+
+## Follow Way Path
+
+_待补充_
+
+## Break Joint
+
+### `Targets ID`
+
+- Type: `Tuple<int, int[]>`
+- Default: `(0, [])`
+- Constrain: `(n, l): n >= 0`
+
+开始执行时，这些关节将断开，所有相关约束解除。

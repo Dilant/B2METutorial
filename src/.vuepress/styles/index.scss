@@ -50,18 +50,6 @@ html.dark {
   }
 }
 
-.sidebar::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-code {
-  transition: background-color ease 0.3s;
-}
-
-div[class*="language-"].ext-mpp:before {
-  content: "mpp";
-}
-
 .shiki {
   &::-webkit-scrollbar {
     height: 7px;
@@ -76,8 +64,6 @@ div[class*="language-"].ext-mpp:before {
 }
 
 .custom-container {
-  transition: background-color ease 0.3s;
-
   &.warning a {
     color: var(--c-brand);
   }
@@ -89,7 +75,8 @@ div[class*="language-"].ext-mpp:before {
 
 @media print {
   .navbar,
-  .page-meta {
+  .page-meta,
+  .page-nav {
     display: none;
   }
 }

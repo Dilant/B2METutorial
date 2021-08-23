@@ -2,12 +2,17 @@
 
 ## Universal Parameters
 
+### `Trigger Type`
+
+- Type: `enum{Physics, Input}`
+- Default: `Physics`
+
 ### `Activated`
 
 - Type: `bool`
 - Default: `true`
 
-触发器激活时才能被使能。执行器可以在游戏中改变触发器的激活状态。
+触发器激活时才能生效。执行器可以在游戏中改变触发器的激活状态。
 
 ### `Trigger Count`
 
@@ -17,28 +22,37 @@
 
 `-1` 表示不限次数。
 
+### `Trigger CD`
+
+- Type: `float`
+- Default: `0`
+- Constrain: `t: t >= 0`
+
+`0` 表示没有冷却时间。注意：**即使触发失败也会重置冷却时间**。
+
 ### `Target Executor ID`
 
 - Type: `int`
 - Default: `0`
 
-触发器使能时，该执行器开始执行。
+触发器生效时，该执行器开始执行。
 
 ## Physics
 
 ### `Physics Trigger Type`
 
-- Type: `enum`
+- Type: `enum{Enter, Stay, Exit}`
 - Default: `Enter`
 
-`Enter` 在进入触发器时使能；`Stay` 在停留于触发器中时逐物理帧反复使能；`Exit` 在离开触发器时使能。
+`Enter` 在进入触发器时生效；`Stay` 在停留于触发器中时逐物理帧反复生效；`Exit` 在离开触发器时生效。
 
 ### `Trigger Targets ID`
 
 - Type: `Tuple<int, int[]>`
 - Default: `(0, [])`
+- Constrain: `(n, l): n >= 0`
 
-只有列表中的元件可以使能触发器。
+只有列表中的元件可以使触发器生效。
 
 ::: tip
 
@@ -66,7 +80,7 @@
 - Type: `bool`
 - Default: `false`
 
-勾选此项时，使能触发器的任何元件将临时成为关联的执行器的目标编号。
+勾选此项时，使触发器生效的任何元件将临时成为关联的执行器的目标编号。
 
 ## Input
 
@@ -77,7 +91,7 @@
 
 ### `Input Action`
 
-- Type: `enum`
+- Type: `enum{Down, Hold, Up}`
 - Default: `Down`
 
-`Down` 在按下按键时使能；`Hold` 在按住按键时逐物理帧反复使能；`Up` 在松开按键时使能。
+`Down` 在按下按键时生效；`Hold` 在按住按键时逐物理帧反复生效；`Up` 在松开按键时生效。
