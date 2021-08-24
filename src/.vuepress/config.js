@@ -51,7 +51,7 @@ module.exports = {
           },
           {
             text: "进阶",
-            link: "/advanced/preface.md",
+            link: "/advanced/",
           },
           {
             text: "更多",
@@ -73,12 +73,27 @@ module.exports = {
           },
         ],
         sidebar: {
+          "/start/": [
+            {
+              isGroup: true,
+              text: "起步",
+              link: "/start/",
+              collapsable: false,
+              children: [
+                "preparation.md",
+                "basic-operation.md",
+                "alignment.md",
+              ],
+            },
+          ],
+
           "/advanced/": [
             {
               isGroup: true,
               text: "进阶",
+              link: "/advanced/",
+              collapsable: false,
               children: [
-                "preface.md",
                 "texture-system.md",
                 "mesh-system.md",
                 "trigger-system.md",
@@ -87,6 +102,7 @@ module.exports = {
               ],
             },
           ],
+
           "/": [""],
         },
       },
@@ -114,7 +130,7 @@ module.exports = {
           },
           {
             text: "Advanced",
-            link: "/en/advanced/preface.md",
+            link: "/en/advanced/",
           },
           {
             text: "More",
@@ -136,12 +152,27 @@ module.exports = {
           },
         ],
         sidebar: {
+          "/en/start/": [
+            {
+              isGroup: true,
+              text: "Start",
+              link: "/en/start/",
+              collapsable: false,
+              children: [
+                "preparation.md",
+                "basic-operation.md",
+                "alignment.md",
+              ],
+            },
+          ],
+
           "/en/advanced/": [
             {
               isGroup: true,
               text: "Advanced",
+              link: "/en/advanced/",
+              collapsable: false,
               children: [
-                "preface.md",
                 "texture-system.md",
                 "mesh-system.md",
                 "trigger-system.md",

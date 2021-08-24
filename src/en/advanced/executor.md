@@ -26,7 +26,7 @@
 
 ::: details 例如可以这样
 
-![](/images/executor-addforce.gif)
+![](/images/executor-add-force.gif)
 
 :::
 

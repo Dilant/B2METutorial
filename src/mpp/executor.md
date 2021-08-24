@@ -133,7 +133,7 @@
 
 ::: details 简单来说就是这样的
 
-![](/images/executor-addforce.gif)
+![](/images/executor-add-force.gif)
 
 :::
 
