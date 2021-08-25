@@ -33,13 +33,15 @@ Find the needed element in `Assets → Items` window and drag it into `Scene` wi
 
 Now you can place any objects you want -- and know that much more convenient ways of adjusting an object will be introduced later.
 
-## Undo and Redo
+## Undo
 
-`Ctrl + Z` `Ctrl + Y`, also #1 #2 buttons of toolbar.
+`Edit → Undo` / `Ctrl + Z`, also #1 button of toolbar.
 
-But don't rely on them, and always make a backup before making breaking changes.
+Don't rely on it, and always make a backup before making breaking changes.
 
-~~I just can't bear the level editor of _ADOFAI_ or _Rhythm Doctor_~~
+## Redo
+
+`Edit → Redo` / `Ctrl + Y`, also #2 button of toolbar.
 
 ## Adjust View
 
@@ -136,9 +138,9 @@ In order not to select any unneeded object, using [overlook](#three-views) view 
 
 :::
 
-## Duplicate Objects
+## Duplicate
 
-`Ctrl + D`
+`Edit → Duplicate` / `Ctrl + D`
 
 A copy will be created at the same position, in `Hierarchy` window at the end of the list.
 
@@ -146,7 +148,7 @@ Sorry but there's no `Ctrl + X` `Ctrl + C` `Ctrl + V`.
 
 ## Delete Objects
 
-`Delete`
+`Edit → Delete` / `Delete`
 
 ## Create Starting Point, Check Point and Destination
 
