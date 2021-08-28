@@ -91,7 +91,64 @@ _待补充_
 
 ## Follow Way Path
 
-_待补充_
+### `Way Path ID`
+
+- Type: `int`
+- Default: `0`
+- Constrain: `i: i > 0`
+
+### `Targets ID`
+
+- Type: `int...`
+- Default: 空
+- Constrain: `i: i > 0`
+
+### `Enable Relative Position`
+
+- Type: `bool`
+- Default: `false`
+
+### `Enable Relative Rotation`
+
+- Type: `bool`
+- Default: `false`
+
+### `Rotation Align Tangent`
+
+- Type: `bool`
+- Default: `false`
+
+### `Rotation Align Offset`
+
+- Type: `Tuple<float, float, float>`
+- Default: `(0, 0, 0)`
+
+### `Rigidbody Mode`
+
+- Type: `bool`
+- Default: `false`
+
+在刚体模式下，存在一个中心由 `Way Path` 控制移动，力度受 `Control Rigidbody Strength` 影响，半径由 `Control Rigidbody Distance` 决定的向心恒力场，`Targets` 刚体在这一恒力场的牵引下运动。
+
+### `Control Rigidbody Strength` <badge text="Rigidbody Mode = true"/>
+
+- Type: `float`
+- Default: `0`
+
+### `Control Rigidbody Distance` <badge text="Rigidbody Mode = true"/>
+
+- Type: `float`
+- Default: `0`
+- Constrain: `x: x >= 0`
+
+刚体超出这一距离时不会受力，回到距离内会继续受力。
+
+### `Execute on Life Start`
+
+- Type: `bool`
+- Default: `false`
+
+生命开始时执行的执行器不需要被触发器绑定。
 
 ## Break Joint
 

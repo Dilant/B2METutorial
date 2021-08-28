@@ -1,17 +1,20 @@
 {
   "name": "b2me-tutorial",
-  "version": "0.6.4",
+  "version": "0.6.7",
   "description": "Ballex² 制图教程的 VuePress 源码",
   "private": true,
   "scripts": {
+    "check-md": "check-md -p vuepress -c src",
     "dev": "vuepress dev src",
     "build": "vuepress build src",
     "deploy": "sh deploy.sh"
   },
   "devDependencies": {
     "@vuepress/plugin-pwa": "^2.0.0-beta.24",
+    "@vuepress/plugin-pwa-popup": "^2.0.0-beta.24",
     "@vuepress/plugin-search": "^2.0.0-beta.24",
     "@vuepress/plugin-shiki": "^2.0.0-beta.24",
+    "check-md": "^1.0.2",
     "vuepress": "^2.0.0-beta.24"
   }
 }

@@ -1,49 +1,8 @@
 # Executor
 
-## 语法
-
-### 无后继触发器
-
-<div class="language-mpp ext-mpp line-numbers-mode">
-  <pre
-    class="shiki"
-    style="background-color: #1e1e1e"
-  ><code><span class="line"><span style="color:#569CD6">Executor</span> <span style="color:#4EC9B0">Type</span><span style="color:#D4D4D4;">[</span><span style="color:#9CDCFE;">key0</span> <span style="color:#D4D4D4;">=</span> <span style="color:#9CDCFE;">value0</span><span style="color:#D4D4D4;">,</span> <span style="color:#9CDCFE;">key1</span> <span style="color:#D4D4D4;">=</span> <span style="color:#9CDCFE;">value1</span><span style="color:#D4D4D4;">,</span> <span style="color:#D4D4D4;">...</span><span style="color:#D4D4D4;">]</span><span style="color:#D4D4D4;">;</span></span>
-<span class="line"><span style="color:#569CD6">Executor</span> <span style="color:#4EC9B0">ChangeWeather</span><span style="color:#D4D4D4;">[</span><span style="color:#9CDCFE;">autoExecute</span> <span style="color:#D4D4D4;">=</span> <span style="color:#569CD6;">false</span><span style="color:#D4D4D4;">,</span> <span style="color:#9CDCFE;">weatherType</span> <span style="color:#D4D4D4;">=</span> <span style="color:#B5CEA8;">0</span><span style="color:#D4D4D4;">]</span><span style="color:#D4D4D4;">;</span></span></code></pre>
-  <div class="line-numbers">
-    <span class="line-number">1</span><br /><span class="line-number">2</span
-    ><br />
-  </div>
-</div>
-
-`Type` 为执行器类名，`key` `value` 为键值对。
-
-### 有后继触发器
-
-<div class="language-mpp ext-mpp line-numbers-mode">
-  <pre
-    class="shiki"
-    style="background-color: #1e1e1e"
-  ><code><span class="line"><span style="color:#569CD6">Executor</span> <span style="color:#4EC9B0">Type</span><span style="color:#D4D4D4;">[</span><span style="color:#9CDCFE;">key0</span> <span style="color:#D4D4D4;">=</span> <span style="color:#9CDCFE;">value0</span><span style="color:#D4D4D4;">,</span> <span style="color:#9CDCFE;">key1</span> <span style="color:#D4D4D4;">=</span> <span style="color:#9CDCFE;">value1</span><span style="color:#D4D4D4;">,</span> <span style="color:#D4D4D4;">...</span><span style="color:#D4D4D4;">]</span> <span style="color:#D4D4D4;">-&gt;</span> <span style="color:#569CD6">ExecutorID</span> <span style="color:#D4D4D4;">[</span><span style="color:#9CDCFE;">id0</span><span style="color:#D4D4D4;">,</span> <span style="color:#9CDCFE;">id1</span><span style="color:#D4D4D4;">,</span> <span style="color:#D4D4D4;">...</span><span style="color:#D4D4D4;">]</span><span style="color:#D4D4D4;">;</span></span>
-<span class="line"><span style="color:#569CD6">Executor</span> <span style="color:#4EC9B0">ChangeWeather</span><span style="color:#D4D4D4;">[</span><span style="color:#9CDCFE;">autoExecute</span> <span style="color:#D4D4D4;">=</span> <span style="color:#569CD6;">false</span><span style="color:#D4D4D4;">,</span> <span style="color:#9CDCFE;">weatherType</span> <span style="color:#D4D4D4;">=</span> <span style="color:#B5CEA8;">0</span><span style="color:#D4D4D4;">]</span> <span style="color:#D4D4D4;">-&gt;</span> <span style="color:#569CD6">ExecutorID</span> <span style="color:#D4D4D4;">[</span><span style="color:#B5CEA8;">15</span><span style="color:#D4D4D4;">,</span> <span style="color:#B5CEA8;">35</span><span style="color:#D4D4D4;">,</span> <span style="color:#B5CEA8;">88</span><span style="color:#D4D4D4;">]</span><span style="color:#D4D4D4;">;</span></span></code></pre>
-  <div class="line-numbers">
-    <span class="line-number">1</span><br /><span class="line-number">2</span
-    ><br />
-  </div>
-</div>
-
-`Type` 为执行器类名，`key` `value` 为键值对，`id` 为后继触发器 ID，这些触发器将在本触发器执行完毕后**同时**开始执行。
-
-::: tip
-
-类型为 `type...` 的参数表示可以传入多个，直接在参数名尾部添加编号后逐个传入，**即使只有一个也是如此**。
-例如参数名为 `example`，类型为 `int...`，则参数依次填入 `example0 = 162, example1 = 534, ...`。
-
-:::
-
 ## 执行器类名
 
-- `AddForce`：施力。可选恒力场、恒加速度场或弹跳盒。
+- ~~`AddForce`：施力。可选恒力场、恒加速度场或弹跳盒。~~
 - `ChangePhysicsBody`：改变物理性质。可以将物体变为运动学物体或刚体。
 - `ChangeTime`：改变场景时间。
 - `ChangeTimeSpeed`：改变时间流速。影响场景昼夜变换的速度。
@@ -51,7 +10,7 @@
 - `Delay`：延迟。
 - `PauseExecutor`：暂停执行。
 - `ResumeExecutor`：继续执行。
-- `Transform`：变换。需要配合路点系统使用。
+- ~~`Transform`：变换。需要配合路点系统使用。~~
 
 ## 通用参数
 

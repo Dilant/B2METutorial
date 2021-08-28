@@ -47,7 +47,7 @@ Don't rely on it, and always make a backup before making breaking changes.
 
 ### Translation
 
-Use `MouseWheel` and drag.
+Use `MouseWheel` or `MouseRight` and drag.
 
 ### Rotation
 
@@ -59,7 +59,7 @@ Use `MouseScroll`.
 
 ### Travel
 
-Hold `MouseRight` to enter travel mode. Drag to change orientation of camera, hold `W` to go front, `S` back, `A` left, `D` right, `Q` down and `E` up.
+Hold `Alt + MouseRight` to enter travel mode. Drag to change orientation of camera, hold `W` to go front, `S` back, `A` left, `D` right, `Q` down and `E` up.
 
 ### Focus
 
@@ -121,7 +121,7 @@ Drag the handles on the rectangle to scale the object, and current size of the o
 
 ### Quantization
 
-`Shift`, hold to enable and release to disable.
+`Ctrl` / `Shift`, hold to enable and release to disable.
 
 When enabled, the units of move, rotate, scale and ruler operations are 0.5 absolutely, 15° absolutely, 50% relatively and 0.5 absolutely, correspondingly.
 
