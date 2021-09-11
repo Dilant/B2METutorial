@@ -7,12 +7,12 @@ module.exports = {
     "/": {
       lang: "zh-CN",
       title: "Ballex² 制图教程",
-      description: "基于 Ballex Map Editor Pro 0.6.7b1 编写",
+      description: "基于 Ballex Map Editor Pro 0.7.0 编写",
     },
     "/en/": {
       lang: "en-US",
       title: "Ballex² Mapping Tutorial",
-      description: "Based on Ballex Map Editor Pro 0.6.7b1",
+      description: "Based on Ballex Map Editor Pro 0.7.0",
     },
   },
 
@@ -45,6 +45,10 @@ module.exports = {
         ],
         backToHome: "返回首页",
         navbar: [
+          {
+            text: "公测进度",
+            link: "/status.md",
+          },
           {
             text: "起步",
             link: "/start/",
@@ -124,6 +128,10 @@ module.exports = {
           'No "F5" any more, I\'ve told you!',
         ],
         navbar: [
+          {
+            text: "Beta Status",
+            link: "/en/status.md",
+          },
           {
             text: "Start",
             link: "/en/start/",

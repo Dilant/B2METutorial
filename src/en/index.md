@@ -2,10 +2,10 @@
 home: true
 heroText: Ballex² Mapping Tutorial
 heroImage: /images/Ballex2Hero.png
-tagline: Based on Ballex Map Editor Pro 0.4.1b2
+tagline: Based on Ballex Map Editor Pro 0.7.0
 actions:
-  - text: Quick Start →
-    link: /en/start/
+  - text: Beta Status →
+    link: /en/status.md
     type: primary
 footer: 2021 Dilant
 ---
