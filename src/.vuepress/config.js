@@ -47,7 +47,7 @@ module.exports = {
         navbar: [
           {
             text: "公测进度",
-            link: "/status.md",
+            link: "/beta-status.md",
           },
           {
             text: "起步",
@@ -130,7 +130,7 @@ module.exports = {
         navbar: [
           {
             text: "Beta Status",
-            link: "/en/status.md",
+            link: "/en/beta-status.md",
           },
           {
             text: "Start",

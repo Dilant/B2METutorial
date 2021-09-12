@@ -5,7 +5,7 @@ heroImage: /images/Ballex2Hero.png
 tagline: 基于 Ballex Map Editor Pro 0.7.0 编写
 actions:
   - text: 公测进度 →
-    link: /status.md
+    link: /beta-status.md
     type: primary
 footer: 2021 Dilant
 ---
