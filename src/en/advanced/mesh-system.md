@@ -42,6 +42,12 @@ BME Pro 中的单位为米，轴向为 `X` 轴向右，`Y` 轴向上，`Z` 轴�
 - Type: `enum{Box, Sphere, Mesh}`
 - Default: `Mesh`
 
+::: tip
+
+网格模式的性能远低于另外两者，在效果满足期望的前提下，请优先选择长方体或球体模式。
+
+:::
+
 ### `Offset`
 
 - Type: `Tuple<float, float, float>`
@@ -57,13 +63,13 @@ BME Pro 中的单位为米，轴向为 `X` 轴向右，`Y` 轴向上，`Z` 轴�
 
 - Type: `float`
 - Default: `0.02`
-- Constrain: `x: x >= 0`
+- Constrain: `r: r >= 0`
 
 ### `Radius` <badge text="Collider Type = Sphere"/>
 
 - Type: `float`
 - Default: `0.5`
-- Constrain: `x: x > 0`
+- Constrain: `r: r > 0`
 
 ### `Mesh Overwrite` <badge text="Collider Type = Mesh"/>
 
@@ -87,26 +93,33 @@ BME Pro 中的单位为米，轴向为 `X` 轴向右，`Y` 轴向上，`Z` 轴�
 
 - Type: `float`
 - Default: `1`
-- Constrain: `m: m > 0`
+- Constrain: `m: 0.001 <= m <= 10000`
+
+### `Density` <badge text="Physics Body Type = Rigid"/>
+
+- Type: `float`
+- Default: `10`
+- Constrain: `ρ: 0.01 <= ρ <= 100`
 
 ### `Linear Drag` <badge text="Physics Body Type = Rigid"/>
 
 - Type: `float`
 - Default: `0.5`
-- Constrain: `x: x >= 0`
+- Constrain: `ζ: 0.001 <= ζ <= 10000`
 
 ### `Angular Drag` <badge text="Physics Body Type = Rigid"/>
 
 - Type: `float`
 - Default: `0.05`
-- Constrain: `x: x >= 0`
+- Constrain: `ζ: 0.001 <= ζ <= 10000`
 
 ### `Gravity Factor` <badge text="Physics Body Type = Rigid"/>
 
 - Type: `float`
 - Default: `1`
+- Constrain: `η: -10 <= η <= 10`
 
-`1` 为正常重力，`0` 为无重力，负数为反重力。
+1 为正常重力，0 为无重力，负数为反重力。
 
 ### `Physics Material`
 

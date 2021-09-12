@@ -4,7 +4,7 @@
 
 ### `Trigger Type`
 
-- Type: `enum{Physics, Input}`
+- Type: `enum`
 - Default: `Physics`
 
 ### `Activated`
@@ -91,7 +91,21 @@
 
 ### `Input Action`
 
-- Type: `enum{Down, Hold, Up}`
+- Type: `enum{Down, Hold, Up, Switch}`
 - Default: `Down`
 
-`Down` 在按下按键时生效；`Hold` 在按住按键时逐物理帧反复生效；`Up` 在松开按键时生效。
+`Down` 在按下按键时生效；`Hold` 在按住按键时逐物理帧反复生效；`Up` 在松开按键时生效；`Switch` 在首次按下按键时开始逐物理帧反复生效，再次按下时停止。
+
+## Physics Frame
+
+::: tip
+
+Ballex² 的物理帧频率为 200Hz。
+
+:::
+
+### Wait Frame
+
+- Type: `int`
+- Default: `0`
+- Constrain: `f: f >= 0`

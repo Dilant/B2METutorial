@@ -10,20 +10,21 @@
 
 ## Control and Functions
 
-### Standard Mode Control
+### Four-directional Camera Mode Control
 
 - Move: `↑` `←` `↓` `→`
-- Rotate view: `A` clockwise, `D` anti-clockwise
-- Lift view: `Space`
+- Rotate camera: `A` clockwise, `D` anticlockwise
+- Overlook: `Space`
 
-### Free Look View Control
+### Free Look Camera Mode Control
 
 - Move: `W` `A` `S` `D`
-- Rotate view: `Mouse`, same as FPS cursor movements
-- 8-way view snap: `Space`
+- Rotate camera: `Mouse`, same as FPS cursor movements
+- 8-way snap: `Space`
 
 ### Universal Functions
 
+- Switch player ball: `Tab`
 - Pause: `ESC`
 - Suicide: `R`
 - Restart: `P`
@@ -37,7 +38,7 @@
 
 `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Settings\Settings.json`
 
-- `invertCameraRotate`: Swap view rotation directions of `A` `D` in standard mode
+- `invertCameraRotate`: Swap view rotation directions of `A` `D` in four-directional camera mode
 - `targetFrameRate`
 - `invertFreeLookCameraHorizontal`
 - `invertFreeLookCameraVertical`
@@ -49,22 +50,29 @@
 
 ## Changelog
 
+### `0.7.0b2` @ 2021/9/12
+
+- Switch camera target executor
+  - Fix problem that camera isn't reset on life start
+  - Fix problem that camera isn't reset when the target is destroyed
+  - Fix problem that camera motion is always determined by player ball
+- Try to fix issues related to quitting game
+
 ### `0.7.0` @ 2021/9/12
 
-~~TODO: 一时翻不动 挂着先~~
-
-- 新增变量机制
-- 触发器
-  - 新增物理帧触发器
-  - 按键触发器新增开关模式
-  - 按键触发器可引用玩家设定的功能键
-- 新增执行器
-  - 按键屏蔽
-  - 摄像机偏移
-  - 更改摄像机目标
-  - 设置变量
-  - 比较变量
-- 修复截图文件夹不存在时截图卡死的问题
+- Add variable mechanism
+- Triggers
+  - Add physics frame trigger
+  - Add switch mode for input trigger
+  - Input trigger can refer to player keys
+- Add executors
+  - Set camera offset
+  - Set variable value
+  - Compare variables
+  - Disable player key
+  - Switch camera target
+- Fix game crash when taking screenshots while the save folder does't exist
+- Camera mode setting moved to export window
 
 ### `0.6.8b2` @ 2021/9/11
 

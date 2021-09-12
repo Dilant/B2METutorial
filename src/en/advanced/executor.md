@@ -4,7 +4,7 @@
 
 ### `Executor Type`
 
-- Type: `enum{Add Force, Play Audio, Set Spawn Point, Player Death, Game Over, Level Complete, Follow Way Path, Break Joint}`
+- Type: `enum`
 - Default: `Add Force`
 
 ### `Next Executor ID`
@@ -86,7 +86,7 @@ _待补充_
 
 ### `Transform Mark`
 
-- Type: `str`
+- Type: `String`
 - Default: empty
 
 ## Follow Way Path
@@ -100,7 +100,7 @@ _待补充_
 ### `Targets ID`
 
 - Type: `int...`
-- Default: 空
+- Default: empty
 - Constrain: `i: i > 0`
 
 ### `Enable Relative Position`
@@ -159,3 +159,94 @@ _待补充_
 - Constrain: `(n, l): n >= 0`
 
 开始执行时，这些关节将断开，所有相关约束解除。
+
+## Set Camera Offset
+
+### `Camera Offset`
+
+- Type: `Tuple<float, float, float>`
+- Default: `(0, 3.5, -4.25)`
+
+## Set Variable Value
+
+### `Target Variable`
+
+- Type: `String`
+- Default: empty
+
+### `Expression`
+
+- Type: `String`
+- Default: empty
+
+## Compare Variables
+
+### `Variable A`
+
+- Type: `String`
+- Default: empty
+
+### `Variable B`
+
+- Type: `String`
+- Default: empty
+
+### `Equal Threshold`
+
+- Type: `float`
+- Default: `0`
+
+::: tip
+
+以下条件分支不会熔断，所有满足的分支连同 `Next Executor` 同时开始执行。
+
+:::
+
+### `Equal`
+
+- Type: `int`
+- Default: `0`
+
+`|A - B| <= ε` 时执行该执行器。
+
+### `Not Equal`
+
+- Type: `int`
+- Default: `0`
+
+`|A - B| > ε` 时执行该执行器。
+
+### `Greater`
+
+- Type: `int`
+- Default: `0`
+
+`A > B` 时执行该执行器。
+
+### `Less`
+
+- Type: `int`
+- Default: `0`
+
+`A < B` 时执行该执行器。
+
+## Disable Player Key
+
+### `Disable Key`
+
+- Type: `bool`
+- Default: `true`
+
+### `Player Key`
+
+- Type: `enum{Move Forward, Move Backward, Move Left, Move Right, Camera Clockwise Rotate, Camera Anticlockwise Rotate, Camera Overlook, Function Key 1, Function Key 2, Function Key 3, Function Key 4}`
+- Default: `Move Forward`
+
+## Switch Camera Target
+
+### `Camera Target ID`
+
+- Type: `int`
+- Default: `0`
+
+仅对物理物体和当前玩家球 `ID = -99` 有效。
