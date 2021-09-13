@@ -100,6 +100,7 @@ module.exports = {
               children: [
                 "texture-system.md",
                 "mesh-system.md",
+                "variable-system.md",
                 "trigger-system.md",
                 "trigger.md",
                 "executor.md",
@@ -183,6 +184,7 @@ module.exports = {
               children: [
                 "texture-system.md",
                 "mesh-system.md",
+                "variable-system.md",
                 "trigger-system.md",
                 "trigger.md",
                 "executor.md",

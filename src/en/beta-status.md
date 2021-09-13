@@ -73,6 +73,7 @@
   - Switch camera target
 - Fix game crash when taking screenshots while the save folder does't exist
 - Camera mode setting moved to export window
+- Include a casual map by MushREB
 
 ### `0.6.8b2` @ 2021/9/11
 
@@ -82,4 +83,4 @@
 ### `0.6.8` @ 2021/9/10
 
 - First beta version
-- Include an easy map created by z2414
+- Include an easy map by z2414

@@ -179,6 +179,8 @@ _待补充_
 - Type: `String`
 - Default: empty
 
+可以使用 `+-*/()` 进行数学运算，使用 `@name ` （注意尾随空格）引用其它变量。
+
 ## Compare Variables
 
 ### `Variable A`
