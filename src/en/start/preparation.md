@@ -63,7 +63,7 @@ List all objects with their hierarchical relationships.
 
 ### `Assets`
 
-Categorize and display all assets. There're 6 tabs:
+Categorize and display all assets. There're 6 panels:
 
 - `Scenes`: List all source files of maps.
 - `Items`: List all available elements.

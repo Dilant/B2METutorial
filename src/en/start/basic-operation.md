@@ -16,7 +16,7 @@ If there's no skybox, create one at `Create → Skybox`.
 
 `File → Save Scene` / `Ctrl + S`
 
-Saved maps will appear in `Assets → Scenes` window and can be double-clicked to open.
+Saved maps will appear in `Assets → Scenes` panel and can be double-clicked to open.
 
 ::: tip
 
@@ -29,7 +29,7 @@ The saving path on disk is:
 
 ## Add objects
 
-Find the needed element in `Assets → Items` window and drag it into `Scene` window. You'll see it in `Hierarchy` window at the end of the list, and you can change its position, posture or other parameters in `Inspector` window.
+Find the needed element in `Assets → Items` panel and drag it into `Scene` window. You'll see it in `Hierarchy` window at the end of the list, and you can change its position, posture or other parameters in `Inspector` window.
 
 Now you can place any objects you want -- and know that much more convenient ways of adjusting an object will be introduced later.
 

@@ -40,13 +40,13 @@ BME Pro 的材质系统为蘑菇特制的 PBR 材质系统，每个材质包含�
 
 ## 导入纹理
 
-在 `Assets → Textures` 窗口中，点击右栏加号，选择图片即可导入。
+在 `Assets → Textures` 面板中，点击右栏加号，选择图片即可导入。
 
 目前 BME Pro 中暂不支持重命名纹理，可以在 `%USERPROFILE%\AppData\LocalLow\Mushreb\BME Pro\Assets\Textures` 中直接修改文件名。
 
 ## 创建材质
 
-在 `Assets → Textures` 窗口中，点击右栏加号创建材质，双击材质进行编辑。
+在 `Assets → Textures` 面板中，点击右栏加号创建材质，双击材质进行编辑。
 
 点击 `Save` 将保存材质，点击 `Reload` 或关闭窗口将放弃更改。
 
