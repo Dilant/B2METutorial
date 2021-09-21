@@ -5,12 +5,18 @@
 - Anyone owning Ballex can take part in it
 - The latest version
   - Public: `0.7.1 β` @ 2021/9/17
-  - Insider: `0.7.1b2 α` @ 2021/9/17
+  - Insider: `0.7.2b2 α` @ 2021/9/20
 - Require Windows 10 x64 20H1 or newer version, and a graphics card supporting DirectX 12
 - Beta will end with the first release of Ballex². The beta channel will no longer receive updates nor supports since then, and a separate purchase for stable releases is required
 - Outstanding testers may get Ballex² Steam key
 
 ## Control and Functions
+
+::: tip
+
+Here's the default keymap. Most of the keys can be [changed via config file](#keymap).
+
+:::
 
 ### Four-directional Camera Mode Control
 
@@ -30,6 +36,7 @@
 - Pause: `ESC`
 - Suicide: `R`
 - Restart: `P`
+- Back to main: `F9`
 
 ### Map Test Functions
 
@@ -40,7 +47,13 @@
 
 `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Settings\Settings.json`
 
-- `invertCameraRotate`: Swap camera rotation direction of `A` `D` in four-directional camera mode
+::: tip
+
+We recommend formatting JSON files using VSCode with extension Prettier.
+
+:::
+
+- `invertCameraRotate`: Invert camera rotation direction in four-directional camera mode
 - `targetFrameRate`
 - `invertFreeLookCameraHorizontal`: Invert camera horizontal rotation direction in free look camera mode
 - `invertFreeLookCameraVertical`: Invert camera vertical movement direction in free look camera mode
@@ -49,8 +62,92 @@
 - `screenshotResolution: { "x": *, "y": * }`
 - `gameResolution: { "x": *, "y": * }`
 - `renderResolutionRate`
+- `keys`: Keymap
+
+### Keymap
+
+`keys = [Move Forward, Move Backward, Move Left, Move Right, Camera Clockwise Rotate, Camera Anticlockwise Rotate, Camera Overlook, Function Key 1, Function Key 2, Function Key 3, Function Key 4]`
+
+::: tip
+
+Clockwise rotation of camera means anticlockwise rotation of your view (a.k.a. what you see), vice versa.
+
+If you want to invert camera rotation direction, set `invertCameraRotate = true` instead of editing keymap directly.
+
+:::
+
+::: warning
+
+Avoid using `R` `P` `Tab`, function keys or numpad keys.
+
+:::
+
+Here are some commonly used snippets:
+
+```json
+keys = [63, 64, 61, 62, 18, 15, 1, 31, 37, 19, 33] // ↑ ↓ ← → D A _ Q W E S
+keys = [63, 64, 61, 62, 18, 15, 1, 40, 38, 17, 36] // ↑ ↓ ← → D A _ Z X C V
+keys = [23, 25, 24, 26, 18, 15, 1, 31, 37, 19, 33] // I K J L D A _ Q W E S
+keys = [37, 33, 15, 18, 26, 24, 1, 35, 23, 29, 25] // W S A D L J _ U I O K
+keys = [37, 33, 15, 18, 19, 31, 1, 41, 42, 43, 44] // W S A D E Q _ 1 2 3 4
+keys = [37, 33, 61, 62, 41, 4, 63, 27, 7, 8, 9]    // W S ← → 1 ` ↑ M , . /
+```
+
+::: details Mapping table for keys and IDs
+
+| Key     | ID  | Key          | ID  | Key           | ID  | Key       | ID  |
+| ------- | --- | ------------ | --- | ------------- | --- | --------- | --- |
+| None    | 0   | `M`          | 27  | `RightAlt`    | 54  | `Numpad-` | 81  |
+| `Space` | 1   | `N`          | 28  | `Ctrl`        | 55  | `Numpad.` | 82  |
+| `Enter` | 2   | `O`          | 29  | `RightCtrl`   | 56  | `Numpad=` | 83  |
+| `Tab`   | 3   | `P`          | 30  | `Win`         | 57  | `Numpad0` | 84  |
+| `` ` `` | 4   | `Q`          | 31  | `RightWin`    | 58  | `Numpad1` | 85  |
+| `'`     | 5   | `R`          | 32  | `Menu`        | 59  | `Numpad2` | 86  |
+| `;`     | 6   | `S`          | 33  | `Esc`         | 60  | `Numpad3` | 87  |
+| `,`     | 7   | `T`          | 34  | `←`           | 61  | `Numpad4` | 88  |
+| `.`     | 8   | `U`          | 35  | `→`           | 62  | `Numpad5` | 89  |
+| `/`     | 9   | `V`          | 36  | `↑`           | 63  | `Numpad6` | 90  |
+| `\`     | 10  | `W`          | 37  | `↓`           | 64  | `Numpad7` | 91  |
+| `[`     | 11  | `X`          | 38  | `Backspace`   | 65  | `Numpad8` | 92  |
+| `]`     | 12  | `Y`          | 39  | `PageDown`    | 66  | `Numpad9` | 93  |
+| `-`     | 13  | `Z`          | 40  | `PageUp`      | 67  | `F1`      | 94  |
+| `=`     | 14  | `1`          | 41  | `Home`        | 68  | `F2`      | 95  |
+| `A`     | 15  | `2`          | 42  | `End`         | 69  | `F3`      | 96  |
+| `B`     | 16  | `3`          | 43  | `Insert`      | 70  | `F4`      | 97  |
+| `C`     | 17  | `4`          | 44  | `Delete`      | 71  | `F5`      | 98  |
+| `D`     | 18  | `5`          | 45  | `CapsLock`    | 72  | `F6`      | 99  |
+| `E`     | 19  | `6`          | 46  | `NumLock`     | 73  | `F7`      | 100 |
+| `F`     | 20  | `7`          | 47  | `PrintScreen` | 74  | `F8`      | 101 |
+| `G`     | 21  | `8`          | 48  | `ScrollLock`  | 75  | `F9`      | 102 |
+| `H`     | 22  | `9`          | 49  | `Pause`       | 76  | `F10`     | 103 |
+| `I`     | 23  | `0`          | 50  | `NumpadEnter` | 77  | `F11`     | 104 |
+| `J`     | 24  | `Shift`      | 51  | `Numpad/`     | 78  | `F12`     | 105 |
+| `K`     | 25  | `RightShift` | 52  | `Numpad*`     | 79  |           |     |
+| `L`     | 26  | `Alt`        | 53  | `Numpad+`     | 80  |           |     |
+
+:::
 
 ## Changelog
+
+### `0.7.2b2 α` @ 2021/9/20
+
+- Add keymap setting
+- Adjust range of visibility in game
+- Slightly adjust properties of balls and machinery
+- Fix the issue that score ball traces aren't reset upon restart
+- Change start position of score ball traces upon reborn
+- Add textures for balls to built-in assets
+
+### `0.7.2 α` @ 2021/9/19
+
+- The default camera offset changes from `(0, 3.5, -4.25)` to `(0, 4, -3.5)`
+- Add animations of appenders
+- Change the behaviors when inactive player balls activate checkpoints, destination, switchers or appenders
+- Change the behavior of score ball trace upon death or winning
+- Slightly weaken friction of some textures
+- Fix the issue that ice ball can get electric balls
+- Fix some issues related to screenshot function
+- Fix the issue that some sound effects don't pause with game pause
 
 ### `0.7.1b2 α` `0.7.1 β` @ 2021/9/17
 
