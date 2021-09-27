@@ -25,7 +25,7 @@ BME Pro 中的单位为米，轴向为 `X` 轴向右，`Y` 轴向上，`Z` 轴�
 ### `Mesh`
 
 - Type: `Model`
-- Default: current mesh
+- Default: empty
 
 该元件**显示**的网格。
 
@@ -45,6 +45,19 @@ BME Pro 中的单位为米，轴向为 `X` 轴向右，`Y` 轴向上，`Z` 轴�
 ::: tip
 
 网格模式的性能远低于另外两者，在效果满足期望的前提下，请优先选择长方体或球体模式。
+
+:::
+
+### `Weld Collider` <badge text="Physics Body Type = Static"/>
+
+- Type: `bool`
+- Default: `false`
+
+启用该功能的邻近物体会自动优化碰撞箱，尝试修正细缝、错位、轻微穿模等微小问题。
+
+::: danger
+
+该功能可能导致诸多违背物理的表现，包括但不限于弹跳、单轨滑落、机关穿模。除非清楚自己在做什么，请勿使用。
 
 :::
 

@@ -29,7 +29,7 @@ Often used when aligning block-shaped objects such as road, boards, boxes, and c
 ::: tip
 
 - Multiple objects can be selected to perform alignment simultaneously. Their relative position will remain unchanged.
-- The selectable vertices includes all the ones on the mesh of the object, which may include excessive ones at where the textures meet. In most cases, only the ones at the outside of the object are used.
+- The selectable vertices includes all the ones on the mesh of the object, which may include excessive ones at where the materials meet. In most cases, only the ones at the outside of the object are used.
 
 :::
 

@@ -7,12 +7,12 @@ module.exports = {
     "/": {
       lang: "zh-CN",
       title: "Ballex² 制图教程",
-      description: "基于 Ballex Map Editor Pro 0.7.0 编写",
+      description: "基于 Ballex Map Editor Pro 0.7.2b2 编写",
     },
     "/en/": {
       lang: "en-US",
       title: "Ballex² Mapping Tutorial",
-      description: "Based on Ballex Map Editor Pro 0.7.0",
+      description: "Based on Ballex Map Editor Pro 0.7.2b2",
     },
   },
 
@@ -98,7 +98,7 @@ module.exports = {
               link: "/advanced/",
               collapsable: false,
               children: [
-                "texture-system.md",
+                "material-system.md",
                 "mesh-system.md",
                 "variable-system.md",
                 "trigger-system.md",
@@ -182,7 +182,7 @@ module.exports = {
               link: "/en/advanced/",
               collapsable: false,
               children: [
-                "texture-system.md",
+                "material-system.md",
                 "mesh-system.md",
                 "variable-system.md",
                 "trigger-system.md",

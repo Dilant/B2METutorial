@@ -11,7 +11,7 @@
 
 ### `G_Score`
 
-- 类型：`int`
+- 类型：`float`
 - 限制：`x: x >= 0`
 
 玩家当前得分。
@@ -43,6 +43,19 @@
 - 限制：`θ: 0 <= θ < 360`
 
 当前摄像机角度。以世界坐标系为基准，`Z` 轴正方向为 `0`，顺时针增加。
+
+### `G_PlayerVelocity`
+
+- 类型：`float`
+- 限制：`v: v >= 0`
+
+当前玩家速度。
+
+### `G_PlayerPositionX` `G_PlayerPositionY` `G_PlayerPositionZ`
+
+- 类型：`float` `float` `float`
+
+当前玩家坐标。
 
 ## 新建变量
 

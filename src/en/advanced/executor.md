@@ -64,7 +64,8 @@
 
 ### `Audio`
 
-_待补充_
+- Type: `Audio`
+- Default: empty
 
 ### `Volume`
 

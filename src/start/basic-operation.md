@@ -20,10 +20,7 @@
 
 ::: tip
 
-地图实际保存位置为：
-
-- Win: `%USERPROFILE%\AppData\LocalLow\Mushreb\BME Pro\Assets\Scenes\`
-- Mac: _待补充_
+地图实际保存位置为：`%USERPROFILE%\AppData\LocalLow\Mushreb\BME Pro\Assets\Scenes\`
 
 :::
 

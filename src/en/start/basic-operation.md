@@ -20,10 +20,7 @@ Saved maps will appear in `Assets → Scenes` panel and can be double-clicked to
 
 ::: tip
 
-The saving path on disk is:
-
-- Win: `%USERPROFILE%\AppData\LocalLow\Mushreb\BME Pro\Assets\Scenes\`
-- Mac: _to be added_
+The saving path on disk is: `%USERPROFILE%\AppData\LocalLow\Mushreb\BME Pro\Assets\Scenes\`
 
 :::
 

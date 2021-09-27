@@ -136,7 +136,7 @@ keys = [37, 33, 61, 62, 41, 4, 63, 27, 7, 8, 9]    // W S ← → 1 ` ↑ M , . 
 - Slightly adjust properties of balls and machinery
 - Fix the issue that score ball traces aren't reset upon restart
 - Change start position of score ball traces upon reborn
-- Add textures for balls to built-in assets
+- Add materials for balls to built-in assets
 
 ### `0.7.2 α` @ 2021/9/19
 
@@ -144,8 +144,9 @@ keys = [37, 33, 61, 62, 41, 4, 63, 27, 7, 8, 9]    // W S ← → 1 ` ↑ M , . 
 - Add animations of appenders
 - Change the behaviors when inactive player balls activate checkpoints, destination, switchers or appenders
 - Change the behavior of score ball trace upon death or winning
-- Slightly weaken friction of some textures
+- Slightly weaken friction of some materials
 - Fix the issue that ice ball can get electric balls
+- Add a key to go back to main screen
 - Fix some issues related to screenshot function
 - Fix the issue that some sound effects don't pause with game pause
 
