@@ -60,7 +60,7 @@ Hold `Alt + MouseRight` to enter travel mode. Drag to change orientation of came
 
 ### Focus
 
-`F`, press to trigger.
+`F`
 
 The view will automatically change to focus on the selected object, and set current position as the center of view adjustments.
 
@@ -82,25 +82,25 @@ Current view (`Persp` / `Ortho`) is shown under the coordinate axis, and can be 
 
 ### Spectator Mode
 
-`Q`, press to enable, also #3 button of toolbar.
+`Q`, also #3 button of toolbar.
 
 You can't select or make any change to objects ~~to avoid misoperations~~. We don't use it often.
 
 ### Moving Mode
 
-`W`, press to enable, also #4 button of toolbar.
+`W`, also #4 button of toolbar.
 
 Drag the arrows to move an object in corresponding directions, or drag the plane symbols to move it in corresponding planes.
 
 ### Rotation Mode
 
-`E`, press to enable, also #5 button of toolbar.
+`E`, also #5 button of toolbar.
 
 Drag the colored arcs to rotate the object in corresponding planes, or drag the white arc to rotate it in the projection plane, or drag the surface to ~~let it go~~ rotate it freely.
 
 ### Scaling Mode
 
-`R`, press to enable, also #6 button of toolbar.
+`R`, also #6 button of toolbar.
 
 Drag the handles to scale the object in corresponding directions. The opposite direction means mirroring.
 
@@ -112,7 +112,7 @@ For fixed objects, there's no need to scale them in most cases. For machinery, m
 
 ### Ruler mode
 
-`T`, press to enable, also #7 button of toolbar.
+`T`, also #7 button of toolbar.
 
 Drag the handles on the rectangle to scale the object, and current size of the object is shown. [Rotate your view](#Rotation) to switch to another surface to operate.
 
@@ -124,7 +124,7 @@ When enabled, the units of move, rotate, scale and ruler operations are 0.5 abso
 
 ## Multi-select
 
-In `Scene` window: Hold `MouseLeft` and box-select.
+In `Scene` window: Hold `Shift` and select each object, or hold `MouseLeft` and box-select.
 In `Hierarchy` window: Use `Ctrl` `Shift` in common sense.
 
 ::: tip
@@ -163,6 +163,18 @@ Ballex² will launch automatically if you've [set Ballex² path](/en/start/prepa
 
 ::: tip
 
-There's no difference between tester environment and player environment. For convenience, you can fetch aids from `Assets → Items → TestMapTools`.
+For convenience, you can fetch aids from `Assets → Items → TestMapTools`.
 
 :::
+
+### Screenshot
+
+`F5`
+
+The screenshot is 1920×1080 in `.jpg` format in default, and saved at: `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`.
+
+### 变量检视器
+
+`F6`
+
+See: [Advanced → Variable System](/en/advanced/variable-system.md).

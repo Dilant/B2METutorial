@@ -49,7 +49,7 @@
 
 ::: tip
 
-建议使用 VSCode 并安装 Prettier 插件用于格式化 JSON 文件。
+推荐使用 VSCode 并安装 Prettier 插件用于格式化 JSON 文件。
 
 :::
 

@@ -10,9 +10,9 @@
 
 ::: tip
 
-BME Pro 中的单位为米，轴向为 `X` 轴向右，`Y` 轴向上，`Z` 轴向前，为左手系，请建模时注意。
+推荐使用 Cinema 4D 建模，参见：[Start → Preparation → Coordinate System](/en/start/preparation.md#coordinate-system)。
 
-对于 `.fbx` 格式，要求**必须为文本 (ASCII) 格式**，推荐使用 7.4 (2014/2015) 版本并三角化面。
+对于 `.fbx` 格式，要求**必须为文本 (ASCII) 格式**，推荐使用 7.4 (2014/2015) 版本并三角化面。导入的模型 `X` `Z` 两轴将被翻转。
 
 对于 `.obj` 格式，无论建模软件中设置如何，**只能使用一个材质**，该材质将作用于所有面。
 
