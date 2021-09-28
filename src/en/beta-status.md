@@ -4,8 +4,8 @@
 
 - Anyone owning Ballex can take part in it
 - The latest version
-  - Public: `0.7.1 β` @ 2021/9/17
-  - Insider: `0.7.2b2 α` @ 2021/9/20
+  - Public: `0.7.2 β` @ 2021/9/28
+  - Insider: `0.7.2 β` @ 2021/9/28
 - Require Windows 10 x64 20H1 or newer version, and a graphics card supporting DirectX 12
 - Beta will end with the first release of Ballex². The beta channel will no longer receive updates nor supports since then, and a separate purchase for stable releases is required
 - Outstanding testers may get Ballex² Steam key
@@ -66,7 +66,27 @@ We recommend formatting JSON files using VSCode with extension Prettier.
 
 ### Keymap
 
-`keys = [Move Forward, Move Backward, Move Left, Move Right, Camera Clockwise Rotate, Camera Anticlockwise Rotate, Camera Overlook, Function Key 1, Function Key 2, Function Key 3, Function Key 4]`
+```json
+{
+  "keys": [
+    "Move Forward",
+    "Move Backward",
+    "Move Left",
+    "Move Right",
+    "Camera Clockwise Rotate",
+    "Camera Anticlockwise Rotate",
+    "Camera Overlook",
+    "Function Key 1",
+    "Function Key 2",
+    "Function Key 3",
+    "Function Key 4",
+    "Free Look Move Forward",
+    "Free Look Move Backward",
+    "Free Look Move Left",
+    "Free Look Move Right"
+  ]
+}
+```
 
 ::: tip
 
@@ -85,12 +105,20 @@ Avoid using `R` `P` `Tab`, function keys or numpad keys.
 Here are some commonly used snippets:
 
 ```json
-keys = [63, 64, 61, 62, 18, 15, 1, 31, 37, 19, 33] // ↑ ↓ ← → D A _ Q W E S
-keys = [63, 64, 61, 62, 18, 15, 1, 40, 38, 17, 36] // ↑ ↓ ← → D A _ Z X C V
-keys = [23, 25, 24, 26, 18, 15, 1, 31, 37, 19, 33] // I K J L D A _ Q W E S
-keys = [37, 33, 15, 18, 26, 24, 1, 35, 23, 29, 25] // W S A D L J _ U I O K
-keys = [37, 33, 15, 18, 19, 31, 1, 41, 42, 43, 44] // W S A D E Q _ 1 2 3 4
-keys = [37, 33, 61, 62, 41, 4, 63, 27, 7, 8, 9]    // W S ← → 1 ` ↑ M , . /
+{
+  // ↑ ↓ ← → D A _ Q W E S W S A D
+  "keys": [63, 64, 61, 62, 18, 15, 1, 31, 37, 19, 33, 37, 33, 15, 18],
+  // ↑ ↓ ← → D A _ Z X C V W S A D
+  "keys": [63, 64, 61, 62, 18, 15, 1, 40, 38, 17, 36, 37, 33, 15, 18],
+  // I K J L D A _ Q W E S W S A D
+  "keys": [23, 25, 24, 26, 18, 15, 1, 31, 37, 19, 33, 37, 33, 15, 18],
+  // W S A D L J _ U I O K W S A D
+  "keys": [37, 33, 15, 18, 26, 24, 1, 35, 23, 29, 25, 37, 33, 15, 18],
+  // W S A D E Q _ 1 2 3 4 W S A D
+  "keys": [37, 33, 15, 18, 19, 31, 1, 41, 42, 43, 44, 37, 33, 15, 18],
+  // W S ← → 1 ` ↑ M , . / W S A D
+  "keys": [37, 33, 61, 62, 41, 4, 63, 27, 7, 8, 9, 37, 33, 15, 18]
+}
 ```
 
 ::: details Mapping table for keys and IDs
@@ -128,6 +156,19 @@ keys = [37, 33, 61, 62, 41, 4, 63, 27, 7, 8, 9]    // W S ← → 1 ` ↑ M , . 
 :::
 
 ## Changelog
+
+### `0.7.2 β` @ 2021/9/28
+
+- Add keymap setting for free look camera mode
+- Map name will show in game now
+- Changes to built-in levels
+  - Official level 1 changed to snowy weather
+  - Minor fixes of **_First Try_** by Aeka
+  - Add **_Strato Run_**, a casual map by Aeka
+  - Add **_Ordinary_ (原)**, a logical map by Dilant
+  - Add **_Ball's Last Tour: Top Floor_ (木球终末旅行·顶层)**, a landscape map by Ding~ao
+  - Add a technical map by Matt
+  - Add a casual map by Z Red
 
 ### `0.7.2b2 α` @ 2021/9/20
 
@@ -201,4 +242,4 @@ keys = [37, 33, 61, 62, 41, 4, 63, 27, 7, 8, 9]    // W S ← → 1 ` ↑ M , . 
 ### `0.6.8 β` @ 2021/9/10
 
 - First beta version
-- Include an easy map by z2414
+- Include a casual map by z2414
