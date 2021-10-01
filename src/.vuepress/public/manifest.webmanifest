@@ -1,7 +1,7 @@
 {
   "name": "Ballex² 制图教程",
   "short_name": "Ballex² 制图教程",
-  "description": "基于 Ballex Map Editor Pro 0.7.2b2 编写",
+  "description": "基于 Ballex Map Editor Pro 0.7.3 编写",
   "lang": "zh-CN",
   "start_url": "/",
   "display": "standalone",

@@ -1,11 +1,20 @@
 # Ballex² Beta Status
 
+::: warning
+
+When upgrading from a previous version to `0.7.3` or a newer one, please upgrade all assets:
+
+- `Edit → Upgrade Assets` to upgrade everything except audios
+- Delete and re-add audios. Be aware that only `.ogg` format is supported
+
+:::
+
 ## Description
 
 - Anyone owning Ballex can take part in it
 - The latest version
-  - Public: `0.7.2 β` @ 2021/9/28
-  - Insider: `0.7.2 β` @ 2021/9/28
+  - Public: `0.7.2 β` @ 2021/10/1
+  - Insider: `0.7.3b2 α` @ 2021/10/1
 - Require Windows 10 x64 20H1 or newer version, and a graphics card supporting DirectX 12
 - Beta will end with the first release of Ballex². The beta channel will no longer receive updates nor supports since then, and a separate purchase for stable releases is required
 - Outstanding testers may get Ballex² Steam key
@@ -27,7 +36,7 @@ Here's the default keymap. Most of the keys can be [changed via config file](#ke
 ### Free Look Camera Mode Control
 
 - Move: `W` `A` `S` `D`
-- Rotate camera: `Mouse`, same as FPS cursor movements
+- Rotate camera: `Mouse`, same as FPS / TPS cursor movements
 - 8-way snap: `Space`
 
 ### Universal Functions
@@ -157,12 +166,39 @@ Here are some commonly used snippets:
 
 ## Changelog
 
+### `0.7.3b4 α` `0.7.3 β` @ 2021/10/1
+
+- Add lava pools
+- Fix the issue with road generators when it has more than 32 segments
+- Fix the size of pools
+- Fix the issue with buoyancy of pools scaled along `Y` axis
+- Add water and lava materials to built-in assets
+- Include _Topo Trip_, a technical map by Aeka
+
+### `0.7.3b3 α` @ 2021/9/30
+
+- Level description will show in loading page now
+- Change effect of texture emission
+- The max number of segments in a road generator changes from 32 to 128
+- Add musics by STERD and Aeka to built-in assets
+- Changes to built-in levels
+  - Fix the set camera offset executors in official level 1
+  - **_Ordinary_ (原)** by Dilant adds section #3 and BGM
+  - Add _Flamire_, a casual map by STERD
+
+### `0.7.3 α` `0.7.3b2 α` @ 2021/9/29
+
+- Optimize compression rate of textures and audios by a great margin
+- Switch to another import method for audios, which supports `.ogg` only
+- Camera offset setting is added to export window
+- Add lots of audios to built-in assets
+
 ### `0.7.2 β` @ 2021/9/28
 
 - Add keymap setting for free look camera mode
-- Map name will show in game now
+- Level name will show in game now
 - Changes to built-in levels
-  - Official level 1 changed to snowy weather
+  - Official level 1 changes to snowy weather
   - Minor fixes of **_First Try_** by Aeka
   - Add **_Strato Run_**, a casual map by Aeka
   - Add **_Ordinary_ (原)**, a logical map by Dilant
