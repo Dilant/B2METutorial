@@ -1,8 +1,5 @@
 module.exports = {
-  head: [
-    ["link", { rel: "icon", href: "/ballex2.ico" }],
-    ["link", { rel: "manifest", href: "/manifest.webmanifest" }],
-  ],
+  head: [["link", { rel: "icon", href: "/ballex2.ico" }]],
   locales: {
     "/": {
       lang: "zh-CN",
@@ -47,7 +44,7 @@ module.exports = {
         navbar: [
           {
             text: "公测进度",
-            link: "/beta-status.md",
+            link: "/beta-status/",
           },
           {
             text: "起步",
@@ -77,6 +74,16 @@ module.exports = {
           },
         ],
         sidebar: {
+          "/beta-status/": [
+            {
+              isGroup: true,
+              text: "Ballex² 公测进度",
+              link: "/beta-status/",
+              collapsable: false,
+              children: ["control-and-functions.md", "changelog.md"],
+            },
+          ],
+
           "/start/": [
             {
               isGroup: true,
@@ -131,7 +138,7 @@ module.exports = {
         navbar: [
           {
             text: "Beta Status",
-            link: "/en/beta-status.md",
+            link: "/en/beta-status/",
           },
           {
             text: "Start",
@@ -161,6 +168,16 @@ module.exports = {
           },
         ],
         sidebar: {
+          "/en/beta-status/": [
+            {
+              isGroup: true,
+              text: "Ballex² Beta Status",
+              link: "/en/beta-status/",
+              collapsable: false,
+              children: ["control-and-functions.md", "changelog.md"],
+            },
+          ],
+
           "/en/start/": [
             {
               isGroup: true,
@@ -215,22 +232,6 @@ module.exports = {
           },
           "/en/": {
             placeholder: "Search",
-          },
-        },
-      },
-    ],
-    ["@vuepress/plugin-pwa"],
-    [
-      "@vuepress/plugin-pwa-popup",
-      {
-        locales: {
-          "/": {
-            message: "新内容可用",
-            buttonText: "重载",
-          },
-          "/en/": {
-            message: "New content available",
-            buttonText: "Reload",
           },
         },
       },

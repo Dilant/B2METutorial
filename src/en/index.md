@@ -5,7 +5,7 @@ heroImage: /images/Ballex2Hero.png
 tagline: Based on Ballex Map Editor Pro 0.7.3
 actions:
   - text: Beta Status →
-    link: /en/beta-status.md
+    link: /en/beta-status/
     type: primary
 footer: 2021 Dilant
 ---

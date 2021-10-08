@@ -2,7 +2,7 @@
 
 ::: tip
 
-Ballex² 正在公测！详情请见 [Ballex² 公测进度](/en/beta-status.md)。
+Ballex² 正在公测！详情请见 [Ballex² 公测进度](/en/beta-status/)。
 
 :::
 
