@@ -16,3 +16,5 @@ When upgrading from a previous version to `0.7.3` or a newer one, please upgrade
 - Require Windows 10 x64 20H1 or newer version, and a graphics card supporting DirectX 12
 - Beta will end with the first release of Ballex². The beta channel will no longer receive updates nor supports since then, and a separate purchase for stable releases is required
 - Outstanding testers may get Ballex² Steam key
+
+(Refer to the sidebar for configs and changelog)
