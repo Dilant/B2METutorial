@@ -1,5 +1,12 @@
 # Changelog
 
+## `rolling` @ 2021/11/5
+
+- Add screen space reflection support
+- Fix the UV texture issue with meshes
+- Drop `.obj` support when importing meshes
+- Optimize the rendering pipeline to allow handling a large amount of simultaneous illuminations
+
 ## `0.7.3b4 α` `0.7.3 β` @ 2021/10/1
 
 - Add lava pools
