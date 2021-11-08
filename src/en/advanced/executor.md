@@ -18,9 +18,8 @@
 
 ### `Targets ID`
 
-- Type: `Tuple<int, int[]>`
-- Default: `(0, [])`
-- Constrain: `(n, l): n >= 0`
+- Type: `int[]`
+- Default: `[]`
 
 开始执行时，这些物体会受力 **（无论它们在哪里）**。
 
@@ -60,7 +59,7 @@
 
 勾选此项时，物体离触发器越远受力越小。
 
-## Play Audio
+## Play Audio <badge text="Obsolete" type="warning"/>
 
 ### `Audio`
 
@@ -121,8 +120,8 @@
 
 ### `Rotation Align Offset`
 
-- Type: `Tuple<float, float, float>`
-- Default: `(0, 0, 0)`
+- Type: `float` `float` `float`
+- Default: `0` `0` `0`
 
 ### `Rigidbody Mode`
 
@@ -155,9 +154,8 @@
 
 ### `Targets ID`
 
-- Type: `Tuple<int, int[]>`
-- Default: `(0, [])`
-- Constrain: `(n, l): n >= 0`
+- Type: `int[]`
+- Default: `[]`
 
 开始执行时，这些关节将断开，所有相关约束解除。
 
@@ -165,8 +163,8 @@
 
 ### `Camera Offset`
 
-- Type: `Tuple<float, float, float>`
-- Default: `(0, 3.5, -4.25)`
+- Type: `float` `float` `float`
+- Default: `0` `4` `-3.5`
 
 ## Set Variable Value
 

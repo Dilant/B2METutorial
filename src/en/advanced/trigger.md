@@ -48,9 +48,8 @@
 
 ### `Trigger Targets ID`
 
-- Type: `Tuple<int, int[]>`
-- Default: `(0, [])`
-- Constrain: `(n, l): n >= 0`
+- Type: `int[]`
+- Default: `[]`
 
 只有列表中的元件可以使触发器生效。
 

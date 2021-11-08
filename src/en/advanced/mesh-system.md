@@ -31,9 +31,8 @@
 
 ### `Materials`
 
-- Type: `Tuple<int, Material[]>`
-- Default: `(0, [])`
-- Constrain: `(n, l): n >= 0`
+- Type: `Material[]`
+- Default: `[]`
 
 对应关系与建模软件中的设定一致。
 
@@ -63,14 +62,14 @@
 
 ### `Offset`
 
-- Type: `Tuple<float, float, float>`
-- Default: `(0, 0, 0)`
+- Type: `float` `float` `float`
+- Default: `0` `0` `0`
 
 ### `Size` <badge text="Collider Type = Box"/>
 
-- Type: `Tuple<float, float, float>`
-- Default: `(1, 1, 1)`
-- Constrain: `(x, y, z): x > 0 && y > 0 && z > 0`
+- Type: `float` `float` `float`
+- Default: `1` `1` `1`
+- Constrain: `x: x > 0` `y: y > 0` `z: z > 0`
 
 ### `Rounded Radius` <badge text="Collider Type = Box"/>
 

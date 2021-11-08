@@ -92,14 +92,14 @@ The performance of threshold mode is much better than that of blend mode. The fo
 
 ### `Tiling Scale`
 
-- Type: `Tuple<float, float>`
-- Default: `(1, 1)`
-- Constrain: `(x, y): x > 0 && y > 0`
+- Type: `float` `float` 
+- Default: `1` `1`
+- Constrain: `x: x > 0` `y: y > 0`
 
 ### `Tiling Offset`
 
-- Type: `Tuple<float, float>`
-- Default: `(0, 0)`
+- Type: `float` `float`
+- Default: `0` `0`
 
 ### `Emission Color`
 
