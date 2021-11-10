@@ -79,7 +79,7 @@
 
 ### `Material`
 
-- Type: `Material`
+- Type: `Material.Particle`
 - Default: empty
 
 ### `Color over Lifetime`

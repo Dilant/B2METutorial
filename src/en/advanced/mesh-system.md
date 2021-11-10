@@ -31,7 +31,7 @@
 
 ### `Materials`
 
-- Type: `Material[]`
+- Type: `Material.PBR[]`
 - Default: `[]`
 
 对应关系与建模软件中的设定一致。

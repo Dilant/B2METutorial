@@ -10,7 +10,7 @@
 - Optimize physical calculation speed under heavy loads
 - Fix the textures of appenders
 - Fix audio players and now they can be triggered
-- Fix an issue causing BME Pro crash
+- Fix an issue causing BME Pro to crash
 - Make burst count of particle emitters work again
 - Particle emitters should rotate with camera now
 
@@ -20,6 +20,7 @@
 - Add terrain system and particle system
 - Replace audio manager
 - Fix the UV texture issue with custom meshes
+- Support `.jpg` when importing textures
 - Drop `.obj` support when importing meshes
 - Optimize the rendering pipeline to allow handling a large amount of simultaneous illuminations
 - Audio assets are provided separately now (instead of being built-in)
