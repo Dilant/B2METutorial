@@ -25,7 +25,7 @@ Here's the default keymap. Most of the keys can be [changed via config file](#ke
 - Suicide: `R`
 - Restart: `P`
 - Back to main: `F9`
-- Temporary fullscreen: `Alt + Enter`
+- Temporary full screen: `Alt + Enter`
 
 ## Map Test Functions
 

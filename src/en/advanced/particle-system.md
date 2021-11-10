@@ -14,7 +14,7 @@
 - Type: `bool`
 - Default: `true`
 
-### `Duration` <badge text="Loop = false"/>
+### `Duration`
 
 - Type: `float`
 - Default: `5`
@@ -26,14 +26,14 @@
 - Default: `10` `20`
 - Constrain: `x: x > 0` `y: y > 0`
 
-小编不知道这是啥（好像有 bug
+下一粒子的发射时间将由在该区间内均匀取得的随机值决定，负数将视为 `0`。两数不分顺序，相同表示固定。
 
 ### `Burst Count`
 
 - Type: `float` `float`
 - Default: `0` `0`
 
-小编也不知道这是啥（好像也有 bug
+每一周期开始时，将有爆发粒子射出。每个爆发粒子的强度将在该区间内均匀取随机值，负数将视为 `0`。两数不分顺序，相同表示固定。
 
 ### `Emitter Size`
 
@@ -70,7 +70,7 @@
 - Type: `bool`
 - Default: `false`
 
-小编也不知道这是啥（不是我想要的玩具
+粒子发射器将跟随摄像机移动和旋转。
 
 ### `Follow Position Offset` <badge text="Follow Camera = true"/>
 
@@ -80,7 +80,7 @@
 ### `Material`
 
 - Type: `Material`
-- Default: 空
+- Default: empty
 
 ### `Color over Lifetime`
 
@@ -113,7 +113,7 @@
 
 - Type: `Tuple[]<float, float>`
 - Default: `[(0.3, 0), (1, 1)]`
-- Constrain: `(η, τ): η >= 0 and 0 <= τ <= 1`
+- Constrain: `(s, τ): s >= 0 and 0 <= τ <= 1`
 
 `X` 表示相对于粒子 `Initial Size` 的比例，负数将视为 `0`。
 

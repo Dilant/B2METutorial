@@ -94,6 +94,7 @@ module.exports = {
                 "preparation.md",
                 "basic-operation.md",
                 "alignment.md",
+                "road-generator.md",
               ],
             },
           ],
@@ -113,7 +114,7 @@ module.exports = {
                 "variable-system.md",
                 "terrain-system.md",
                 "particle-system.md",
-                "audio-system.md"
+                "audio-system.md",
               ],
             },
           ],
@@ -191,6 +192,7 @@ module.exports = {
                 "preparation.md",
                 "basic-operation.md",
                 "alignment.md",
+                "road-generator.md",
               ],
             },
           ],
@@ -210,7 +212,7 @@ module.exports = {
                 "variable-system.md",
                 "terrain-system.md",
                 "particle-system.md",
-                "audio-system.md"
+                "audio-system.md",
               ],
             },
           ],
