@@ -1,5 +1,16 @@
 # Changelog
 
+## `0.8.1b2 α` @ 2021/11/17
+
+- Support Steam Workshop
+- Support packing and unpacking assets
+- Add icons to menu items
+
+## `0.8.1b1 α` @ 2021/11/14
+
+- All parameters of a joint should work now
+- Fix an issue which hides the border of selection
+
 ## `0.8.0 β` @ 2021/11/10
 
 - Optimize rendering effect of screen space reflection
@@ -16,7 +27,9 @@
 
 ## `0.8.0b1 α` @ 2021/11/7
 
+- Address the game freeze issue upon exit
 - Add screen space reflection support
+- Object ID will show in `Hierarchy` window
 - Add terrain system and particle system
 - Replace audio manager
 - Fix the UV texture issue with custom meshes
@@ -110,7 +123,7 @@
   - Compare variables
   - Disable player key
   - Switch camera target
-- The game won't crash when taking screenshots while the save folder does't exist
+- The game won't freeze when taking screenshots while the save folder does't exist
 - Camera mode setting is moved to export window
 
 ## `0.6.8b2 α` @ 2021/9/11
