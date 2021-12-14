@@ -9,7 +9,7 @@ Launch it via Steam and choose the 2nd option `Launch Game Editor`.
 Ballex² and BME Pro can be launched from local directory. Ensure that:
 
 - Steam is launched and logged in
-- Manually restart Steam if it's started automatically by other tools (for example Steam++ or SteamCommunity302).
+- Manually restart Steam if it's started automatically by other tools (for example Steam++ or SteamCommunity302)
 
 :::
 
@@ -65,12 +65,12 @@ List all objects with their hierarchical relationships.
 
 Categorize and display all assets. There're 6 panels:
 
-- `Scenes`: List all source files of maps.
-- `Items`: List all available elements.
-- `Meshes`: List all imported meshes.
-- `Textures`: List all imported texture pictures.
-- `Materials`: List all available materials.
-- `Audios`: List all imported audios.
+- `Scenes`: List all source files of maps
+- `Items`: List all available elements
+- `Meshes`: List all imported meshes
+- `Textures`: List all imported texture pictures
+- `Materials`: List all available materials
+- `Audios`: List all imported audios
 
 ## Coordinate System
 

@@ -9,14 +9,14 @@ BME Pro uses a specially designed PBR material system. Each material consists of
 `RGB` channel: diffusion color. (Required)
 `A` channel: depth or opacity. (Optional, white if omitted)
 
-![](/images/texture-albedo.jpg)
+![](/images/texture/texture-albedo.jpg)
 
 ### Normal Map
 
 `RGB` channel: normal direction. (Optional, no image if omitted)
 `A` channel: ~~unused now~~
 
-![](/images/texture-normal.jpg)
+![](/images/texture/texture-normal.jpg)
 
 ::: tip
 
@@ -28,19 +28,19 @@ In Adobe Photoshop, you can use `Filter → 3D → Generate Normal Map...` to ge
 
 `R` channel: emission. (Optional, black if omitted)
 
-![](/images/texture-mask-r.jpg)
+![](/images/texture/texture-mask-r.jpg)
 
 `G` channel: smoothness. (Optional, black if omitted)
 
-![](/images/texture-mask-g.jpg)
+![](/images/texture/texture-mask-g.jpg)
 
 `B` channel: metallic. (Optional, black if omitted)
 
-![](/images/texture-mask-b.jpg)
+![](/images/texture/texture-mask-b.jpg)
 
 `A` channel: ambient occlusion. (Optional, white if omitted)
 
-![](/images/texture-mask-a.jpg)
+![](/images/texture/texture-mask-a.jpg)
 
 ## Import Texture
 

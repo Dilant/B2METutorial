@@ -108,6 +108,7 @@ module.exports = {
               children: [
                 "mesh-system.md",
                 "material-system.md",
+                "joint-system.md",
                 "trigger-system.md",
                 "trigger.md",
                 "executor.md",
@@ -206,6 +207,7 @@ module.exports = {
               children: [
                 "mesh-system.md",
                 "material-system.md",
+                "joint-system.md",
                 "trigger-system.md",
                 "trigger.md",
                 "executor.md",

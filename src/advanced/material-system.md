@@ -9,14 +9,14 @@ BME Pro 的材质系统为特制的 PBR 材质系统，每个材质包含三张 
 `RGB` 通道：漫射颜色。（必需）
 `A` 通道：深度或不透明度。（可选，不使用留白色）
 
-![](/images/texture-albedo.jpg)
+![](/images/texture/texture-albedo.jpg)
 
 ### 法线贴图
 
 `RGB` 通道：法线方向。（可选，不使用则不导入）
 `A` 通道：~~暂无用途~~
 
-![](/images/texture-normal.jpg)
+![](/images/texture/texture-normal.jpg)
 
 ::: tip
 
@@ -28,19 +28,19 @@ BME Pro 的材质系统为特制的 PBR 材质系统，每个材质包含三张 
 
 `R` 通道：自发光。（可选，不使用留黑色）
 
-![](/images/texture-mask-r.jpg)
+![](/images/texture/texture-mask-r.jpg)
 
 `G` 通道：光滑度。（可选，不使用留黑色）
 
-![](/images/texture-mask-g.jpg)
+![](/images/texture/texture-mask-g.jpg)
 
 `B` 通道：金属度。（可选，不使用留黑色）
 
-![](/images/texture-mask-b.jpg)
+![](/images/texture/texture-mask-b.jpg)
 
 `A` 通道：环境光遮蔽。（可选，不使用留白色）
 
-![](/images/texture-mask-a.jpg)
+![](/images/texture/texture-mask-a.jpg)
 
 ## 导入纹理
 

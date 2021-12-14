@@ -3,13 +3,13 @@
 ## 执行器类名
 
 - ~~`AddForce`：施力。可选恒力场、恒加速度场或弹跳盒。~~
-- `ChangePhysicsBody`：改变物理性质。可以将物体变为运动学物体或刚体。
-- `ChangeTime`：改变场景时间。
-- `ChangeTimeSpeed`：改变时间流速。影响场景昼夜变换的速度。
-- `ChangeWeather`：改变场景天气。
-- `Delay`：延迟。
-- `PauseExecutor`：暂停执行。
-- `ResumeExecutor`：继续执行。
+- `ChangePhysicsBody`：改变物理性质。可以将物体变为运动学物体或刚体
+- `ChangeTime`：改变场景时间
+- `ChangeTimeSpeed`：改变时间流速。影响场景昼夜变换的速度
+- `ChangeWeather`：改变场景天气
+- `Delay`：延迟
+- `PauseExecutor`：暂停执行
+- `ResumeExecutor`：继续执行
 - ~~`Transform`：变换。需要配合路点系统使用。~~
 
 ## 通用参数

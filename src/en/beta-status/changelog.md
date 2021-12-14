@@ -129,7 +129,7 @@
 ## `0.6.8b2 α` @ 2021/9/11
 
 - Fix a visibility issue with skybox
-- Fix collider of rocks, stairs, etc.
+- Fix collider of rocks, stairs, etc
 
 ## `0.6.8 β` @ 2021/9/10
 
