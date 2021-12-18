@@ -1,8 +1,24 @@
 # Changelog
 
+## `0.9.0 β` @ 2021/12/18
+
+- Overall gravity setting is added to export window
+- Fix unexpected truncations of workshop item descriptions
+- Fix the issue that cursor is not released when back to main screen
+- Items are sorted by update time by default in workshop
+
+## `0.9.0b1 α` @ 2021/12/17
+
+- Full support of Steam Workshop
+- Game UI is redesigned
+- Add more graphics settings
+- Fix reflection of water further from a certain distance
+- `Gravity Factor` should work now
+- Aggressively address the game freeze issue upon exit
+
 ## `0.8.1b2 α` @ 2021/11/17
 
-- Support Steam Workshop
+- BME now supports Steam Workshop
 - Support packing and unpacking assets
 - Add icons to menu items
 

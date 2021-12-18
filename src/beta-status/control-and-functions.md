@@ -22,8 +22,6 @@
 
 - 切换玩家球：`Tab`
 - 暂停：`Esc`
-- 自杀：`R`
-- 重开：`P`
 - 返回主界面：`F9`
 - 临时全屏：`Alt + Enter`
 
@@ -51,6 +49,9 @@
 - `screenshotResolution: { "x": *, "y": * }`：截图分辨率
 - `gameResolution: { "x": *, "y": * }`：游戏分辨率
 - `renderResolutionRate`：渲染比例
+- `screenSpaceReflectionQuality`: 屏幕空间反射，`0` 关闭 → `3` 高质量
+- `graphicQuality`: 画面质量，`1` 低 → `4` 极高
+- `motionBlurQuality`: 运动模糊，`0` 关闭 → `3` 高质量
 - `keys`：键位
 
 ## 键位
@@ -87,7 +88,7 @@
 
 ::: warning
 
-请避免设置 `R` `P` `Tab`，功能键或小键盘。
+请避免设置 `Tab`，功能键或小键盘。
 
 :::
 
@@ -143,3 +144,7 @@
 | 26   | `L`     | 53   | `Alt`        | 80   | `Numpad+`     |      |           |
 
 :::
+
+## Steam 创意工坊
+
+左下角倒数第 2 个按钮。

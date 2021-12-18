@@ -22,8 +22,6 @@ Here's the default keymap. Most of the keys can be [changed via config file](#ke
 
 - Switch player ball: `Tab`
 - Pause: `Esc`
-- Suicide: `R`
-- Restart: `P`
 - Back to main: `F9`
 - Temporary full screen: `Alt + Enter`
 
@@ -51,6 +49,9 @@ We recommend formatting JSON files using VSCode with extension Prettier.
 - `screenshotResolution: { "x": *, "y": * }`
 - `gameResolution: { "x": *, "y": * }`
 - `renderResolutionRate`
+- `screenSpaceReflectionQuality`: `0` off → `3` high
+- `graphicQuality`: `1` low → `4` ultra
+- `motionBlurQuality`: `0` off → `3` high
 - `keys`: Keymap
 
 ## Keymap
@@ -87,7 +88,7 @@ If you want to invert camera rotation direction, set `invertCameraRotate = true`
 
 ::: warning
 
-Avoid using `R` `P` `Tab`, function keys or numpad keys.
+Avoid using `Tab`, function keys or numpad keys.
 
 :::
 
@@ -143,3 +144,7 @@ Here are some commonly used snippets:
 | 26  | `L`     | 53  | `Alt`        | 80  | `Numpad+`     |     |           |
 
 :::
+
+## Steam Workshop
+
+The last but one button at the bottom left corner.
