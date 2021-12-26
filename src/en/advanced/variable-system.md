@@ -2,13 +2,6 @@
 
 ## Internal Variables
 
-### `G_Life`
-
-- Type: `int`
-- Constrain: `x: x >= 0`
-
-Player's extra lives. (Current life not included)
-
 ### `G_Score`
 
 - Type: `float`
@@ -44,14 +37,14 @@ Current camera direction. Using global reference frame, `0` means positive direc
 
 Current camera angle. Using global reference frame, `0` means positive direction of `Z`, which increases clockwise.
 
-### `G_PlayerVelocity`
+### `G_PlayerVelocity` <badge text="Readonly" type="warning"/>
 
 - Type: `float`
 - Constrain: `v: v >= 0`
 
 Player's current velocity.
 
-### `G_PlayerPositionX` `G_PlayerPositionY` `G_PlayerPositionZ`
+### `G_PlayerPositionX` `G_PlayerPositionY` `G_PlayerPositionZ` <badge text="Readonly" type="warning"/>
 
 - Type: `float` `float` `float`
 
@@ -80,4 +73,7 @@ All internal variables start with `G_`, so avoid doing so when you create a vari
 
 ## Manipulate Variables
 
-See: [Advanced → Executor → Set Variable Value](/en/advanced/executor.md#set-variable-value)、[Advanced → Executor → Compare Variables](/en/advanced/executor.md#compare-variables).
+See:
+
+- [Advanced → Executor → Set Variable Value](/en/advanced/executor.md#set-variable-value)
+- [Advanced → Executor → Compare Variables](/en/advanced/executor.md#compare-variables)

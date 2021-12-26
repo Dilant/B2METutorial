@@ -1,11 +1,18 @@
 # Changelog
 
-## `0.9.0 β` @ 2021/12/18
+## `0.9.1` @ 2021/12/22
+
+- BME Pro is separated as a free DLC
+- Add search dependencies function to the package collector
+- Fix the black screen issue when taking screenshots using Steam in BME Pro
+
+## `0.9.0` @ 2021/12/18
 
 - Overall gravity setting is added to export window
 - Fix unexpected truncations of workshop item descriptions
 - Fix the issue that cursor is not released when back to main screen
 - Items are sorted by update time by default in workshop
+- Add official level 1-2 E
 
 ## `0.9.0b1 α` @ 2021/12/17
 
@@ -15,10 +22,11 @@
 - Fix reflection of water further from a certain distance
 - `Gravity Factor` should work now
 - Aggressively address the game freeze issue upon exit
+- Add official level 1-1 E
 
 ## `0.8.1b2 α` @ 2021/11/17
 
-- BME now supports Steam Workshop
+- BME Pro now supports Steam Workshop
 - Support packing and unpacking assets
 - Add icons to menu items
 

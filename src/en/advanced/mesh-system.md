@@ -95,6 +95,8 @@
 - Type: `enum{Static, Kinematic, Rigid, Decoration, Collider}`
 - Default: `Static`
 
+各类型含义为：
+
 - 静态：完全静止。如：地面
 - 运动学刚体：静止，只能通过执行器调整位姿。如：移动路面
 - 刚体：参与物理模拟，将受到各种力的影响。如：箱子

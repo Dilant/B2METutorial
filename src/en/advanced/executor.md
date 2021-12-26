@@ -59,29 +59,6 @@
 
 勾选此项时，物体离触发器越远受力越小。
 
-## Play Audio <badge text="Obsolete" type="warning"/>
-
-### `Audio`
-
-- Type: `Audio`
-- Default: empty
-
-### `Volume`
-
-- Type: `float`
-- Default: `1`
-- Constrain: `v: 0 <= v <= 1`
-
-### `Loop`
-
-- Type: `bool`
-- Default: `false`
-
-### `Execute on Level Start`
-
-- Type: `bool`
-- Default: `false`
-
 ## Set Spawn Point
 
 ### `Transform Mark`
