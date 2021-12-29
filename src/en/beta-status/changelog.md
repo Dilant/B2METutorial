@@ -1,10 +1,13 @@
 # Changelog
 
-## `0.9.1` @ 2021/12/22
+## `0.9.1` @ 2021/12/25
 
+- Re-add DirectX 11 Support
 - BME Pro is separated as a free DLC
+- Adjust read / write permissions of internal variables
 - Add search dependencies function to the package collector
 - Fix the black screen issue when taking screenshots using Steam in BME Pro
+- Add official level 1-3 E
 
 ## `0.9.0` @ 2021/12/18
 
