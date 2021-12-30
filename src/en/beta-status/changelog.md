@@ -1,13 +1,21 @@
 # Changelog
 
-## `0.9.1` @ 2021/12/25
+## `0.9.1b3` @ 2021/12/30
+
+- Change mechanisms related to inactive player balls
+- The camera won't lock now upon death of an inactive player ball
+
+## `0.9.1b2` @ 2021/12/25
+
+- Adjust read / write permissions of internal variables
+- Add official level 1-3 E
+
+## `0.9.1` @ 2021/12/22
 
 - Re-add DirectX 11 Support
-- BME Pro is separated as a free DLC
 - Adjust read / write permissions of internal variables
 - Add search dependencies function to the package collector
 - Fix the black screen issue when taking screenshots using Steam in BME Pro
-- Add official level 1-3 E
 
 ## `0.9.0` @ 2021/12/18
 
@@ -105,7 +113,7 @@
 
 - The default camera offset changes from `(0, 3.5, -4.25)` to `(0, 4, -3.5)`
 - Add animations of appenders
-- Change the behaviors when inactive player balls activate checkpoints, destination, switchers or appenders
+- ~~Change the behaviors when inactive player balls activate checkpoints, destination, switchers or appenders~~
 - Change the behavior of score ball trace upon death or winning
 - Slightly weaken friction of some materials
 - Ice ball won't get electric balls now
