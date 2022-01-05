@@ -10,9 +10,11 @@
 
 ### `0.9.1b3`
 
-- Change mechanisms related to inactive player balls
-  - An inactive player ball will be destroyed upon activating checkpoints, destination, switchers or appenders
-  - All inactive player ball will be destroyed when the current player ball activates checkpoints or destination
+_To be discussed: may revert these changes later_
+
+- ~~Change mechanisms related to inactive player balls~~
+  - ~~An inactive player ball will be destroyed upon activating checkpoints, destination, switchers or appenders~~
+  - ~~All inactive player ball will be destroyed when the current player ball activates checkpoints or destination~~
 
 ### `0.9.0`
 
