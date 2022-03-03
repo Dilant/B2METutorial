@@ -6,13 +6,13 @@
 
 :::
 
-## 四向视角摄像机模式操作
+## 四向视角模式操作
 
 - 移动：`↑` `←` `↓` `→`
 - 旋转视角：`A` 顺时针，`D` 逆时针
 - 抬升视角：`Space`
 
-## 自由视角摄像机模式操作
+## 自由视角模式操作
 
 - 移动：`W` `A` `S` `D`
 - 旋转视角：`鼠标`，遵循 FPS / TPS 准星移动方向
@@ -29,6 +29,7 @@
 
 - 截图：`F5`，保存在 `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`
 - 变量检视器：`F6`
+- 快速变球：`0` - `9`
 
 ## 配置
 
@@ -40,12 +41,12 @@
 
 :::
 
-- `invertCameraRotate`：反转四向视角摄像机模式视角旋转方向
+- `invertCameraRotate`：反转四向视角模式视角旋转方向
 - `targetFrameRate`：限定帧率
-- `invertFreeLookCameraHorizontal`：反转自由视角摄像机模式视角水平旋转方向
-- `invertFreeLookCameraVertical`：反转自由视角摄像机模式视角竖直移动方向
-- `freeLookCameraHorizontalSensitivity`：自由视角摄像机模式视角水平旋转灵敏度
-- `freeLookCameraVerticalSensitivity`：自由视角摄像机模式视角竖直移动灵敏度
+- `invertFreeLookCameraHorizontal`：反转自由视角模式视角水平旋转方向
+- `invertFreeLookCameraVertical`：反转自由视角模式视角竖直移动方向
+- `freeLookCameraHorizontalSensitivity`：自由视角模式视角水平旋转灵敏度
+- `freeLookCameraVerticalSensitivity`：自由视角模式视角竖直移动灵敏度
 - `screenshotResolution: { "x": *, "y": * }`：截图分辨率
 - `gameResolution: { "x": *, "y": * }`：游戏分辨率
 - `renderResolutionRate`：渲染比例
@@ -53,6 +54,7 @@
 - `graphicQuality`: 画面质量，`1` 低 → `4` 极高
 - `motionBlurQuality`: 运动模糊，`0` 关闭 → `3` 高质量
 - `keys`：键位
+- `muteBGM`：关闭背景音乐
 
 ## 键位
 
@@ -106,8 +108,8 @@
   "keys": [37, 33, 15, 18, 26, 24, 1, 35, 23, 29, 25, 37, 33, 15, 18],
   // W S A D E Q _ 1 2 3 4 W S A D
   "keys": [37, 33, 15, 18, 19, 31, 1, 41, 42, 43, 44, 37, 33, 15, 18],
-  // W S ← → 1 ` ↑ M , . / W S A D
-  "keys": [37, 33, 61, 62, 41, 4, 63, 27, 7, 8, 9, 37, 33, 15, 18]
+  // W S ← → D A ↑ M , . / W S A D
+  "keys": [37, 33, 61, 62, 18, 15, 63, 27, 7, 8, 9, 37, 33, 15, 18]
 }
 ```
 

@@ -1,5 +1,20 @@
 # Changelog
 
+## `0.9.2b2` `0.9.2b3` @ 2022/3/3
+
+- Add leaderboards
+- The player ball won't get any supply during the death animation
+- Items are sorted by weekly trend by default in workshop
+- Adjust scroll speed of workshop screen
+- Fix issues with mouse capture while pausing in the free look mode
+
+## `0.9.2b1` @ 2022/3/2
+
+- Change mechanisms related to durability
+- Add level evaluation screen
+- Fix the flickering issue with wooden boards in section #2 of official level 1-3 E
+- Remove injury effect of inactive player balls
+
 ## `0.9.1b3` @ 2021/12/30
 
 - Change mechanisms related to inactive player balls
@@ -22,7 +37,7 @@
 - Overall gravity setting is added to export window
 - Fix unexpected truncations of workshop item descriptions
 - Fix the issue that cursor is not released when back to main screen
-- Items are sorted by update time by default in workshop
+- ~~Items are sorted by update time by default in workshop~~
 - Add official level 1-2 E
 
 ## `0.9.0b1 α` @ 2021/12/17
@@ -97,7 +112,7 @@
 
 ## `0.7.2 β` @ 2021/9/28
 
-- Add keymap setting for free look camera mode
+- Add keymap setting for free look mode
 - Level name will show in game now
 
 ## `0.7.2b2 α` @ 2021/9/20
@@ -123,7 +138,7 @@
 
 ## `0.7.1b2 α` `0.7.1 β` @ 2021/9/17
 
-- Fix an issue that blocks screenshot function in free look camera mode
+- Fix an issue that blocks screenshot function in free look mode
 - Add add-to-favorites function for asset folders
 - Add a function to import directories as asset folders
 - Remove drop-in import method

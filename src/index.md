@@ -8,5 +8,5 @@ actions:
   - text: 公测进度 →
     link: /beta-status/
     type: primary
-footer: 2021 Dilant
+footer: 2022 Dilant
 ---

@@ -6,13 +6,13 @@ Here's the default keymap. Most of the keys can be [changed via config file](#ke
 
 :::
 
-## Four-directional Camera Mode Control
+## Four-directional Mode Control
 
 - Move: `↑` `←` `↓` `→`
 - Rotate camera: `A` clockwise, `D` anticlockwise
 - Overlook: `Space`
 
-## Free Look Camera Mode Control
+## Free Look Mode Control
 
 - Move: `W` `A` `S` `D`
 - Rotate camera: `Mouse`, same as FPS / TPS cursor movements
@@ -29,6 +29,7 @@ Here's the default keymap. Most of the keys can be [changed via config file](#ke
 
 - Screenshot: `F5`, saved at `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`
 - Variables Inspector: `F6`
+- Ball hot-switch: `0` - `9`
 
 ## Config
 
@@ -40,10 +41,10 @@ We recommend formatting JSON files using VSCode with extension Prettier.
 
 :::
 
-- `invertCameraRotate`: Invert camera rotation direction in four-directional camera mode
+- `invertCameraRotate`: Invert camera rotation direction in four-directional mode
 - `targetFrameRate`
-- `invertFreeLookCameraHorizontal`: Invert camera horizontal rotation direction in free look camera mode
-- `invertFreeLookCameraVertical`: Invert camera vertical movement direction in free look camera mode
+- `invertFreeLookCameraHorizontal`: Invert camera horizontal rotation direction in free look mode
+- `invertFreeLookCameraVertical`: Invert camera vertical movement direction in free look mode
 - `freeLookCameraHorizontalSensitivity`
 - `freeLookCameraVerticalSensitivity`
 - `screenshotResolution: { "x": *, "y": * }`
@@ -53,6 +54,7 @@ We recommend formatting JSON files using VSCode with extension Prettier.
 - `graphicQuality`: `1` low → `4` ultra
 - `motionBlurQuality`: `0` off → `3` high
 - `keys`: Keymap
+- `muteBGM`
 
 ## Keymap
 
@@ -106,8 +108,8 @@ Here are some commonly used snippets:
   "keys": [37, 33, 15, 18, 26, 24, 1, 35, 23, 29, 25, 37, 33, 15, 18],
   // W S A D E Q _ 1 2 3 4 W S A D
   "keys": [37, 33, 15, 18, 19, 31, 1, 41, 42, 43, 44, 37, 33, 15, 18],
-  // W S ← → 1 ` ↑ M , . / W S A D
-  "keys": [37, 33, 61, 62, 41, 4, 63, 27, 7, 8, 9, 37, 33, 15, 18]
+  // W S ← → D A ↑ M , . / W S A D
+  "keys": [37, 33, 61, 62, 18, 15, 63, 27, 7, 8, 9, 37, 33, 15, 18]
 }
 ```
 

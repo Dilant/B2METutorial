@@ -8,7 +8,7 @@ actions:
   - text: Beta Status →
     link: /en/beta-status/
     type: primary
-footer: 2021 Dilant
+footer: 2022 Dilant
 ---
 
 > Thanks [@Swung0x48](https://github.com/Swung0x48) for part of localization!
