@@ -1,8 +1,14 @@
 # Changelog
 
+## `0.9.2b4` @ 2022/3/4
+
+- Add leaderboard for official levels
+- Expand the trigger area of switchers and appenders
+- Supplies got by an inactive player ball will take effect
+
 ## `0.9.2b2` `0.9.2b3` @ 2022/3/3
 
-- Add leaderboards
+- Add leaderboard for custom levels
 - The player ball won't get any supply during the death animation
 - Items are sorted by weekly trend by default in workshop
 - Adjust scroll speed of workshop screen
@@ -25,7 +31,7 @@
 - Adjust read / write permissions of internal variables
 - Add official level 1-3 E
 
-## `0.9.1` @ 2021/12/22
+## `0.9.1b1` @ 2021/12/22
 
 - Re-add DirectX 11 Support
 - Adjust read / write permissions of internal variables

@@ -1,6 +1,6 @@
 # Ballex² Beta Status
 
-- The latest version: `0.9.2b3` @ 2022/3/3
+- The latest version: `0.9.2b4` @ 2022/3/4
 - The minimum requirement is Windows 7 x64
 - DirectX 12 mode require Windows 10 x64 20H2 or newer version
 
