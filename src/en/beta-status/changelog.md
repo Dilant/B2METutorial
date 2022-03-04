@@ -1,10 +1,13 @@
 # Changelog
 
-## `0.9.2b4` @ 2022/3/4
+## `0.9.2b4` `0.9.2b5` @ 2022/3/4
 
 - Add leaderboard for official levels
+- Paperballs become irregular spheres
 - Expand the trigger area of switchers and appenders
+- The color of durability bar no longer considers injury buffer
 - Supplies got by an inactive player ball will take effect
+- Bring back the muted BGM when restarting after completing a level
 
 ## `0.9.2b2` `0.9.2b3` @ 2022/3/3
 

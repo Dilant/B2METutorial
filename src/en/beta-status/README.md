@@ -1,6 +1,6 @@
 # Ballex² Beta Status
 
-- The latest version: `0.9.2b4` @ 2022/3/4
+- The latest version: `0.9.2b5` @ 2022/3/4
 - The minimum requirement is Windows 7 x64
 - DirectX 12 mode require Windows 10 x64 20H2 or newer version
 
@@ -12,7 +12,7 @@
 
 - Change mechanisms related to durability
   - The initial value of durability is 100, and the upper limit is 200
-  - The part exceeding 100 displays as the dark blue bar. This part has no injury buffer (the light blue bar), and recovery effect to this part is 20% of the numeric value
+  - The part exceeding 100 displays as the dark blue bar. This part has no injury buffer (the light bar), and recovery effect to this part is 20% of the numeric value
     - e.g. If a durability of 90 gets a supply of 100, it becomes `118 = 90 + 10 + 90 * 0.2`
   - A durability lower than 100 will be filled to 100 upon activating a checkpoint
   - Durability value takes part in the final evaluation with formula `finalScore = timePoint + durability * 10`
