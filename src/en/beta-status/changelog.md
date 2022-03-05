@@ -1,9 +1,15 @@
 # Changelog
 
+## `0.9.2b6` @ 2022/3/5
+
+- Paperballs turn back to regular spheres
+- The `Disable Player Key` executor can disable 8-way snap function in free look mode
+- Fix an issue that disabled player keys take effect again after death
+
 ## `0.9.2b4` `0.9.2b5` @ 2022/3/4
 
 - Add leaderboard for official levels
-- Paperballs become irregular spheres
+- ~~Paperballs become irregular spheres~~
 - Expand the trigger area of switchers and appenders
 - The color of durability bar no longer considers injury buffer
 - Supplies got by an inactive player ball will take effect
@@ -164,7 +170,7 @@
 
 ## `0.7.0b2 α` `0.7.0 β` @ 2021/9/12
 
-- Switch camera target executor
+- `Switch Camera Target` executor
   - Fix the issue that camera isn't reset on life start
   - Fix the issue that camera isn't reset when the target is destroyed
   - Fix the issue that camera motion is always determined by player ball
@@ -173,15 +179,15 @@
 
 - Add variable mechanism
 - Triggers
-  - Add physics frame trigger
-  - Add switch mode for input trigger
-  - Input trigger can refer to player keys
+  - Add `Physics Frame` trigger
+  - Add switch mode for `Input` trigger
+  - `Input` trigger can refer to player keys
 - Add executors
-  - Set camera offset
-  - Set variable value
-  - Compare variables
-  - Disable player key
-  - Switch camera target
+  - `Set Camera Offset`
+  - `Set Variable Value`
+  - `Compare Variables`
+  - `Disable Player Key`
+  - `Switch Camera Target`
 - The game won't freeze when taking screenshots while the save folder does't exist
 - Camera mode setting is moved to export window
 
