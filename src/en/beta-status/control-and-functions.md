@@ -9,13 +9,13 @@ Here's the default keymap. Most of the keys can be [changed via config file](#ke
 ## Four-directional Mode Control
 
 - Move: `↑` `←` `↓` `→`
-- Rotate camera: `A` clockwise, `D` anticlockwise
+- Rotate view: `A` clockwise, `D` anticlockwise
 - Overlook: `Space`
 
 ## Free Look Mode Control
 
 - Move: `W` `A` `S` `D`
-- Rotate camera: `Mouse`, same as FPS / TPS cursor movements
+- Rotate view: `Mouse`, same as FPS / TPS cursor movements
 - 8-way snap: `Space`
 
 ## Universal Functions
@@ -28,7 +28,7 @@ Here's the default keymap. Most of the keys can be [changed via config file](#ke
 ## Map Test Functions
 
 - Screenshot: `F5`, saved at `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`
-- Variables Inspector: `F6`
+- Variables inspector: `F6`
 - Ball hot-switch: `0` - `9`
 
 ## Config
@@ -82,7 +82,7 @@ We recommend formatting JSON files using VSCode with extension Prettier.
 
 ::: tip
 
-Clockwise rotation of camera means anticlockwise rotation of your view (a.k.a. what you see), vice versa.
+Clockwise rotation of camera means anticlockwise rotation of your view (i.e. what you see), vice versa.
 
 If you want to invert camera rotation direction, set `invertCameraRotate = true` instead of editing keymap directly.
 

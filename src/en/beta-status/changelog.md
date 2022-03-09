@@ -1,5 +1,23 @@
 # Changelog
 
+## `0.9.3b3` @ 2022/3/9
+
+- Temporarily remove ghost ball function
+- The main screen can no longer be entered from test map mode
+- The default graphics setting is changed to 1920×1080 with highest graphics quality
+- Fix flashing lights in certain cases
+
+## `0.9.3b2` @ 2022/3/8
+
+- Add numeric display for durability
+- Iceballs become opaque
+- The sponge ball won't take any physical damage
+- ~~The ghost ball is adjusted to be translucent~~
+
+## `0.9.3b1` @ 2022/3/7
+
+- ~~Add ghost ball function~~
+
 ## `0.9.2b6` @ 2022/3/5
 
 - Paperballs turn back to regular spheres
