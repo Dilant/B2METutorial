@@ -1,8 +1,15 @@
 # Changelog
 
+## `0.9.4b1` @ 2022/3/10
+
+- Road generators take custom section shapes
+- Add `Remove All Inactive Balls` executor
+- Fix the issue that the sponge ball is immune to lava and deathbox
+- Fix the issue that a `Compare Variables` executor may render machinery inoperative
+
 ## `0.9.3b3` @ 2022/3/9
 
-- Temporarily remove ghost ball function
+- Temporarily remove shadow ball function
 - The main screen can no longer be entered from test map mode
 - The default graphics setting is changed to 1920×1080 with highest graphics quality
 - Fix flashing lights in certain cases
@@ -12,11 +19,11 @@
 - Add numeric display for durability
 - Iceballs become opaque
 - The sponge ball won't take any physical damage
-- ~~The ghost ball is adjusted to be translucent~~
+- ~~The shadow ball is adjusted to be translucent~~
 
 ## `0.9.3b1` @ 2022/3/7
 
-- ~~Add ghost ball function~~
+- ~~Add shadow ball function~~
 
 ## `0.9.2b6` @ 2022/3/5
 
