@@ -1,11 +1,17 @@
 # Changelog
 
+## `0.9.4b2` @ 2022/3/12
+
+- Add official 1-4 E
+- Fix triggers' response to player ball IDs
+- Replace the push board with a suspension bridge at the end of section #3 of official level 1-1 E
+
 ## `0.9.4b1` @ 2022/3/10
 
 - Road generators take custom section shapes
 - Add `Remove All Inactive Balls` executor
 - Fix the issue that the sponge ball is immune to lava and deathbox
-- Fix the issue that a `Compare Variables` executor may render machinery inoperative
+- Fix the issue that machinery become inoperative upon accidental activation of executor #0
 
 ## `0.9.3b3` @ 2022/3/9
 
