@@ -1,5 +1,18 @@
 # Changelog
 
+## `0.9.6b1` @ 2022/3/15
+
+- Add shadow ball function
+- Fix the issue that durability is added to the active ball when the iron inactive ball gets electric
+- Fix the issue that lower snow footprint is projected onto the upper road
+
+## `0.9.5b1` @ 2022/3/14
+
+- Add 3 types of locked door and corresponding key
+- Add collectable system
+- Reduce weight of durability in the final evaluation
+- Modify official level 1-1 E and 1-3 E
+
 ## `0.9.4b2` @ 2022/3/12
 
 - Add official 1-4 E
@@ -43,7 +56,7 @@
 - ~~Paperballs become irregular spheres~~
 - Expand the trigger area of switchers and appenders
 - The color of durability bar no longer considers injury buffer
-- Supplies got by an inactive player ball will take effect
+- Supplies got by an inactive ball will take effect
 - Bring back the muted BGM when restarting after completing a level
 
 ## `0.9.2b2` `0.9.2b3` @ 2022/3/3
@@ -59,12 +72,12 @@
 - Change mechanisms related to durability
 - Add level evaluation screen
 - Fix the flickering issue with wooden boards in section #2 of official level 1-3 E
-- Remove injury effect of inactive player balls
+- Remove injury effect of inactive balls
 
 ## `0.9.1b3` @ 2021/12/30
 
-- Change mechanisms related to inactive player balls
-- The camera won't lock now upon death of an inactive player ball
+- Change mechanisms related to inactive balls
+- The camera won't lock now upon death of an inactive ball
 
 ## `0.9.1b2` @ 2021/12/25
 
@@ -174,7 +187,7 @@
 
 - The default camera offset changes from `(0, 3.5, -4.25)` to `(0, 4, -3.5)`
 - Add animations of appenders
-- ~~Change the behaviors when inactive player balls activate checkpoints, destination, switchers or appenders~~
+- ~~Change the behaviors when inactive balls activate checkpoints, destination, switchers or appenders~~
 - Change the behavior of score ball trace upon death or winning
 - Slightly weaken friction of some materials
 - Ice ball won't get electric balls now
