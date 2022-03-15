@@ -19,36 +19,64 @@ Current time in milliseconds.
 ### `G_Durability`
 
 - Type: `float`
-- Constrain: `x: 0 <= x <= 1`
+- Constrain: `x: 0 <= x <= 200`
 
-Durability of current player ball.
+Durability of active ball.
 
 ### `G_CameraDirection` <badge text="Four-directional"/>
 
 - Type: `int`
 - Constrain: `x: x in {0, 1, 2, 3}`
 
-Current camera direction. Using global reference frame, `0` means positive direction of `Z`, `1` means positive direction of `X`, `2` means negative direction of `Z`, `3` means negative direction of `X`.
+Current camera direction. Using global reference frame, `0` means direction `Z+`, `1` means direction `X+`, `2` means direction `Z-`, `3` means direction `X-`.
 
 ### `G_CameraAngle` <badge text="Free Look"/>
 
 - Type: `int`
 - Constrain: `θ: 0 <= θ < 360`
 
-Current camera angle. Using global reference frame, `0` means positive direction of `Z`, which increases clockwise.
+Current camera angle. Using global reference frame, `0` means direction `Z+`, which increases clockwise.
 
 ### `G_PlayerVelocity` <badge text="Readonly" type="warning"/>
 
 - Type: `float`
 - Constrain: `v: v >= 0`
 
-Player's current velocity.
+Velocity of active ball.
 
 ### `G_PlayerPositionX` `G_PlayerPositionY` `G_PlayerPositionZ` <badge text="Readonly" type="warning"/>
 
 - Type: `float` `float` `float`
 
-Player's current coordinate.
+Coordinate of active ball.
+
+### `G_CurrentBallType`
+
+- Type: `int`
+- Constrain: `x: x in {-100, -101, ..., -109}`
+
+Type of active ball.
+
+### `C_Key_Red`
+
+- Type: `int`
+- Constrain: `x: x >= 0`
+
+Number of red keys.
+
+### `C_Key_Green`
+
+- Type: `int`
+- Constrain: `x: x >= 0`
+
+Number of green keys.
+
+### `C_Key_Blue`
+
+- Type: `int`
+- Constrain: `x: x >= 0`
+
+Number of blue keys.
 
 ## Create Variables
 
@@ -59,7 +87,7 @@ Player's current coordinate.
 - Type: `String`
 - Default: empty
 
-All internal variables start with `G_`, so avoid doing so when you create a variable.
+All internal variables start with `G_` or `C_`, so avoid doing so when you create a variable.
 
 ### `Variable Type`
 

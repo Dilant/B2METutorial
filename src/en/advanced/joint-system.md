@@ -2,7 +2,7 @@
 
 ::: tip
 
-本章节高度依赖于[Mesh System](/en/advanced/mesh-system.md)和[Material System](/en/advanced/material-system.md)章节，请在阅读前先掌握前述章节内容。
+本章节高度依赖于 [Mesh System](/en/advanced/mesh-system.md) 和 [Material System](/en/advanced/material-system.md) 章节，请在阅读前先掌握前述章节内容。
 
 如果需要导入外部网格和材质，你还需要具备建模能力。当然，本章节也提供了一些利用内置素材的方案。
 

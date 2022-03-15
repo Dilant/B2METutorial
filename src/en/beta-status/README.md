@@ -33,7 +33,7 @@ _To be discussed: may revert these changes later_
 
 - ~~Change mechanisms related to inactive balls~~
   - ~~An inactive ball will be destroyed upon activating checkpoints, destination, switchers or appenders~~
-  - ~~All inactive ball will be destroyed when the current player ball activates checkpoints or destination~~
+  - ~~All inactive ball will be destroyed when the active ball activates checkpoints or destination~~
 
 ### `0.9.0`
 
