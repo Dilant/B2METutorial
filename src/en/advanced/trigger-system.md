@@ -8,7 +8,7 @@
 
 触发器可以被指定的物体触发，此时关联的执行器将自动执行。
 
-See: [Advanced → Trigger](/en/advanced/trigger.md)。
+See: [Advanced → Trigger](/en/advanced/trigger.md)
 
 ## Executor
 
@@ -16,7 +16,7 @@ See: [Advanced → Trigger](/en/advanced/trigger.md)。
 
 执行器可以被触发器触发，也可以关联执行器实现链式触发。
 
-See: [Advanced → Executor](/en/advanced/executor.md)。
+See: [Advanced → Executor](/en/advanced/executor.md)
 
 ::: tip
 

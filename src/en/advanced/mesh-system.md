@@ -10,7 +10,7 @@
 
 ::: tip
 
-参见：[Start → Preparation → Coordinate System](/en/start/preparation.md#coordinate-system)。
+参见：[Start → Preparation → Coordinate System](/en/start/preparation.md#coordinate-system)
 
 为了提升性能，网格建议三角化面。
 

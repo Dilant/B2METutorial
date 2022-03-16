@@ -177,4 +177,4 @@
 
 `F6`
 
-参见：[进阶 → 变量系统](/advanced/variable-system.md)。
+参见：[进阶 → 变量系统](/advanced/variable-system.md)

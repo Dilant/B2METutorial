@@ -1,5 +1,33 @@
 # Variable System
 
+## Create Variables
+
+`Create → Variable`
+
+### `Variable Name`
+
+- Type: `String`
+- Default: empty
+
+All internal variables start with `G_` or `C_`, so avoid doing so when you create a variable.
+
+### `Variable Type`
+
+- Type: `enum{Int, Float, Bool}`
+- Default: `Int`
+
+### `Variable Value`
+
+- Type: `int | float | bool`
+- Default: `0 | 0 | false`
+
+## Manipulate Variables
+
+See:
+
+- [Advanced → Executor → Set Variable Value](/en/advanced/executor.md#set-variable-value)
+- [Advanced → Executor → Compare Variables](/en/advanced/executor.md#compare-variables)
+
 ## Internal Variables
 
 ### `G_Score`
@@ -60,48 +88,20 @@ Type of active ball.
 ### `C_Key_Red`
 
 - Type: `int`
-- Constrain: `x: x >= 0`
+- Constrain: `n: 0 <= n < 1000`
 
 Number of red keys.
 
 ### `C_Key_Green`
 
 - Type: `int`
-- Constrain: `x: x >= 0`
+- Constrain: `n: 0 <= n < 1000`
 
 Number of green keys.
 
 ### `C_Key_Blue`
 
 - Type: `int`
-- Constrain: `x: x >= 0`
+- Constrain: `n: 0 <= n < 1000`
 
 Number of blue keys.
-
-## Create Variables
-
-`Create → Variable`
-
-### `Variable Name`
-
-- Type: `String`
-- Default: empty
-
-All internal variables start with `G_` or `C_`, so avoid doing so when you create a variable.
-
-### `Variable Type`
-
-- Type: `enum{Int, Float, Bool}`
-- Default: `Int`
-
-### `Variable Value`
-
-- Type: `int | float | bool`
-- Default: `0 | 0 | false`
-
-## Manipulate Variables
-
-See:
-
-- [Advanced → Executor → Set Variable Value](/en/advanced/executor.md#set-variable-value)
-- [Advanced → Executor → Compare Variables](/en/advanced/executor.md#compare-variables)

@@ -177,4 +177,4 @@ The screenshot is 1920×1080 in `.jpg` format in default, and saved at: `%USERPR
 
 `F6`
 
-See: [Advanced → Variable System](/en/advanced/variable-system.md).
+See: [Advanced → Variable System](/en/advanced/variable-system.md)
