@@ -1,8 +1,19 @@
 # Changelog
 
+## `0.9.7b1` @ 2022/3/20
+
+- Add spectator mode for leaderboards
+- The player ball won't take any physical damage within 0.6 second on life start
+- The range of variable `G_CurrentBallType` is change to `-100` ~ `-109`
+- Fix the issue that an electric is not consumed when it kills an inactive ball
+- Fix the issue that the action of rotating view or switching player ball during pause will take effect upon resuming
+- Fix overlapping of animations caused by restarting during rebirth
+- Fix the issue that a ghost rubber ball is shown as a paper ball
+- You can use `Shift` to speed up `Q` and `E` in screenshot function now
+
 ## `0.9.6b1` @ 2022/3/15
 
-- Add shadow ball function
+- Add ghost ball function
 - Fix the issue that durability is added to the active ball when the iron inactive ball gets electric
 - Fix the issue that lower snow footprint is projected onto the upper road
 
@@ -28,7 +39,7 @@
 
 ## `0.9.3b3` @ 2022/3/9
 
-- Temporarily remove shadow ball function
+- Temporarily remove ghost ball function
 - The main screen can no longer be entered from test map mode
 - The default graphics setting is changed to 1920×1080 with highest graphics quality
 - Fix flashing lights in certain cases
@@ -38,11 +49,11 @@
 - Add numeric display for durability
 - Iceballs become opaque
 - The sponge ball won't take any physical damage
-- ~~The shadow ball is adjusted to be translucent~~
+- ~~The ghost ball is adjusted to be translucent~~
 
 ## `0.9.3b1` @ 2022/3/7
 
-- ~~Add shadow ball function~~
+- ~~Add ghost ball function~~
 
 ## `0.9.2b6` @ 2022/3/5
 
@@ -180,7 +191,7 @@
 - Adjust range of visibility in game
 - Slightly adjust properties of balls and machinery
 - Score ball traces should reset upon restart now
-- Change start position of score ball traces upon reborn
+- Change start position of score ball traces upon rebirth
 - Add materials for balls to built-in assets
 
 ## `0.7.2b1 α` @ 2021/9/19
@@ -190,7 +201,7 @@
 - ~~Change the behaviors when inactive balls activate checkpoints, destination, switchers or appenders~~
 - Change the behavior of score ball trace upon death or winning
 - Slightly weaken friction of some materials
-- Ice ball won't get electric balls now
+- Ice ball won't get electric now
 - Add a key to go back to main screen
 - Fix some issues related to screenshot function
 - Fix the issue that some sound effects don't pause with game pause
