@@ -10,7 +10,7 @@
 
 ::: warning
 
-Since neither game mechanism nor level design is finalized, **the leaderboards would be reset without any prior notice.** Remember to record your runs, and don't be crazy about hitting a leaderboard.
+Since neither game mechanism nor level design is finalized, **the leaderboards would be reset without any prior notice during the beta period.** Remember to record your runs, and don't be crazy about hitting a leaderboard.
 
 :::
 

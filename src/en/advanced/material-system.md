@@ -75,7 +75,7 @@ Renaming materials in BME Pro is not supported now, but you can rename them by c
 
 ### `Transparency Mode`
 
-- Type: `enum{Opaque, Threshold, Blend}`
+- Type: `enum`
 - Default: `Opaque`
 
 When using `Threshold` mode, the texture is fully transparent where `A` channel of albedo map is less than 128, or fully opaque otherwise. When using `Blend` mode, the opacity of texture is defined by `A` channel of albedo map.
@@ -142,7 +142,7 @@ Enhance ambient occlusion effect on the basis of `A` channel of mask map.
 
 ### `Blend Mode`
 
-- Type: `enum{Normal, Additive}`
+- Type: `enum`
 - Default: `Normal`
 
 ### `Tiling Scale`

@@ -41,6 +41,29 @@ We recommend formatting JSON files using VSCode with extension Prettier.
 
 :::
 
+::: details Example / Default config
+
+```json
+{
+  "invertCameraRotate": false,
+  "targetFrameRate": 120,
+  "invertFreeLookCameraHorizontal": false,
+  "invertFreeLookCameraVertical": false,
+  "freeLookCameraHorizontalSensitivity": 0.75,
+  "freeLookCameraVerticalSensitivity": 0.75,
+  "screenshotResolution": { "x": 1920, "y": 1080 },
+  "gameResolution": { "x": 1920, "y": 1080 },
+  "renderResolutionRate": 1.0,
+  "screenSpaceReflectionQuality": 3,
+  "graphicQuality": 3,
+  "motionBlurQuality": 0,
+  "keys": [63, 64, 61, 62, 18, 15, 1, 31, 37, 19, 33],
+  "muteBGM": false
+}
+```
+
+:::
+
 - `invertCameraRotate`: Invert camera rotation direction in four-directional mode
 - `targetFrameRate`
 - `invertFreeLookCameraHorizontal`: Invert camera horizontal rotation direction in free look mode

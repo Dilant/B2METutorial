@@ -31,7 +31,7 @@
 
 ### `Force Mode`
 
-- Type: `enum{Apply Constant Force, Set Speed, Append Acceleration}`
+- Type: `enum`
 - Default: `Append Acceleration`
 
 | 施力模式   | 触发器类型为停留时 | 否则         |
@@ -42,7 +42,7 @@
 
 ### `Force Direction`
 
-- Type: `enum{To AxisY, To Center}`
+- Type: `enum`
 - Default: `To AxisY`
 
 ### `Force Value`
@@ -217,7 +217,7 @@
 
 ### `Player Key`
 
-- Type: `enum{Move Forward, Move Backward, Move Left, Move Right, Camera Clockwise Rotate, Camera Anticlockwise Rotate, Camera Overlook, Function Key 1, Function Key 2, Function Key 3, Function Key 4}`
+- Type: `enum`
 - Default: `Move Forward`
 
 ## Switch Camera Target

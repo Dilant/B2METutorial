@@ -38,7 +38,7 @@
 
 ### `Collider Type`
 
-- Type: `enum{Box, Sphere, Mesh}`
+- Type: `enum`
 - Default: `Mesh`
 
 ::: tip
@@ -92,7 +92,7 @@
 
 ### `Physics Body Type`
 
-- Type: `enum{Static, Kinematic, Rigid, Decoration, Collider}`
+- Type: `enum`
 - Default: `Static`
 
 各类型含义为：
@@ -137,14 +137,14 @@
 
 ### `Physics Material`
 
-- Type: `enum{Stone, Wood, Steel, Ice, Rubber, Stopper}`
+- Type: `enum`
 - Default: `Stone`
 
 影响弹力、表面摩擦系数等物理性质。
 
 ### `Physics Audio Group`
 
-- Type: `enum{Stone, Wood, Steel}`
+- Type: `enum`
 - Default: `Stone`
 
 影响碰撞音效等游戏效果。

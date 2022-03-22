@@ -13,7 +13,7 @@ All internal variables start with `G_` or `C_`, so avoid doing so when you creat
 
 ### `Variable Type`
 
-- Type: `enum{Int, Float, Bool}`
+- Type: `enum`
 - Default: `Int`
 
 ### `Variable Value`
@@ -81,7 +81,7 @@ Coordinate of active ball.
 ### `G_CurrentBallType`
 
 - Type: `int`
-- Constrain: `x: x in {-100, -101, ..., -109}`
+- Constrain: `x: -100 >= x >= -109`
 
 Type of active ball.
 

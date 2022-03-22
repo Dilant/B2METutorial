@@ -15,7 +15,7 @@
 ## 自由视角模式操作
 
 - 移动：`W` `A` `S` `D`
-- 旋转视角：`鼠标`，遵循 FPS / TPS 准星移动方向
+- 转动视角：`鼠标`，遵循 FPS / TPS 准星移动方向
 - 视角八向锁定：`Space`
 
 ## 通用功能
@@ -38,6 +38,29 @@
 ::: tip
 
 推荐使用 VSCode 并安装 Prettier 插件用于格式化 JSON 文件。
+
+:::
+
+::: details 示例 / 默认配置
+
+```json
+{
+  "invertCameraRotate": false,
+  "targetFrameRate": 120,
+  "invertFreeLookCameraHorizontal": false,
+  "invertFreeLookCameraVertical": false,
+  "freeLookCameraHorizontalSensitivity": 0.75,
+  "freeLookCameraVerticalSensitivity": 0.75,
+  "screenshotResolution": { "x": 1920, "y": 1080 },
+  "gameResolution": { "x": 1920, "y": 1080 },
+  "renderResolutionRate": 1.0,
+  "screenSpaceReflectionQuality": 3,
+  "graphicQuality": 3,
+  "motionBlurQuality": 0,
+  "keys": [63, 64, 61, 62, 18, 15, 1, 31, 37, 19, 33],
+  "muteBGM": false
+}
+```
 
 :::
 

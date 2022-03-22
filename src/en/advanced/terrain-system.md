@@ -10,7 +10,7 @@
 
 ### `Terrain Quality`
 
-- Type: `enum{Low, Medium, High}`
+- Type: `enum`
 - Default: `Medium`
 
 ::: danger
@@ -21,8 +21,9 @@
 
 ### `Terrain Mesh Quality`
 
-- Type: `enum{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}`
+- Type: `int`
 - Default: `6`
+- Constrain: `x: 0 <= x <= 10`
 
 ### `Terrain Size`
 
