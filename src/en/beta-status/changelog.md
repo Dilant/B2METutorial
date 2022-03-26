@@ -1,5 +1,15 @@
 # Changelog
 
+## `0.9.9b1` @ 2022/3/25
+
+- Add official level 2-2 E
+- Remove the bounding box of the nails of a suspension bridge
+- Eliminate a shortcut in section #2 of official level 1-2 E, where the stone ball can ride onto the wall and then walk on the edge of the pool to pass
+
+## `0.9.8b1` @ 2022/3/22
+
+- Add official level 2-1 E
+
 ## `0.9.7b1` @ 2022/3/20
 
 - Add spectator mode for leaderboards

@@ -22,8 +22,10 @@ Here's the default keymap. Most of the keys can be [changed via config file](#ke
 
 - Switch player ball: `Tab`
 - Pause: `Esc`
-- Back to main: `F9`
+- Hide UI elements: `F7`
+- Back to main screen: `F9`
 - Temporary full screen: `Alt + Enter`
+- Temporary unlock all levels: `M + Enter` in main screen
 
 ## Map Test Functions
 
