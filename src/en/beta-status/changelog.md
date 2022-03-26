@@ -3,6 +3,7 @@
 ## `0.9.9b1` @ 2022/3/25
 
 - Add official level 2-2 E
+- Add light effect for the glow ball
 - Remove the bounding box of the nails of a suspension bridge
 - Eliminate a shortcut in section #2 of official level 1-2 E, where the stone ball can ride onto the wall and then walk on the edge of the pool to pass
 
