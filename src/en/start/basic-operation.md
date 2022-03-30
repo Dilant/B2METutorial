@@ -163,6 +163,8 @@ Ballex² will launch automatically if you've [set Ballex² path](/en/start/prepa
 
 ::: tip
 
+Destination can't be activated in maptest mode.
+
 For convenience, you can fetch aids from `Assets → Items → TestMapTools`.
 
 :::
