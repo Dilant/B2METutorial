@@ -1,5 +1,12 @@
 # Changelog
 
+## `0.10.0b1 α` @ 2022/4/4
+
+- Game UI is redesigned
+- Add humidity mechanism
+- Add official level 2-3 E
+- Add light effect indicating type of a switcher or appender
+
 ## `0.9.9b1` @ 2022/3/25
 
 - Add official level 2-2 E
@@ -124,7 +131,7 @@
 ## `0.9.0b1 α` @ 2021/12/17
 
 - Full support of Steam Workshop
-- Game UI is redesigned
+- ~~Game UI is redesigned~~
 - Add more graphics settings
 - Fix reflection of water further from a certain distance
 - `Gravity Factor` should work now
