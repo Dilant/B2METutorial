@@ -3,6 +3,7 @@
 ## `0.10.0b1 α` @ 2022/4/4
 
 - Game UI is redesigned
+- Durability no longer takes part in the final evaluation
 - Add humidity mechanism
 - Add official level 2-3 E
 - Add light effect indicating type of a switcher or appender
@@ -22,7 +23,7 @@
 
 - Add spectator mode for leaderboards
 - The player ball won't take any physical damage within 0.6 second on life start
-- The range of variable `G_CurrentBallType` is change to `-100` ~ `-109`
+- The range of variable `G_CurrentBallType` is changed to `-100` ~ `-109`
 - Fix the issue that an electric is not consumed when it kills an inactive ball
 - Fix the issue that the action of rotating view or switching player ball during pause will take effect upon resuming
 - Fix overlapping of animations caused by restarting during rebirth
@@ -39,7 +40,7 @@
 
 - Add 3 types of locked door and corresponding key
 - Add collectable system
-- Reduce weight of durability in the final evaluation
+- ~~Reduce weight of durability in the final evaluation~~
 - Modify official level 1-1 E and 1-3 E
 
 ## `0.9.4b2` @ 2022/3/12

@@ -16,9 +16,14 @@ Since neither game mechanism nor level design is finalized, **the leaderboards w
 
 :::
 
+### `0.10.0b1 α`
+
+- Durability value no longer takes part in the final evaluation
+- A green or blue supply will also give a small amount of score (whose specific value is not determined yet, currently 0)
+
 ### `0.9.5b1`
 
-- The formula of final evaluation changes to `finalScore = timePoint + durability * 5`
+- ~~The formula of final evaluation changes to `finalScore = timePoint + durability * 5`~~
 
 ### `0.9.2b1`
 
@@ -27,15 +32,15 @@ Since neither game mechanism nor level design is finalized, **the leaderboards w
   - The part exceeding 100 displays as the dark bar. This part has no injury buffer (the light bar), and recovery effect to this part is 20% of the numeric value
     - e.g. If a durability of 90 gets a supply of 100, it becomes `118 = 90 + 10 + 90 * 0.2`
   - A durability lower than 100 will be filled to 100 upon activating a checkpoint
-  - Durability value takes part in the final evaluation ~~with formula `finalScore = timePoint + durability * 10`~~
+  - ~~Durability value takes part in the final evaluation with formula `finalScore = timePoint + durability * 10`~~
 
 ### `0.9.1b3`
 
 _To be discussed: may revert these changes later_
 
-- ~~Change mechanisms related to inactive balls~~
-  - ~~An inactive ball will be destroyed upon activating checkpoints, destination, switchers or appenders~~
-  - ~~All inactive ball will be destroyed when the active ball activates checkpoints or destination~~
+- Change mechanisms related to inactive balls
+  - An inactive ball will be destroyed upon activating checkpoints, destination, switchers or appenders
+  - All inactive ball will be destroyed when the active ball activates checkpoints or destination
 
 ### `0.9.0`
 
