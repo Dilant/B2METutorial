@@ -1,11 +1,32 @@
 # Changelog
 
+## `0.10.3b1` @ 2022/4/17
+
+- Simplified Chinese localization is available
+- Eliminate exploitation of farming scores by suiciding after getting a cure or life supply
+- Fix the drifting issue of snow footprint
+- Settings related to resolution and graphics will take effect on next launch
+- The navigation bar will be updated when exiting from setting screen
+
+## `0.10.2b1` @ 2022/4/16
+
+- Add setting screen
+- Add settings for full screen, FSR and volume
+- A cure supply gives an extra 15 points
+- A life supply gives an extra 100 points
+- The `Follow Way Path` executor can be applied to most assets
+- Fix the issue that FPS is displayed as NaN in certain cases
+- Add `Don't Reset on Death` option to collectables
+- Add some particle effects
+- Add materials of sticky ball switcher and appender
+- The material name of a steel ball is changed from `IronBall` to `SteelBall`
+
 ## `0.10.0b1 α` @ 2022/4/4
 
 - Game UI is redesigned
 - Durability no longer takes part in the final evaluation
 - Add humidity mechanism
-- Add official level 2-3 E
+- Add official level 2-3 E and 2-4 E
 - Add light effect indicating type of a switcher or appender
 
 ## `0.9.9b1` @ 2022/3/25
@@ -158,7 +179,7 @@
 ## `0.8.0b2 α` @ 2021/11/9
 
 - Optimize physical calculation speed under heavy loads
-- Fix the textures of appenders
+- Fix the materials of appenders
 - Fix audio players and now they can be triggered
 - Fix an issue causing BME Pro to crash
 - Make burst count of particle emitters work again
@@ -188,7 +209,7 @@
 ## `0.7.3b3 α` @ 2021/9/30
 
 - Level description will show in loading page now
-- Change effect of texture emission
+- Change effect of material emission
 - The max number of segments in a road generator changes from 32 to 128
 - Add musics by STERD and Aeka to built-in assets
 

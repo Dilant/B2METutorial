@@ -1,8 +1,6 @@
 # Ballex² Beta Status
 
-- The latest version:
-  - Insider: `0.10.0b1 α` @ 2022/4/4
-  - Steam: `0.9.9b1` @ 2022/3/25
+- The latest version: `0.10.3b1` @ 2022/4/17
 - The minimum requirement is Windows 7 x64
 - DirectX 12 mode require Windows 10 x64 20H2 or newer version
 
@@ -19,7 +17,8 @@ Since neither game mechanism nor level design is finalized, **the leaderboards w
 ### `0.10.0b1 α`
 
 - Durability value no longer takes part in the final evaluation
-- A green or blue supply will also give a small amount of score (whose specific value is not determined yet, currently 0)
+- A cure supply gives an extra 15 points
+- A life supply gives an extra 100 points
 
 ### `0.9.5b1`
 
@@ -30,7 +29,7 @@ Since neither game mechanism nor level design is finalized, **the leaderboards w
 - Change mechanisms related to durability
   - The initial value of durability is 100, and the upper limit is 200
   - The part exceeding 100 displays as the dark bar. This part has no injury buffer (the light bar), and recovery effect to this part is 20% of the numeric value
-    - e.g. If a durability of 90 gets a supply of 100, it becomes `118 = 90 + 10 + 90 * 0.2`
+    - e.g. If a durability of 90 is topped up by 100, it becomes `118 = 90 + 10 + 90 * 0.2`
   - A durability lower than 100 will be filled to 100 upon activating a checkpoint
   - ~~Durability value takes part in the final evaluation with formula `finalScore = timePoint + durability * 10`~~
 
@@ -45,8 +44,8 @@ _To be discussed: may revert these changes later_
 ### `0.9.0`
 
 - Cross off the concept of life
+- Green supply (cure) is changed to restore 15 durability
 - Blue supply (life) is changed to restore 100 durability
-- Green supply (durability) is changed to restore 15 durability
 
 ### `0.7.3`
 
