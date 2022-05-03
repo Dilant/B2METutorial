@@ -1,6 +1,6 @@
 # Ballex² Beta Status
 
-- The latest version: `0.10.3b1` @ 2022/4/17
+- The latest version: `0.11.4b1` @ 2022/5/3
 - The minimum requirement is Windows 7 x64
 - DirectX 12 mode require Windows 10 x64 20H2 or newer version
 
@@ -14,6 +14,11 @@ Since neither game mechanism nor level design is finalized, **the leaderboards w
 
 :::
 
+### `0.11.3b1`
+
+- The mass of the sponge ball is defined by its humidity
+- It becomes heavier under higher humidity with formula `current_mass = stone_ball_mass * humidity% + sponge_ball_mass * (1 - humidity%)`
+
 ### `0.10.0b1 α`
 
 - Durability value no longer takes part in the final evaluation
@@ -22,7 +27,7 @@ Since neither game mechanism nor level design is finalized, **the leaderboards w
 
 ### `0.9.5b1`
 
-- ~~The formula of final evaluation changes to `finalScore = timePoint + durability * 5`~~
+- ~~The formula of final evaluation changes to `final_score = time_point + durability * 5`~~
 
 ### `0.9.2b1`
 
@@ -31,7 +36,7 @@ Since neither game mechanism nor level design is finalized, **the leaderboards w
   - The part exceeding 100 displays as the dark bar. This part has no injury buffer (the light bar), and recovery effect to this part is 20% of the numeric value
     - e.g. If a durability of 90 is topped up by 100, it becomes `118 = 90 + 10 + 90 * 0.2`
   - A durability lower than 100 will be filled to 100 upon activating a checkpoint
-  - ~~Durability value takes part in the final evaluation with formula `finalScore = timePoint + durability * 10`~~
+  - ~~Durability value takes part in the final evaluation with formula `final_score = time_point + durability * 10`~~
 
 ### `0.9.1b3`
 

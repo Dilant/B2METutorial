@@ -1,5 +1,41 @@
 # Changelog
 
+## `0.11.4b1` @ 2022/5/3
+
+- Add visual effect of underwater
+- `.json` config file is obsoleted with all settings migrated into the setting panel
+- Add setting items
+  - Reset BGM on restart
+  - `F1` Back to checkpoint
+  - `F2` Restart game
+  - Restart game on death
+
+## `0.11.3b1` @ 2022/5/2
+
+- Add tube type to road generators
+- Add mechanism to the sponge ball that its mass is defined by its humidity
+- Add official level 3-1 E
+
+## `0.11.2b1 α` @ 2022/4/30
+
+- Add `Thickness` parameter to wooden board and corner of road generators
+- The minimum width of a wooden board is changed from 0.3 to 0.01
+- Fix the issue that the thickness of stone roads in an earlier project file is parsed as 0.01
+- Fix the issue which hangs up the test map mode at the loading screen
+- Fix an issue that turns off the ambient light in certain cases
+
+## `0.11.1b1 α` @ 2022/4/29
+
+- Add `Thickness` parameter to stone road of road generators
+- Add fog related parameters to custom skyboxes
+- MiniScript will correctly throw exceptions when failing to execute in-game functions
+
+## `0.11.0b1 α` @ 2022/4/23
+
+- Add custom executor using MiniScript
+- Add variable `G_Humidity`
+- Prop paper balls become regular spheres
+
 ## `0.10.3b1` @ 2022/4/17
 
 - Simplified Chinese localization is available
@@ -16,6 +52,7 @@
 - A life supply gives an extra 100 points
 - The `Follow Way Path` executor can be applied to most assets
 - Fix the issue that FPS is displayed as NaN in certain cases
+- Now you can't delete an non-empty folder in BME
 - Add `Don't Reset on Death` option to collectables
 - Add some particle effects
 - Add materials of sticky ball switcher and appender
@@ -97,14 +134,14 @@
 
 ## `0.9.2b6` @ 2022/3/5
 
-- Paperballs turn back to regular spheres
+- Paper balls turn back to regular spheres
 - The `Disable Player Key` executor can disable 8-way snap function in free look mode
 - Fix an issue that disabled player keys take effect again after death
 
 ## `0.9.2b4` `0.9.2b5` @ 2022/3/4
 
 - Add leaderboard for official levels
-- ~~Paperballs become irregular spheres~~
+- ~~Paper balls become irregular spheres~~
 - Expand the trigger area of switchers and appenders
 - The color of durability bar no longer considers injury buffer
 - Supplies got by an inactive ball will take effect
@@ -211,7 +248,7 @@
 - Level description will show in loading page now
 - Change effect of material emission
 - The max number of segments in a road generator changes from 32 to 128
-- Add musics by STERD and Aeka to built-in assets
+- ~~Add musics by STERD and Aeka to built-in assets~~
 
 ## `0.7.3b1 α` `0.7.3b2 α` @ 2021/9/29
 
@@ -272,7 +309,7 @@
 
 ## `0.7.0b1 α` @ 2021/9/12
 
-- Add variable mechanism
+- Add variable system
 - Triggers
   - Add `Physics Frame` trigger
   - Add switch mode for `Input` trigger

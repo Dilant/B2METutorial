@@ -49,7 +49,14 @@ Current time in milliseconds.
 - Type: `float`
 - Constrain: `x: 0 <= x <= 200`
 
-Durability of active ball.
+Durability value of active ball.
+
+### `G_Humidity`
+
+- Type: `float`
+- Constrain: `x: 0 <= x <= 100`
+
+Humidity value of active ball.
 
 ### `G_CameraDirection` <badge text="Four-directional"/>
 

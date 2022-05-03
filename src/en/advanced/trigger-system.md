@@ -18,8 +18,10 @@ See: [Advanced → Trigger](/en/advanced/trigger.md)
 
 See: [Advanced → Executor](/en/advanced/executor.md)
 
-::: tip
+## Custom Executor
 
-执行器的位姿和缩放没有作用，不过建议摆放在便于查找的位置。
+`Create → Custom Executor`
 
-:::
+自定义执行器使用 [MiniScript](https://miniscript.org/) 编写，可以实现各类复杂逻辑。
+
+See: [Advanced → Custom Executor](/en/advanced/custom-executor.md)

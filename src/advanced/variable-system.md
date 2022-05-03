@@ -49,7 +49,14 @@
 - 类型：`float`
 - 限制：`x: 0 <= x <= 200`
 
-主球耐久。
+主球耐久值。
+
+### `G_Humidity`
+
+- 类型：`float`
+- 限制：`x: 0 <= x <= 100`
+
+主球湿度值。
 
 ### `G_CameraDirection` <badge text="四向视角"/>
 

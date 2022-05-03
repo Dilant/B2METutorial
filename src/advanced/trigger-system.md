@@ -18,8 +18,10 @@
 
 参见：[进阶 → 执行器](/advanced/executor.md)
 
-::: tip
+## 自定义执行器
 
-执行器的位姿和缩放没有作用，不过建议摆放在便于查找的位置。
+`创建 → 自定义执行器`
 
-:::
+自定义执行器使用 [MiniScript](https://miniscript.org/) 编写，可以实现各类复杂逻辑。
+
+参见：[进阶 → 自定义执行器](/advanced/custom-executor.md)

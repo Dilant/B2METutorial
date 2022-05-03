@@ -3,7 +3,7 @@ home: true
 heroText: Ballex² Mapping Tutorial
 heroImage: /images/Ballex2Hero.png
 heroImageDark: /images/Ballex2HeroDark.png
-tagline: Based on Ballex Map Editor Pro 0.10.3b1
+tagline: Based on Ballex Map Editor Pro 0.10.4b1
 actions:
   - text: Beta Status →
     link: /en/beta-status/

@@ -1,19 +1,23 @@
+const { defaultTheme } = require("vuepress");
+const { shikiPlugin } = require("@vuepress/plugin-shiki");
+const { docsearchPlugin } = require("@vuepress/plugin-docsearch");
+
 module.exports = {
   head: [["link", { rel: "icon", href: "/ballex2.ico" }]],
   locales: {
     "/": {
       lang: "zh-CN",
       title: "Ballex² 制图教程",
-      description: "基于 Ballex Map Editor Pro 0.10.3b1 编写",
+      description: "基于 Ballex Map Editor Pro 0.10.4b1 编写",
     },
     "/en/": {
       lang: "en-US",
       title: "Ballex² Mapping Tutorial",
-      description: "Based on Ballex Map Editor Pro 0.10.3b1",
+      description: "Based on Ballex Map Editor Pro 0.10.4b1",
     },
   },
 
-  themeConfig: {
+  theme: defaultTheme({
     repo: "Dilant/B2METutorial",
     docsBranch: "master",
     docsDir: "src",
@@ -113,6 +117,7 @@ module.exports = {
                 "trigger-system.md",
                 "trigger.md",
                 "executor.md",
+                "custom-executor.md",
                 "variable-system.md",
                 "terrain-system.md",
                 "particle-system.md",
@@ -214,6 +219,7 @@ module.exports = {
                 "trigger-system.md",
                 "trigger.md",
                 "executor.md",
+                "custom-executor.md",
                 "variable-system.md",
                 "terrain-system.md",
                 "particle-system.md",
@@ -226,29 +232,27 @@ module.exports = {
         },
       },
     },
-  },
+  }),
 
   markdown: {
     breaks: true,
   },
 
   plugins: [
-    ["@vuepress/plugin-shiki", { theme: "dark-plus" }],
-    [
-      "@vuepress/docsearch",
-      {
-        appId: "Q409HCH0AR",
-        apiKey: "c730727a0cff094aa2c23cc2643fbbb9",
-        indexName: "B2METutorial",
-        locales: {
-          "/": {
-            placeholder: "搜索",
-          },
-          "/en/": {
-            placeholder: "Search",
-          },
+    shikiPlugin({ theme: "dark-plus" }),
+
+    docsearchPlugin({
+      appId: "Q409HCH0AR",
+      apiKey: "c730727a0cff094aa2c23cc2643fbbb9",
+      indexName: "B2METutorial",
+      locales: {
+        "/": {
+          placeholder: "搜索",
+        },
+        "/en/": {
+          placeholder: "Search",
         },
       },
-    ],
+    }),
   ],
 };
