@@ -1,14 +1,33 @@
 # Changelog
 
+## `0.11.6b1` @ 2022/5/5
+
+- Quick action of `F1` `F2` can't be used during pause
+- Fix the issue which prevents player from going right in free look mode
+- The camera won't be locked by triggering a restart event during death animation
+- Fix the issue that the skybox time isn't reset upon restarting
+- Fix the issue that pressing `Esc` when setting keymap directly quits the setting screen
+
+## `0.11.5b1` @ 2022/5/4
+
+- Replace the fog system
+- Fix the issue that pressing `PageUp` `PageDown` when setting keymap switches the panel
+- Get the missing cursor back when switching to a panel with less items in setting screen
+- Fix the issue that panel names are always displayed in English when entering the setting screen in level
+- Fix the misbehaving navigation bar when switching language in level
+- Fix the issue that quick suiciding with `F1` neglects the checkpoint cool-down
+- ~~Fix the issue that quick restarting with `F2` during pause leaves player at pause screen~~
+- Remove `Thickness` parameter of wooden boards
+
 ## `0.11.4b1` @ 2022/5/3
 
 - Add visual effect of underwater
-- `.json` config file is obsoleted with all settings migrated into the setting panel
+- `.json` config file is obsoleted with all settings migrated into the setting screen
 - Add setting items
   - Reset BGM on restart
   - `F1` Back to checkpoint
-  - `F2` Restart game
-  - Restart game on death
+  - `F2` Restart level
+  - Restart level on death
 
 ## `0.11.3b1` @ 2022/5/2
 
@@ -18,7 +37,7 @@
 
 ## `0.11.2b1 α` @ 2022/4/30
 
-- Add `Thickness` parameter to wooden board and corner of road generators
+- Add `Thickness` parameter to ~~wooden board and~~ corner of road generators
 - The minimum width of a wooden board is changed from 0.3 to 0.01
 - Fix the issue that the thickness of stone roads in an earlier project file is parsed as 0.01
 - Fix the issue which hangs up the test map mode at the loading screen
@@ -150,7 +169,7 @@
 ## `0.9.2b2` `0.9.2b3` @ 2022/3/3
 
 - Add leaderboard for custom levels
-- The player ball won't get any supply during the death animation
+- The player ball won't get any supply during death animation
 - Items are sorted by weekly trend by default in workshop
 - Adjust scroll speed of workshop screen
 - Fix issues with mouse capture while pausing in the free look mode
@@ -165,7 +184,7 @@
 ## `0.9.1b3` @ 2021/12/30
 
 - Change mechanisms related to inactive balls
-- The camera won't lock now upon death of an inactive ball
+- The camera won't be locked upon death of an inactive ball
 
 ## `0.9.1b2` @ 2021/12/25
 

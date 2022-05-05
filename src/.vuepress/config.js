@@ -8,12 +8,12 @@ module.exports = {
     "/": {
       lang: "zh-CN",
       title: "Ballex² 制图教程",
-      description: "基于 Ballex Map Editor Pro 0.10.4b1 编写",
+      description: "基于 Ballex Map Editor Pro 0.11.6b1 编写",
     },
     "/en/": {
       lang: "en-US",
       title: "Ballex² Mapping Tutorial",
-      description: "Based on Ballex Map Editor Pro 0.10.4b1",
+      description: "Based on Ballex Map Editor Pro 0.11.6b1",
     },
   },
 
@@ -239,8 +239,9 @@ module.exports = {
   },
 
   plugins: [
-    shikiPlugin({ theme: "dark-plus" }),
-
+    shikiPlugin({
+      theme: "dark-plus",
+    }),
     docsearchPlugin({
       appId: "Q409HCH0AR",
       apiKey: "c730727a0cff094aa2c23cc2643fbbb9",

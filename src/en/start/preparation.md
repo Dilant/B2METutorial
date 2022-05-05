@@ -74,4 +74,9 @@ Categorize and display all assets. There're 6 panels:
 
 ## Coordinate System
 
-BME Pro uses a left-handed coordinate system same as Unity3D and Cinema 4D, whose `X+` goes right, `Y+` up and `Z+` front. Grid length is 1 meter in the sense of modeling softwares.
+BME Pro uses a left-handed coordinate system same as Unity3D and Cinema 4D.
+
+- `X+` axis goes right, `Y+` up and `Z+` front
+- The order of quaternion is `X` `Y` `Z` `W`
+- The euler angle uses `Z` `X` `Y` as rotation order and degree as unit.
+- Grid length is 1 meter in the sense of modeling softwares

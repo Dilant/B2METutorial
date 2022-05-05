@@ -4,7 +4,6 @@
 
 ### 截图
 
-- 设置画质与截图分辨率：参见 [Beta Status → Control and Functions → Config](/en/beta-status/control-and-functions.md#config)
 - 进入测图模式：`File → Export BMS → Test Map`
 - 进入截图功能：`F5`
   - `Mouse` 转动视角
