@@ -1,5 +1,28 @@
 # Changelog
 
+## `0.12.2b1` @ 2022/5/21
+
+- Prop balls and boxes are replaced with physics objects in BME
+- Add flickering and inoperative lights
+
+## `0.12.0b1` `0.12.1b1` @ 2022/5/19
+
+- Full mouse support
+- Add official level 3-2 E
+
+## `0.11.8b1` @ 2022/5/12
+
+- Temporary remove leaderboard for custom levels
+- Fix the issue that a TNT doesn't cause damage to the player balls
+- Fix the issue that a TNT doesn't blow off the suspension bridge
+
+## `0.11.7b1` @ 2022/5/10
+
+- You can use `MouseWheel` to adjust the distance of the camera in free look mode
+- Chain explosion of TNTs won't crash the game now
+- Fix the conflict between fog and translucent materials
+- Fix the issue that quick restarting with `F2` after level completion is permitted
+
 ## `0.11.6b1` @ 2022/5/5
 
 - Quick action of `F1` `F2` can't be used during pause
@@ -168,7 +191,7 @@
 
 ## `0.9.2b2` `0.9.2b3` @ 2022/3/3
 
-- Add leaderboard for custom levels
+- ~~Add leaderboard for custom levels~~
 - The player ball won't get any supply during death animation
 - Items are sorted by weekly trend by default in workshop
 - Adjust scroll speed of workshop screen

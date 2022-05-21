@@ -31,7 +31,7 @@
   - `[3:7]`：姿态四元数
   - `[7:10]`：沿三轴的缩放比例
 
-### `GetTransform(ID: int, transform: Annotated[tuple[float], 10]) -> None`
+### `SetTransform(ID: int, transform: Annotated[tuple[float], 10]) -> None`
 
 改变元件变换参数。
 

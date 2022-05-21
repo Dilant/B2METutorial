@@ -31,7 +31,7 @@ Get transform parameters of an object.
   - `[3:7]`: posture's quaternion
   - `[7:10]`: scale ratio along each axis
 
-### `GetTransform(ID: int, transform: Annotated[tuple[float], 10]) -> None`
+### `SetTransform(ID: int, transform: Annotated[tuple[float], 10]) -> None`
 
 Set transform parameters of an object.
 
