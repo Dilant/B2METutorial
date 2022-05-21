@@ -70,7 +70,7 @@
 
 - Add `Thickness` parameter to stone road of road generators
 - Add fog related parameters to custom skyboxes
-- MiniScript will correctly throw exceptions when failing to execute in-game functions
+- MiniScript will correctly raise exceptions when failing to execute in-game functions
 
 ## `0.11.0b1 α` @ 2022/4/23
 

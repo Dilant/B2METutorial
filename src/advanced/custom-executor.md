@@ -5,20 +5,30 @@
 - MiniScript 官方网站：[https://miniscript.org/](https://miniscript.org/)
   - 请先阅读[官方文档](https://miniscript.org/files/MiniScript-Manual.pdf)和[快速入门](https://miniscript.org/files/MiniScript-QuickRef.pdf)
   - 官方提供[演练场](https://miniscript.org/tryit/)
-- MiniScript 是弱类型动态语言
+- MiniScript 是弱类型动态语言（类似 PHP）
   - 变量会在任何可能的情形自动隐式转换类型，且不抛出异常
 - MiniScript 的变量类型：`number` `string` `list` `map`
 - MiniScript **没有** `int` 类型（类似 JavaScript）
   - 所有 `number` 均为 `double`
   - 没有被零除异常，有 `INF` 和 `nan`
-  - 判断数值相等时请注意浮点误差处理
+  - 请注意浮点数大小判断
 - MiniScript **没有** `bool` 类型（类似 C）
   - `true` 即为 `1`，`false` 即为 `0`
-  - `if` 等条件判断语句中，`0` `""` `[]` `{}` `null` 视为假，其它视为真
+  - `if` 条件判断语句中，`0` `""` `[]` `{}` `null` 视为假，其它视为真
 - MiniScript 会在任何可能的情形传引用（类似 Python）
   - 复制 `list` 时，请务必使用 `b = a[0:]` 的语法
-  - **没有**深拷贝功能，请尽量避免使用复杂结构
-- 以下将使用 Python 的类型标注方式标注签名
+  - **没有**深拷贝功能，请尽量避免使用复杂数据结构
+- 以下将使用 Python 风格标注类型和签名
+
+## 全局变量
+
+### `globals.TriggerID: int | None`
+
+运行当前自定义执行器的触发器编号。
+
+### `globals.TriggeredItemID: int | None`
+
+使上述触发器生效的物体编号。
 
 ## 通用
 
@@ -27,7 +37,7 @@
 读取元件变换参数。
 
 - `returns`：变换参数
-  - `[0:3]`：坐标
+  - `[0:3]`：位置坐标
   - `[3:7]`：姿态四元数
   - `[7:10]`：沿三轴的缩放比例
 
@@ -35,8 +45,10 @@
 
 改变元件变换参数。
 
+本方法无法改变刚体的变换参数，请使用 `PhysicsSetTransform`。
+
 - `transform`：变换参数
-  - `[0:3]`：坐标
+  - `[0:3]`：位置坐标
   - `[3:7]`：姿态四元数
   - `[7:10]`：沿三轴的缩放比例
 
@@ -48,9 +60,19 @@
 
 ### `ExecuteExecutor(ID: int) -> None`
 
-执行另一个自定义执行器，当前执行器在它完成后（无论成功还是出错）继续执行。
+运行另一个自定义执行器，当前执行器在它完成后（无论成功还是出错）继续执行。
 
 ## 物理
+
+### `PhysicsSetTransform(ID: int, transform: Annotated[tuple[float], 7]) -> None)`
+
+改变刚体变换参数。
+
+读取刚体变换参数请使用 `GetTransform`。
+
+- `transform`：变换参数
+  - `[0:3]`：位置坐标
+  - `[3:7]`：姿态四元数
 
 ### `PhysicsGetInverseMass(ID: int) -> float`
 
@@ -114,14 +136,14 @@
 
 ### `PhysicsCalculateVelocityToTargetPosition(ID: int, target: tuple[float, float, float]) -> tuple[float, float, float]`
 
-计算物体下一帧平动到指定位置需要的线速度。
+计算物体下一物理帧平动到指定位置需要的线速度。
 
 - `target`：目标位置坐标
 - `returns`：所需线速度沿三轴的分量
 
 ### `PhysicsCalculateVelocityToTargetRotation(ID: int, target: tuple[float, float, float, float]) -> tuple[float, float, float]`
 
-计算物体下一帧旋转到指定姿态需要的角速度。
+计算物体下一物理帧旋转到指定姿态需要的角速度。
 
 - `target`：目标姿态四元数
 - `returns`：所需角速度沿三轴的分量
@@ -138,6 +160,12 @@
 
 ## 游戏流程
 
+### `TransferPlayer(target_position: tuple[float, float, float]) -> None`
+
+传送玩家球到指定位置，保持速度和摄像机视角微动。
+
+- `target_position`：目标位置坐标
+
 ### `RemoveAllInactiveBalls() -> None`
 
 移除所有闲置球。
@@ -153,7 +181,7 @@
 完成关卡，立即结算。
 
 - `vfx`：是否播放终点动画
-- `position`：播放终点动画时，玩家球被传送到的坐标
+- `position`：播放终点动画时，玩家球被传送到的位置坐标
 
 ### `CallSuicide() -> None`
 
@@ -207,11 +235,11 @@
 
 ### `WayPathGetPosition(ID: int, part_index: int, percentage: float) -> tuple[float, float, float]`
 
-计算路径指定点的坐标。
+计算路径指定点的位置。
 
 `part_index`：片段编号，从 `0` 开始计数
 `percentage`：该片段上的进度百分比，范围为 `0 <= x <= 1`
-`returns`：计算得到的坐标
+`returns`：计算得到的位置坐标
 
 ### `WayPathGetRotation(ID: int, part_index: int, percentage: float) -> tuple[float, float, float, float]`
 
@@ -225,7 +253,7 @@
 
 读取路径上路点的信息。
 
-- `ID`：路径 ID
+- `ID`：路径编号
 - `point_index`：路点编号，从 `0` 开始计数
 - `returns`：路点信息
   - `[0]`：前往下一路点的移动速度
@@ -322,3 +350,82 @@
 读取存档。
 
 - `returns`：存档数据
+
+## 代码片段
+
+### `map`
+
+由于 MiniScript 中 `map` 为类型关键字，该函数取名为 `apply`。
+
+<div class="language-miniscript ext-ms line-numbers-mode">
+  <pre
+    class="shiki"
+    style="background-color: #1e1e1e"
+  ><code><span class="line"><span style="color:#DCDCAA;">apply</span><span style="color:#D4D4D4;"> = </span><span style="color:#569CD6;">function</span><span style="color:#DCDCAA;">(</span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;"> = []</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">for</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">in</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">iter</span></span>
+<span class="line"><span style="color:#D4D4D4;">        </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;">.</span><span style="color:#DCDCAA;">push</span><span style="color:#D4D4D4;">(</span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">(</span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;">))</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">for</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">return</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">result</span></span>
+<span class="line"><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#569CD6;">function</span></span>
+<span class="line"></span></code></pre>
+  <div class="line-numbers" aria-hidden="true">
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+  </div>
+</div>
+
+### `reduce`
+
+<div class="language-miniscript ext-ms line-numbers-mode">
+  <pre
+    class="shiki"
+    style="background-color: #1e1e1e"
+  ><code><span class="line"><span style="color:#DCDCAA;">reduce</span><span style="color:#D4D4D4;"> = </span><span style="color:#569CD6;">function</span><span style="color:#DCDCAA;">(</span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;"> = </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">[</span><span style="color:#B5CEA8;">0</span><span style="color:#D4D4D4;">]</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">for</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">in</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">[</span><span style="color:#B5CEA8;">1</span><span style="color:#D4D4D4;">:]</span></span>
+<span class="line"><span style="color:#D4D4D4;">        </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;"> = </span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">(</span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">for</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">return</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">result</span></span>
+<span class="line"><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#569CD6;">function</span></span>
+<span class="line"></span></code></pre>
+  <div class="line-numbers" aria-hidden="true">
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+  </div>
+</div>
+
+### `filter`
+
+<div class="language-miniscript ext-ms line-numbers-mode">
+  <pre
+    class="shiki"
+    style="background-color: #1e1e1e"
+  ><code><span class="line"><span style="color:#DCDCAA;">filter</span><span style="color:#D4D4D4;"> = </span><span style="color:#569CD6;">function</span><span style="color:#DCDCAA;">(</span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;"> = []</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">for</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">in</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">iter</span></span>
+<span class="line"><span style="color:#D4D4D4;">        </span><span style="color:#C586C0;">if</span><span style="color:#D4D4D4;"> </span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">(</span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;">)</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">then</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;">.</span><span style="color:#DCDCAA;">push</span><span style="color:#D4D4D4;">(</span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">for</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">return</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">result</span></span>
+<span class="line"><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#569CD6;">function</span></span>
+<span class="line"></span></code></pre>
+  <div class="line-numbers" aria-hidden="true">
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+  </div>
+</div>

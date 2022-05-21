@@ -93,7 +93,10 @@ Ballex² 中的路面、钢轨和模板均由路面生成器制作而成。
 ::: details 弯曲算法
 
 <div class="language-python ext-py line-numbers-mode">
-  <pre class="shiki" style="background-color: #1e1e1e" ><code><span class="line"><span style="color:#569CD6;">def</span><span style="color:#D4D4D4;"> </span><span style="color:#DCDCAA;">skeletonGenerator</span><span style="color:#D4D4D4;">(</span></span>
+  <pre
+    class="shiki"
+    style="background-color: #1e1e1e"
+  ><code><span class="line"><span style="color:#569CD6;">def</span><span style="color:#D4D4D4;"> </span><span style="color:#DCDCAA;">skeletonGenerator</span><span style="color:#D4D4D4;">(</span></span>
 <span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#9CDCFE;">length</span><span style="color:#D4D4D4;">: </span><span style="color:#4EC9B0;">float</span><span style="color:#D4D4D4;">,</span></span>
 <span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#9CDCFE;">height</span><span style="color:#D4D4D4;">: </span><span style="color:#4EC9B0;">float</span><span style="color:#D4D4D4;">,</span></span>
 <span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#9CDCFE;">bend</span><span style="color:#D4D4D4;">: </span><span style="color:#4EC9B0;">EulerAngle</span><span style="color:#D4D4D4;">,</span></span>
@@ -121,32 +124,32 @@ Ballex² 中的路面、钢轨和模板均由路面生成器制作而成。
 <span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">return</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">point_positions</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">point_postures</span></span>
 <span class="line"></span></code></pre>
   <div class="line-numbers">
-    <span class="line-number">1</span><br>
-    <span class="line-number">2</span><br>
-    <span class="line-number">3</span><br>
-    <span class="line-number">4</span><br>
-    <span class="line-number">5</span><br>
-    <span class="line-number">6</span><br>
-    <span class="line-number">7</span><br>
-    <span class="line-number">8</span><br>
-    <span class="line-number">9</span><br>
-    <span class="line-number">10</span><br>
-    <span class="line-number">11</span><br>
-    <span class="line-number">12</span><br>
-    <span class="line-number">13</span><br>
-    <span class="line-number">14</span><br>
-    <span class="line-number">15</span><br>
-    <span class="line-number">16</span><br>
-    <span class="line-number">17</span><br>
-    <span class="line-number">18</span><br>
-    <span class="line-number">19</span><br>
-    <span class="line-number">20</span><br>
-    <span class="line-number">21</span><br>
-    <span class="line-number">22</span><br>
-    <span class="line-number">23</span><br>
-    <span class="line-number">24</span><br>
-    <span class="line-number">25</span><br>
-    <span class="line-number">26</span><br>
+    <span class="line-number">1</span><br />
+    <span class="line-number">2</span><br />
+    <span class="line-number">3</span><br />
+    <span class="line-number">4</span><br />
+    <span class="line-number">5</span><br />
+    <span class="line-number">6</span><br />
+    <span class="line-number">7</span><br />
+    <span class="line-number">8</span><br />
+    <span class="line-number">9</span><br />
+    <span class="line-number">10</span><br />
+    <span class="line-number">11</span><br />
+    <span class="line-number">12</span><br />
+    <span class="line-number">13</span><br />
+    <span class="line-number">14</span><br />
+    <span class="line-number">15</span><br />
+    <span class="line-number">16</span><br />
+    <span class="line-number">17</span><br />
+    <span class="line-number">18</span><br />
+    <span class="line-number">19</span><br />
+    <span class="line-number">20</span><br />
+    <span class="line-number">21</span><br />
+    <span class="line-number">22</span><br />
+    <span class="line-number">23</span><br />
+    <span class="line-number">24</span><br />
+    <span class="line-number">25</span><br />
+    <span class="line-number">26</span><br />
   </div>
 </div>
 

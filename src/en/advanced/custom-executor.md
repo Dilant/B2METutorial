@@ -2,23 +2,33 @@
 
 ## MiniScript Simple Guide
 
-- MiniScript 官方网站: [https://miniscript.org/](https://miniscript.org/)
-  - 请先阅读[官方文档](https://miniscript.org/files/MiniScript-Manual.pdf)和[快速入门](https://miniscript.org/files/MiniScript-QuickRef.pdf)
-  - 官方提供[演练场](https://miniscript.org/tryit/)
-- MiniScript 是弱类型动态语言
-  - 变量会在任何可能的情形自动隐式转换类型，且不抛出异常
-- MiniScript 的变量类型: `number` `string` `list` `map`
-- MiniScript **没有** `int` 类型（类似 JavaScript）
-  - 所有 `number` 均为 `double`
-  - 没有被零除异常，有 `INF` 和 `nan`
-  - 判断数值相等时请注意浮点误差处理
-- MiniScript **没有** `bool` 类型（类似 C）
-  - `true` 即为 `1`，`false` 即为 `0`
-  - `if` 等条件判断语句中，`0` `""` `[]` `{}` `null` 视为假，其它视为真
-- MiniScript 会在任何可能的情形传引用（类似 Python）
-  - 复制 `list` 时，请务必使用 `b = a[0:]` 的语法
-  - **没有**深拷贝功能，请尽量避免使用复杂结构
-- 以下将使用 Python 的类型标注方式标注签名
+- MiniScript official site: [https://miniscript.org/](https://miniscript.org/)
+  - Read [official manual](https://miniscript.org/files/MiniScript-Manual.pdf) and [quick start](https://miniscript.org/files/MiniScript-QuickRef.pdf) first
+  - There's an official [playground](https://miniscript.org/tryit/)
+- MiniScript is a weak and dynamic typing language (similar to PHP)
+  - Variables will be converted to another type automatically and implicitly whenever possible, without raising exceptions
+- MiniScript has these variable types: `number` `string` `list` `map`
+- MiniScript **doesn't** have `int` type (similar to JavaScript)
+  - All `number`s are `double`s
+  - No exception of division by zero, and there's `INF` and `nan`
+  - Take care of floating point comparisons
+- MiniScript **doesn't** have `bool` type (similar to C)
+  - `true` is `1`, `false` is `0`
+  - In `if` statements, `0` `""` `[]` `{}` `null` are regarded as false, others as true
+- MiniScript passes everything by reference whenever possible (similar to Python)
+  - When copying a `list`, remember to use syntax like `b = a[0:]`
+  - **No** deep copy function, so avoid using complicated data structures
+- The types and signatures below are annotated using Python style
+
+## Global Variables
+
+### `globals.TriggerID: int | None`
+
+The trigger's ID which runs the current custom executor.
+
+### `globals.TriggeredItemID: int | None`
+
+The object's ID which activates the aforementioned trigger.
 
 ## Generic
 
@@ -35,6 +45,8 @@ Get transform parameters of an object.
 
 Set transform parameters of an object.
 
+This method can't be applied to rigid bodies, use `PhysicsSetTransform` instead.
+
 - `transform`: transform parameters
   - `[0:3]`: position's coordinate
   - `[3:7]`: posture's quaternion
@@ -42,15 +54,25 @@ Set transform parameters of an object.
 
 ### `SetActive(ID: int, active: bool) -> None`
 
-设置物体激活状态，未激活的物体会隐藏并失去功能。
+Set the active state of an object. An inactivated object will hide itself and lose its functions.
 
 - `active`: whether active
 
 ### `ExecuteExecutor(ID: int) -> None`
 
-执行另一个自定义执行器，当前执行器在它完成后（无论成功还是出错）继续执行。
+Run another custom executor. The current one goes on when the latter one completes (either with or without errors).
 
 ## 物理
+
+### `PhysicsSetTransform(ID: int, transform: Annotated[tuple[float], 7]) -> None)`
+
+Set transform parameters of a rigid body.
+
+To get transform parameters of a rigid body, use `GetTransform`.
+
+- `transform`: transform parameters
+  - `[0:3]`: position's coordinate
+  - `[3:7]`: posture's quaternion
 
 ### `PhysicsGetInverseMass(ID: int) -> float`
 
@@ -94,14 +116,14 @@ Set transform parameters of an object.
 
 ### `PhysicsCalculateVelocityToTargetPosition(ID: int, target: tuple[float, float, float]) -> tuple[float, float, float]`
 
-计算物体下一帧平动到指定位置需要的线速度。
+Calculate the required linear velocity for an object to move to the target position in the next physics frame.
 
 - `target`: target position's coordinate
 - `returns`: required linear velocity along each axis
 
 ### `PhysicsCalculateVelocityToTargetRotation(ID: int, target: tuple[float, float, float, float]) -> tuple[float, float, float]`
 
-计算物体下一帧旋转到指定姿态需要的角速度。
+Calculate the required angular velocity for an object to rotate to the target posture in the next physics frame.
 
 - `target`: target posture's quaternion
 - `returns`: required angular velocity along each axis
@@ -113,6 +135,12 @@ Set transform parameters of an object.
 ### `PhysicsBreakJoint(ID: int) -> None`
 
 ## Game Process
+
+### `TransferPlayer(target_position: tuple[float, float, float]) -> None`
+
+Transfer the player ball to the target position. Its velocity and camera motion are kept unchanged.
+
+- `target_position`: target position's coordinate
 
 ### `RemoveAllInactiveBalls() -> None`
 
@@ -141,7 +169,7 @@ Back to checkpoint.
 
 ### `SetCameraOffset(offset: tuple[float, float, float]) -> None`
 
-- `offset`: 摄像机相对于玩家球的偏移向量
+- `offset`: the offset vector from the player ball to the camera
 
 ## Light
 
@@ -165,18 +193,18 @@ Change time of a procedural skybox.
 
 ### `WayPathGetPosition(ID: int, part_index: int, percentage: float) -> tuple[float, float, float]`
 
-计算路径指定点的坐标。
+Calculate the position of a given point on a way path.
 
-`part_index`: 片段编号，从 `0` 开始计数
-`percentage`: 该片段上的进度百分比，范围为 `0 <= x <= 1`
+`part_index`: index of the way path segment, counting from `0`
+`percentage`: percentage of progress on this segment, with range `0 <= x <= 1`
 `returns`: calculated position's coordinate
 
 ### `WayPathGetRotation(ID: int, part_index: int, percentage: float) -> tuple[float, float, float, float]`
 
-计算路径指定点的姿态。
+Calculate the posture of a given point on a way path.
 
-`part_index`: 片段编号，从 `0` 开始计数
-`percentage`: 该片段上的进度百分比，范围为 `0 <= x <= 1`
+`part_index`: index of the way path segment, counting from `0`
+`percentage`: percentage of progress on this segment, with range `0 <= x <= 1`
 `returns`: calculated posture's quaternion
 
 ### `GetWayPointInfo(ID: int, point_index: int) -> tuple[float, bool, float, float]`
@@ -184,12 +212,12 @@ Change time of a procedural skybox.
 Get information of a way point on a way path.
 
 - `ID`: way path ID
-- `point_index`: 路点编号，从 `0` 开始计数
-- `returns`: 路点信息
-  - `[0]`: 前往下一路点的移动速度
-  - `[1]`: 是否改用用时
-  - `[2]`: 前往下一路点的用时
-  - `[3]`: 该点停留时间
+- `point_index`: index of the way point (counting from `0`)
+- `returns`: way point information
+  - `[0]`: moving speed towards the next point
+  - `[1]`: whether duration is used instead of moving speed
+  - `[2]`: duration to the next point
+  - `[3]`: stay time at the point
 
 ### `RefreshWayPath() -> None`
 
@@ -252,3 +280,82 @@ Get information of a way point on a way path.
 ### `LoadData() -> list[float]`
 
 - `returns`: game save
+
+## Code Snippets
+
+### `map`
+
+This function is called `apply`, because `map` is a typing keyword of MiniScript.
+
+<div class="language-miniscript ext-ms line-numbers-mode">
+  <pre
+    class="shiki"
+    style="background-color: #1e1e1e"
+  ><code><span class="line"><span style="color:#DCDCAA;">apply</span><span style="color:#D4D4D4;"> = </span><span style="color:#569CD6;">function</span><span style="color:#DCDCAA;">(</span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;"> = []</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">for</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">in</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">iter</span></span>
+<span class="line"><span style="color:#D4D4D4;">        </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;">.</span><span style="color:#DCDCAA;">push</span><span style="color:#D4D4D4;">(</span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">(</span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;">))</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">for</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">return</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">result</span></span>
+<span class="line"><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#569CD6;">function</span></span>
+<span class="line"></span></code></pre>
+  <div class="line-numbers" aria-hidden="true">
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+  </div>
+</div>
+
+### `reduce`
+
+<div class="language-miniscript ext-ms line-numbers-mode">
+  <pre
+    class="shiki"
+    style="background-color: #1e1e1e"
+  ><code><span class="line"><span style="color:#DCDCAA;">reduce</span><span style="color:#D4D4D4;"> = </span><span style="color:#569CD6;">function</span><span style="color:#DCDCAA;">(</span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;"> = </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">[</span><span style="color:#B5CEA8;">0</span><span style="color:#D4D4D4;">]</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">for</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">in</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">[</span><span style="color:#B5CEA8;">1</span><span style="color:#D4D4D4;">:]</span></span>
+<span class="line"><span style="color:#D4D4D4;">        </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;"> = </span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">(</span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">for</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">return</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">result</span></span>
+<span class="line"><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#569CD6;">function</span></span>
+<span class="line"></span></code></pre>
+  <div class="line-numbers" aria-hidden="true">
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+  </div>
+</div>
+
+### `filter`
+
+<div class="language-miniscript ext-ms line-numbers-mode">
+  <pre
+    class="shiki"
+    style="background-color: #1e1e1e"
+  ><code><span class="line"><span style="color:#DCDCAA;">filter</span><span style="color:#D4D4D4;"> = </span><span style="color:#569CD6;">function</span><span style="color:#DCDCAA;">(</span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;"> = []</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">for</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">in</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">iter</span></span>
+<span class="line"><span style="color:#D4D4D4;">        </span><span style="color:#C586C0;">if</span><span style="color:#D4D4D4;"> </span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">(</span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;">)</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">then</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;">.</span><span style="color:#DCDCAA;">push</span><span style="color:#D4D4D4;">(</span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">for</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">return</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">result</span></span>
+<span class="line"><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#569CD6;">function</span></span>
+<span class="line"></span></code></pre>
+  <div class="line-numbers" aria-hidden="true">
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+  </div>
+</div>

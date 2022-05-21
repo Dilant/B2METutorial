@@ -60,6 +60,10 @@ html.dark {
   }
 }
 
+div[class*=language-].ext-ms:before {
+  content: "ms"
+}
+
 .custom-container {
   &.warning a {
     color: var(--c-brand);
