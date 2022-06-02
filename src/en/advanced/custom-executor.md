@@ -52,6 +52,16 @@ This method can't be applied to rigid bodies, use `PhysicsSetTransform` instead.
   - `[3:7]`: posture's quaternion
   - `[7:10]`: scale ratio along each axis
 
+### `Instantiate(ID: int, transform: Annotated[tuple[float], 10]) -> int`
+
+Create a new object from the given object template.
+
+- `transform`: transform parameters
+  - `[0:3]`: position's coordinate
+  - `[3:7]`: posture's quaternion
+  - `[7:10]`: scale ratio along each axis
+- `returns`: ID of the new object
+
 ### `SetActive(ID: int, active: bool) -> None`
 
 Set the active state of an object. An inactivated object will hide itself and lose its functions.
@@ -341,7 +351,7 @@ This function is called `apply`, because `map` is a typing keyword of MiniScript
   <pre
     class="shiki"
     style="background-color: #1e1e1e"
-  ><code><span class="line"><span style="color:#DCDCAA;">filter</span><span style="color:#D4D4D4;"> = </span><span style="color:#569CD6;">function</span><span style="color:#DCDCAA;">(</span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">)</span></span>
+  ><code><span class="line"><span style="color:#DCDCAA;">filter</span><span style="color:#D4D4D4;"> = </span><span style="color:#569CD6;">function</span><span style="color:#D4D4D4;">(</span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">)</span></span>
 <span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;"> = []</span></span>
 <span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">for</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">in</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">iter</span></span>
 <span class="line"><span style="color:#D4D4D4;">        </span><span style="color:#C586C0;">if</span><span style="color:#D4D4D4;"> </span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">(</span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;">)</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">then</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;">.</span><span style="color:#DCDCAA;">push</span><span style="color:#D4D4D4;">(</span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;">)</span></span>

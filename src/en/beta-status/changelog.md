@@ -1,5 +1,21 @@
 # Changelog
 
+## `0.13.3b1` @ 2022/6/1
+
+- Add online multiplayer function
+
+## `0.13.2b1` @ 2022/5/29
+
+- Fix the issue that large objects are rendered twice
+- Fix the issue that a road generator of custom shape only use its first material
+
+## `0.13.0b1` `0.13.1b1` @ 2022/5/27
+
+- Add `Template` option to physics objects, which can be used to create new objects at any time
+- When setting value of a variable, it will be automatically created if it doesn't exist
+- Fix the issue that transform parameters of objects aren't reset upon death
+- Fix the issue that parameters of lights aren't reset upon death
+
 ## `0.12.2b1` @ 2022/5/21
 
 - Prop balls and boxes are replaced with physics objects in BME
