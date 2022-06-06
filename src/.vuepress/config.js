@@ -84,7 +84,11 @@ module.exports = {
               text: "Ballex² 公测进度",
               link: "/beta-status/",
               collapsable: false,
-              children: ["control-and-functions.md", "changelog.md"],
+              children: [
+                "control-and-functions.md",
+                "multiplayer.md",
+                "changelog.md",
+              ],
             },
           ],
 
@@ -186,7 +190,11 @@ module.exports = {
               text: "Ballex² Beta Status",
               link: "/en/beta-status/",
               collapsable: false,
-              children: ["control-and-functions.md", "changelog.md"],
+              children: [
+                "control-and-functions.md",
+                "multiplayer.md",
+                "changelog.md",
+              ],
             },
           ],
 

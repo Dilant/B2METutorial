@@ -1,5 +1,16 @@
 # Changelog
 
+## `0.13.3b3` @ 2022/6/6
+
+- Online multiplayer room
+  - Add ranking screen
+  - Add the function of kicking a player out
+  - Add buttons for frequently used functions
+
+## `0.13.3b2` @ 2022/6/3
+
+- Add room function to online multiplayer
+
 ## `0.13.3b1` @ 2022/6/1
 
 - Add online multiplayer function
