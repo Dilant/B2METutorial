@@ -251,8 +251,8 @@ module.exports = {
       theme: "dark-plus",
     }),
     docsearchPlugin({
-      appId: "Q409HCH0AR",
-      apiKey: "c730727a0cff094aa2c23cc2643fbbb9",
+      appId: "SRD44HYO7D",
+      apiKey: "da4863848aad7a5a1dcb3cced912f0e8",
       indexName: "B2METutorial",
       locales: {
         "/": {
