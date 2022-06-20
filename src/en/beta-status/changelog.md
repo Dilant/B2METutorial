@@ -1,5 +1,19 @@
 # Changelog
 
+## `0.14.1b1` @ 2022/6/16
+
+- Add BGM to official level 3-1 E / 3-2 E / 4-2 E
+
+## `0.14.0b1` @ 2022/6/14
+
+- Fix the issue that death animations are timed in normal mode
+- Online multiplayer
+  - You can also hit `NumpadEnter` to send messages
+  - It's no longer allowed to create or join rooms in pause screen and evaluation screen
+  - Fix the issue that sounds are interrupted upon pause
+  - Fix the issue that other players behind the camera show their names
+- Add official level 4-2 E
+
 ## `0.13.3b3` @ 2022/6/6
 
 - Online multiplayer room
