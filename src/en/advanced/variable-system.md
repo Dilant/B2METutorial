@@ -67,7 +67,7 @@ Current camera direction. Using global reference frame, `0` means direction `Z+`
 
 ### `G_CameraAngle` <badge text="Free Look"/>
 
-- Type: `int`
+- Type: `float`
 - Constrain: `θ: 0 <= θ < 360`
 
 Current camera angle. Using global reference frame, `0` means direction `Z+`, which increases clockwise.
