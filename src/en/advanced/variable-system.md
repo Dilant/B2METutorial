@@ -65,7 +65,7 @@ Humidity value of active ball.
 
 Current camera direction. Using global reference frame, `0` means direction `Z+`, `1` means direction `X+`, `2` means direction `Z-`, `3` means direction `X-`.
 
-### `G_CameraAngle` <badge text="Free Look"/>
+### `G_CameraAngle` <badge text="Free-look"/>
 
 - Type: `float`
 - Constrain: `θ: 0 <= θ < 360`

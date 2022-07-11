@@ -173,7 +173,7 @@ Back to checkpoint.
 
 ### `SetCameraMode(mode: int) -> None`
 
-- `mode`: `0` four-directional mode, `1` free look mode
+- `mode`: `0` four-directional mode, `1` free-look mode
 
 ### `SetCameraTarget(ID: int) -> None`
 

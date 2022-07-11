@@ -1,6 +1,6 @@
 {
   "name": "b2me-tutorial",
-  "version": "0.14.1b1",
+  "version": "0.15.1b1",
   "description": "Ballex² 制图教程的 VuePress 源码",
   "private": true,
   "scripts": {

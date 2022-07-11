@@ -9,7 +9,7 @@ Launch it via Steam and choose the 2nd option `Launch Game Editor`.
 Ballex² and BME Pro can be launched from local directory. Ensure that:
 
 - Steam is launched and logged in
-- Manually restart Steam if it's started automatically by other tools (for example Steam++ or SteamCommunity302)
+- Manually relaunch Steam if it's launched automatically by other tools (for example Steam++ or SteamCommunity302)
 
 :::
 

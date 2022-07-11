@@ -1,5 +1,17 @@
 # Changelog
 
+## `0.15.1b1` @ 2022/7/10
+
+- Add the setting for TAA
+- All graphics settings take effect immediately now without needing to relaunch the game
+- The rotation of view is much more agile in free-look mode
+- Correct the height of the camera in four-directional mode
+
+## `0.15.0b1` @ 2022/7/9
+
+- You can choose four-directional mode or free-look mode for all official levels
+- An executor can select the active ball `-99` as its target
+
 ## `0.14.1b1` @ 2022/6/16
 
 - Add BGM to official level 3-1 E / 3-2 E / 4-2 E
@@ -59,7 +71,7 @@
 
 ## `0.11.7b1` @ 2022/5/10
 
-- You can use `MouseWheel` to adjust the distance of the camera in free look mode
+- You can use `MouseWheel` to adjust the distance of the camera in free-look mode
 - Chain explosion of TNTs won't crash the game now
 - Fix the conflict between fog and translucent materials
 - Fix the issue that quick restarting with `F2` after level completion is permitted
@@ -67,7 +79,7 @@
 ## `0.11.6b1` @ 2022/5/5
 
 - Quick action of `F1` `F2` can't be used during pause
-- Fix the issue which prevents player from going right in free look mode
+- Fix the issue which prevents player from going right in free-look mode
 - The camera won't be locked by triggering a restart event during death animation
 - Fix the issue that the skybox time isn't reset upon restarting
 - Fix the issue that pressing `Esc` when setting keymap directly quits the setting screen
@@ -218,7 +230,7 @@
 ## `0.9.2b6` @ 2022/3/5
 
 - Paper balls turn back to regular spheres
-- The `Disable Player Key` executor can disable 8-way snap function in free look mode
+- The `Disable Player Key` executor can disable 8-way snap function in free-look mode
 - Fix an issue that disabled player keys take effect again after death
 
 ## `0.9.2b4` `0.9.2b5` @ 2022/3/4
@@ -236,7 +248,7 @@
 - The player ball won't get any supply during death animation
 - Items are sorted by weekly trend by default in workshop
 - Adjust scroll speed of workshop screen
-- Fix issues with mouse capture while pausing in the free look mode
+- Fix issues with mouse capture while pausing in the free-look mode
 
 ## `0.9.2b1` @ 2022/3/2
 
@@ -342,7 +354,7 @@
 
 ## `0.7.2 β` @ 2021/9/28
 
-- Add keymap setting for free look mode
+- Add keymap setting for free-look mode
 - Level name will show in game now
 
 ## `0.7.2b2 α` @ 2021/9/20
@@ -368,7 +380,7 @@
 
 ## `0.7.1b2 α` `0.7.1 β` @ 2021/9/17
 
-- Fix an issue that blocks screenshot function in free look mode
+- Fix an issue that blocks screenshot function in free-look mode
 - Add add-to-favorites function for asset folders
 - Add a function to import directories as asset folders
 - Remove drop-in import method
