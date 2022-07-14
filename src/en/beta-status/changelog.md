@@ -1,5 +1,16 @@
 # Changelog
 
+## `0.15.3b1` `0.15.4b1` @ 2022/7/12
+
+- Bump codebase to Unity 2021.3
+- Fix the rendering pipeline
+
+## `0.15.2b1` @ 2022/7/11
+
+- An executor can select a specific player ball `-100` ~ `-109` as its target
+- Fix the issue that the ghost ball always displays as a wooden ball upon level start
+- Fix the issue that steel prop balls are classified into the stone physics audio group
+
 ## `0.15.1b1` @ 2022/7/10
 
 - Add the setting for TAA
@@ -10,7 +21,9 @@
 ## `0.15.0b1` @ 2022/7/9
 
 - You can choose four-directional mode or free-look mode for all official levels
+- Remove numeric display for durability
 - An executor can select the active ball `-99` as its target
+- Fix the issue that the debug console appears in player mode
 
 ## `0.14.1b1` @ 2022/6/16
 
@@ -218,7 +231,7 @@
 
 ## `0.9.3b2` @ 2022/3/8
 
-- Add numeric display for durability
+- ~~Add numeric display for durability~~
 - Iceballs become opaque
 - The sponge ball won't take any physical damage
 - ~~The ghost ball is adjusted to be translucent~~
@@ -362,7 +375,7 @@
 - Add keymap setting
 - Adjust range of visibility in game
 - Slightly adjust properties of balls and machinery
-- Score ball traces should reset upon restart now
+- Score ball traces should reset upon restarting now
 - Change start position of score ball traces upon rebirth
 - Add materials for balls to built-in assets
 
