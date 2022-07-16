@@ -1,5 +1,11 @@
 # Online Multiplayer
 
+:::
+
+This is still a WIP function, its usage can change at any time.
+
+:::
+
 ## Join Server
 
 Press `F4` in main screen. Chat box will show a prompt upon a successful connection.

@@ -42,7 +42,7 @@ Player's current score.
 - Type: `int`
 - Constrain: `t: t >= 0`
 
-Current time in milliseconds.
+Current time in physical frames (5ms).
 
 ### `G_Durability`
 
