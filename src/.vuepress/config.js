@@ -86,7 +86,7 @@ module.exports = {
               collapsable: false,
               children: [
                 "control-and-functions.md",
-                "multiplayer.md",
+                // "multiplayer.md",
                 "changelog.md",
               ],
             },
@@ -192,7 +192,7 @@ module.exports = {
               collapsable: false,
               children: [
                 "control-and-functions.md",
-                "multiplayer.md",
+                // "multiplayer.md",
                 "changelog.md",
               ],
             },

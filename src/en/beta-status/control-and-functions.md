@@ -9,7 +9,6 @@ View and edit control keys via `Settings → Control` panel.
 
 ## Universal Functions
 
-- Join online multiplayer: `F4` in main screen
 - Hide UI elements: `F7`
 - Back to main screen: `F9`
 - Temporary unlock all levels: `M + Enter` in main screen
