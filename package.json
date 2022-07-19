@@ -1,8 +1,18 @@
 {
   "name": "b2me-tutorial",
-  "version": "0.15.4b1",
+  "version": "0.15.7b2",
   "description": "Ballex² 制图教程的 VuePress 源码",
-  "private": true,
+  "engines": {
+    "node": ">=18",
+    "yarn": ">=1.22"
+  },
+  "homepage": "https://ballex2.dilant.cn/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dilant/B2METutorial.git"
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "private": "true",
   "scripts": {
     "check-md": "check-md -p vuepress -c src",
     "dev": "vuepress dev src",

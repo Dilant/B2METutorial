@@ -8,12 +8,12 @@ module.exports = {
     "/": {
       lang: "zh-CN",
       title: "Ballex² 制图教程",
-      description: "基于 Ballex Map Editor Pro 0.15.4b1 编写",
+      description: "基于 Ballex Map Editor Pro 0.15.7b2 编写",
     },
     "/en/": {
       lang: "en-US",
       title: "Ballex² Mapping Tutorial",
-      description: "Based on Ballex Map Editor Pro 0.15.4b1",
+      description: "Based on Ballex Map Editor Pro 0.15.7b2",
     },
   },
 
@@ -47,8 +47,8 @@ module.exports = {
         backToHome: "返回首页",
         navbar: [
           {
-            text: "公测进度",
-            link: "/beta-status/",
+            text: "Steam 抢先体验",
+            link: "/early-access-status/",
           },
           {
             text: "起步",
@@ -65,6 +65,10 @@ module.exports = {
                 text: "另请参阅",
                 children: [
                   {
+                    text: "Steam 商城页面",
+                    link: "https://store.steampowered.com/app/1383570/",
+                  },
+                  {
                     text: "Ballex 制图教程",
                     link: "https://ballex.dilant.cn/",
                   },
@@ -78,11 +82,11 @@ module.exports = {
           },
         ],
         sidebar: {
-          "/beta-status/": [
+          "/early-access-status/": [
             {
               isGroup: true,
-              text: "Ballex² 公测进度",
-              link: "/beta-status/",
+              text: "Ballex² 抢先体验进度",
+              link: "/early-access-status/",
               collapsable: false,
               children: [
                 "control-and-functions.md",
@@ -153,8 +157,8 @@ module.exports = {
         ],
         navbar: [
           {
-            text: "Beta Status",
-            link: "/en/beta-status/",
+            text: "Steam Early Access",
+            link: "/en/early-access-status/",
           },
           {
             text: "Start",
@@ -171,6 +175,10 @@ module.exports = {
                 text: "See Also",
                 children: [
                   {
+                    text: "Steam Store Page",
+                    link: "https://store.steampowered.com/app/1383570/",
+                  },
+                  {
                     text: "Ballex Mapping Tutorial",
                     link: "https://ballex.dilant.cn/en/",
                   },
@@ -184,11 +192,11 @@ module.exports = {
           },
         ],
         sidebar: {
-          "/en/beta-status/": [
+          "/en/early-access-status/": [
             {
               isGroup: true,
-              text: "Ballex² Beta Status",
-              link: "/en/beta-status/",
+              text: "Ballex² Early Access Status",
+              link: "/en/early-access-status/",
               collapsable: false,
               children: [
                 "control-and-functions.md",
