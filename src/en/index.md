@@ -3,7 +3,7 @@ home: true
 heroText: Ballex² Mapping Tutorial
 heroImage: /images/Ballex2Hero.png
 heroImageDark: /images/Ballex2HeroDark.png
-tagline: Based on Ballex Map Editor Pro 0.15.7b2
+tagline: Based on Ballex Map Editor Pro 0.15.8b3
 actions:
   - text: Quick Start →
     link: /en/start/
@@ -11,4 +11,4 @@ actions:
 footer: 2022 Dilant
 ---
 
-> Thanks [@Swung0x48](https://github.com/Swung0x48) for part of localization!
+> Thanks [Swung 0x48](https://github.com/Swung0x48) for part of localization!

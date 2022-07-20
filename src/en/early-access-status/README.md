@@ -1,6 +1,6 @@
 # Ballex² Early Access Status
 
-- The latest version: `0.15.7b2` @ 2022/7/18
+- The latest version: `0.15.8b3` @ 2022/7/20
 - The minimum requirement in theory is Windows 7 x64 (We don't guarantee this, but you can try to copy the executables to Windows 7 and play)
 
 (Refer to the sidebar for configs and changelog)
@@ -12,6 +12,11 @@
 Since neither game mechanism nor level design is finalized, **the leaderboards would be reset without any prior notice during the early access period.** Remember to record your runs, and don't be crazy about hitting a leaderboard.
 
 :::
+
+### `0.15.8b3`
+
+- Force applied when rolling diagonally is increased from 1.207x to 1.414x
+- A player can get and submit a higher score easily, so the leaderboards are kept
 
 ### `0.11.3b1`
 

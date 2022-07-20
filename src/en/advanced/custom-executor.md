@@ -54,7 +54,7 @@ This method can't be applied to rigid bodies, use `PhysicsSetTransform` instead.
 
 ### `Instantiate(ID: int, transform: Annotated[tuple[float], 10]) -> int`
 
-Create a new object from the given object template.
+Create a new object from a given object template.
 
 - `transform`: transform parameters
   - `[0:3]`: position's coordinate
@@ -72,7 +72,7 @@ Set the active state of an object. An inactivated object will hide itself and lo
 
 Run another custom executor. The current one goes on when the latter one completes (either with or without errors).
 
-## 物理
+## Physics
 
 ### `PhysicsSetTransform(ID: int, transform: Annotated[tuple[float], 7]) -> None)`
 
@@ -144,6 +144,42 @@ Calculate the required angular velocity for an object to rotate to the target po
 
 ### `PhysicsBreakJoint(ID: int) -> None`
 
+## Mesh and Material
+
+### `SetPhysicsObjectRenderMesh(ID: int, mesh: str) -> None`
+
+Set mesh of a physics object.
+
+- `mesh`: path to the mesh (reference path to assets in BME Pro)
+
+### `SetPhysicsObjectRenderMaterials(ID: int, materials: list[str]) -> None`
+
+Set materials of a physics object.
+
+- `materials`: list of path to the materials
+
+### `SetPhysicsObjectColliderToSphere(ID: int, radius: float, offset: tuple[float, float, float]) -> None`
+
+Set collider of a physics object to sphere.
+
+- `radius`: radius of the collider
+- `offset`: offset of the collider along each axis
+
+### `SetPhysicsObjectColliderToBox(ID: int, size: tuple[float, float, float], corner_radius: float, offset: tuple[float, float, float]) -> None`
+
+Set collider of a physics object to box.
+
+- `size`: size of the collider along each axis
+- `corner_radius`: corner radius of the collider
+- `offset`: offset of the collider along each axis
+
+### `SetPhysicsObjectColliderToMesh(ID: int, mesh: str, offset: tuple[float, float, float]) -> None`
+
+Set collider of a physics object to a given mesh.
+
+- `mesh`: path to the mesh
+- `offset`: offset of the collider along each axis
+
 ## Game Process
 
 ### `TransferPlayer(target_position: tuple[float, float, float]) -> None`
@@ -198,6 +234,10 @@ Back to checkpoint.
 Change time of a procedural skybox.
 
 - `time`: time, with range `0 <= t <= 24`
+
+### `SetFogIntensity(intensity: float, skybox_fog_intensity: float) -> None`
+
+孩子看不懂 雾不会用 救救孩子
 
 ## Way Path
 

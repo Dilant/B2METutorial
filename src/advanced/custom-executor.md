@@ -168,6 +168,42 @@
 
 断开关节。
 
+## 网格和材质
+
+### `SetPhysicsObjectRenderMesh(ID: int, mesh: str) -> None`
+
+改变物理物体网格。
+
+- `mesh`：网格路径（制图器内对素材的引用路径）
+
+### `SetPhysicsObjectRenderMaterials(ID: int, materials: list[str]) -> None`
+
+改变物理物体材质。
+
+- `materials`：材质路径列表
+
+### `SetPhysicsObjectColliderToSphere(ID: int, radius: float, offset: tuple[float, float, float]) -> None`
+
+改变物理物体碰撞箱为球体。
+
+- `radius`：碰撞箱半径
+- `offset`：碰撞箱沿三轴的偏移
+
+### `SetPhysicsObjectColliderToBox(ID: int, size: tuple[float, float, float], corner_radius: float, offset: tuple[float, float, float]) -> None`
+
+改变物理物体碰撞箱为长方体。
+
+- `size`：碰撞箱沿三轴的尺寸
+- `corner_radius`：碰撞箱圆角半径
+- `offset`：碰撞箱沿三轴的偏移
+
+### `SetPhysicsObjectColliderToMesh(ID: int, mesh: str, offset: tuple[float, float, float]) -> None`
+
+改变物理物体碰撞箱为给定网格。
+
+- `mesh`：网格路径
+- `offset`：碰撞箱沿三轴的偏移
+
 ## 游戏流程
 
 ### `TransferPlayer(target_position: tuple[float, float, float]) -> None`
@@ -240,6 +276,10 @@
 改变预设天空盒时间。
 
 - `time`：时刻，范围为 `0 <= t <= 24`
+
+### `SetFogIntensity(intensity: float, skybox_fog_intensity: float) -> None`
+
+孩子看不懂 雾不会用 救救孩子
 
 ## 路径
 

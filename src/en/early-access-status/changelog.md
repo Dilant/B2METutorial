@@ -1,6 +1,12 @@
 # Changelog
 
-## `0.15.7b1` `0.15.7b2` @ 2022/7/18
+## `0.15.8b3` @ 2022/7/20
+
+- Force applied when rolling diagonally is increased from 1.207x to 1.414x
+- Common framerates are covered by the framerate cap options: 60 / 75 / 90 / 120 / 144 / 165 / 240 / 300 / 360 / uncapped
+- Fix the collider of the platform with stab plates in section #3 of level 1-2 E
+
+## `0.15.7b2` @ 2022/7/18
 
 - Add more 4:3 resolution options
 - Add localization for Microsoft Flavored Chinese
@@ -21,7 +27,7 @@
 - Use better description for FSR options
 - Widen the buttons in the workshop screen, so texts won't split into two lines
 
-## `0.15.3b1` `0.15.4b1` @ 2022/7/12
+## `0.15.4b1` @ 2022/7/12
 
 - Bump codebase to Unity 2021.3
 - Fix the rendering pipeline
@@ -80,7 +86,7 @@
 - Fix the issue that large objects are rendered twice
 - Fix the issue that a road generator of custom shape only use its first material
 
-## `0.13.0b1` `0.13.1b1` @ 2022/5/27
+## `0.13.1b1` @ 2022/5/27
 
 - Add `Template` option to physics objects, which can be used to create new objects at any time
 - When setting value of a variable, it will be automatically created if it doesn't exist
@@ -92,7 +98,7 @@
 - Prop balls and boxes are replaced with physics objects in BME
 - Add flickering and inoperative lights
 
-## `0.12.0b1` `0.12.1b1` @ 2022/5/19
+## `0.12.1b1` @ 2022/5/19
 
 - Full mouse support
 - Add official level 3-2 E
@@ -267,7 +273,7 @@
 - The `Disable Player Key` executor can disable 8-way snap function in free-look mode
 - Fix an issue that disabled player keys take effect again after death
 
-## `0.9.2b4` `0.9.2b5` @ 2022/3/4
+## `0.9.2b5` @ 2022/3/4
 
 - Add leaderboard for official levels
 - ~~Paper balls become irregular spheres~~
@@ -276,7 +282,7 @@
 - Supplies got by an inactive ball will take effect
 - Bring back the muted BGM when restarting after completing a level
 
-## `0.9.2b2` `0.9.2b3` @ 2022/3/3
+## `0.9.2b3` @ 2022/3/3
 
 - ~~Add leaderboard for custom levels~~
 - The player ball won't get any supply during death animation
