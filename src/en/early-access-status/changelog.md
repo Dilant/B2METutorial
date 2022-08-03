@@ -1,5 +1,10 @@
 # Changelog
 
+## `0.15.9b1` @ 2022/7/25
+
+- Use cache for ghost replays
+- Fix the issue that a ghost ball behind the camera shows its name
+
 ## `0.15.8b3` @ 2022/7/20
 
 - Force applied when rolling diagonally is increased from 1.207x to 1.414x

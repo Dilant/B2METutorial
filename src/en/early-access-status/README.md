@@ -1,6 +1,6 @@
 # Ballex² Early Access Status
 
-- The latest version: `0.15.8b3` @ 2022/7/20
+- The latest version: `0.15.9b1` @ 2022/7/25
 - The minimum requirement in theory is Windows 7 x64 (We don't guarantee this, but you can try to copy the executables to Windows 7 and play)
 
 (Refer to the sidebar for configs and changelog)

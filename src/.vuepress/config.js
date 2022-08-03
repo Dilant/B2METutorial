@@ -1,6 +1,6 @@
 const { defaultTheme } = require("vuepress");
 const { shikiPlugin } = require("@vuepress/plugin-shiki");
-const { docsearchPlugin } = require("@vuepress/plugin-docsearch");
+const { nextSearchPlugin } = require("vuepress-plugin-next-search");
 
 module.exports = {
   head: [["link", { rel: "icon", href: "/ballex2.ico" }]],
@@ -8,12 +8,12 @@ module.exports = {
     "/": {
       lang: "zh-CN",
       title: "Ballex² 制图教程",
-      description: "基于 Ballex Map Editor Pro 0.15.8b3 编写",
+      description: "基于 Ballex Map Editor Pro 0.15.9b1 编写",
     },
     "/en/": {
       lang: "en-US",
       title: "Ballex² Mapping Tutorial",
-      description: "Based on Ballex Map Editor Pro 0.15.8b3",
+      description: "Based on Ballex Map Editor Pro 0.15.9b1",
     },
   },
 
@@ -258,18 +258,6 @@ module.exports = {
     shikiPlugin({
       theme: "dark-plus",
     }),
-    docsearchPlugin({
-      appId: "SRD44HYO7D",
-      apiKey: "da4863848aad7a5a1dcb3cced912f0e8",
-      indexName: "B2METutorial",
-      locales: {
-        "/": {
-          placeholder: "搜索",
-        },
-        "/en/": {
-          placeholder: "Search",
-        },
-      },
-    }),
+    nextSearchPlugin({}),
   ],
 };
