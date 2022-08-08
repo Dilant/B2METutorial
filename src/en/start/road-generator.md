@@ -6,91 +6,98 @@ This section includes critical strategies that contributes to a productive workf
 
 :::
 
-Ballex² 中的路面、钢轨和模板均由路面生成器制作而成。
+All roads, rails and wooden boards in Ballex² consist of road generators.
 
-## 创建路面生成器
+## Create a Road Generator
 
-`创建 → 路面生成器`
+`Create → Road Generator`
 
-在起步版块，只讲解常见的用法和常用的参数项。最关键的参数项为：
+The start part will only introduce common usages and parameters. The crucial parameters are:
 
-- `生成器类型`
-- `长度`
-- `末端高度`
-- `分段`
-- `弯曲`
-- `形状` <badge text="生成器类型 = 拐角"/>
-- `偏移` <badge text="生成器类型 = 钢轨"/>
-
-::: tip
-
-由于拐角参数项与另外三者有较大不同，缺失的参数项不再单独展示。
-
-:::
-
-## 直路面
-
-- 选择 `生成器类型` 为 `石质路面`
-- 设置合适的 `长度`
-- 若要制作凹路面，设置合适的 `凹陷`（推荐值为 `0.1`）
-- 若要制作宽路面，设置合适的 `宽度`（推荐值为 `3`）
-- 若要制作斜坡路面，设置合适的 `末端高度`，并勾选 `精确 UV 长度`
-- 若要制作不同路面类型之间的转接路面，取消 `链接末端数值`，并分别调整头部和末端的参数
+- `Generator Type`
+- `Length`
+- `End Height`
+- `Segments`
+- `Bend`
+- `Shape` <badge text="Generator Type = Corner"/>
+- `Offsets` <badge text="Generator Type = Steel Rail"/>
 
 ::: tip
 
-`长度` 意为到自然系 `xOz` 平面的投影长度，与 `末端高度` 是独立的参数。下同。
-
-如果两端都有其它物体遮挡，可以取消 `创建封盖` 以提升性能。下同。
+The start part won't include any content regarding road generators with a `Custom Shape`.
 
 :::
 
-## 直木板
+## Straight Road
 
-- 选择 `生成器类型` 为 `木板`
-- 设置合适的 `长度`
-- 若要制作宽木板，设置合适的 `宽度`（推荐值为 `2`）
-- 若要制作斜坡木板，设置合适的 `末端高度`，并勾选 `精确 UV 长度`
+- Choose `Stone Road` as `Generator Type`
+- Set its `Length`
+- When generating concave roads, set its `Concave` (`0.1` recommended)
+- When generating wide roads, set its `Width` (`3` recommended)
+- When generating slopes, set its `End Height` and check `Precise UV Length`
+- When generating adapters for different types of roads, uncheck `Link ENd Value` and set parameters of start and end respectively
 
-## 直钢轨
+::: tip
 
-- 选择 `生成器类型` 为 `钢轨`
-- 设置合适的 `长度`
-- 若要改变双轨轨距，设置合适的 `偏移`（不推荐修改）
-- 若要制作单轨，设置 `偏移` 数量为 `1`，值为 `(0, 0)`
-- 若要制作斜坡钢轨，旋转钢轨并配套合适的衔接弯轨
+`Length` refers to the length projected onto horizontal plane, which is independent of `End Height`.
 
-## 圆弧
+If both ends are covered by other objects, uncheck `Create Cap` to improve performance.
 
-- 根据所需的半径和圆心角计算对应的 `长度`
-- 将 `弯曲 Y` 设置为末端方向与起始方向的夹角，单位为角度，右转为正，左转为负
-- 根据上述夹角适当设置 `分段数` （推荐值为 `夹角 / 7.5` 向上取整）
+:::
 
-## 螺旋
+## Straight Wooden Board
 
-- 设置 `末端高度` 为末端与头部的高度差
-- 其它同圆弧
+- Choose `Wooden Board` as `Generator Type`
+- Set its `Length`
+- When generating wide wooden boards, set its `Width` (`2` recommended)
+- When generating wooden slopes, set its `End Height` and check `Precise UV Length`
 
-## 纵向弯曲
+## Straight Rail
 
-- 将 `弯曲 X` 设置为末端方向与起始方向的夹角，单位为角度，下压为正，上抬为负
-- 其它同圆弧
+- Choose `Steel Rail` as `Generator Type`
+- Set its `Length`
+- When adjusting the rail gauge, set its `Offsets` (not recommended)
+- When generating single rails, set number of `Offsets` to `1` and its value to `(0, 0)`
+- When generating rail slopes, rotate the rail and append cohesive rail arcs at the ends of the slope
 
-## 麻花
+## Straight Tube
 
-- 将 `弯曲 Z` 设置为末端方向与起始方向的夹角，单位为角度，逆时针扭转为正，顺时针为负
-- 其它同圆弧
+- Choose `Tube` as `Generator Type`
+- Set its `Length`
+- When expanding its external diameter, set its `Radius` (`0.75` recommended)
+- When changing central angle of the section, set its `Slice Start` and `Slice End` (`0` `180` recommended)
+
+## Arc
+
+- Calculate the `Length` according to your desired radius and central angle
+- 将 `Bend Y` 设置为末端方向与起始方向的夹角，单位为角度，右转为正，左转为负
+- Set appropriate `Segments` based on the aforementioned angle (`yaw / 7.5` rounded up recommended)
+
+## Helix
+
+- Set `End Height` as the drop from end to start
+- Others same as arc
+
+## Roller
+
+- 将 `Bend X` 设置为末端方向与起始方向的夹角，单位为角度，下压为正，上抬为负
+- Others same as arc
+
+## Twist
+
+- 将 `Bend Z` 设置为末端方向与起始方向的夹角，单位为角度，逆时针扭转为正，顺时针为负
+- Others same as arc
 
 ::: danger
 
-为了避免得到诡异的结果：
+To avoid getting weird results:
 
-- 请勿同时设置 `末端高度` 和 `弯曲 X` 两个参数
-- 请勿同时设置 `弯曲 X` 和 `弯曲 Y` 两个参数
+- Never use `End Height` together with `Bend X`
+- Never use `Bend X` together with `Bend Y`
 
 :::
 
-::: details 弯曲算法
+::: details Bending Algorithm
 
 <div class="language-python ext-py line-numbers-mode">
   <pre
@@ -155,8 +162,8 @@ Ballex² 中的路面、钢轨和模板均由路面生成器制作而成。
 
 :::
 
-## 拐角
+## Corner
 
-- 选择 `生成器类型` 为 `拐角`
-- 根据路面宽度设定对应的 `尺寸`
-- 点击修改边缘和角落的纹理样式
+- Choose `Corner` as `Generator Type`
+- Set its `Size` according to road width
+- Click to modify the texture and style of edges and corners

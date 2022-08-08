@@ -33,7 +33,7 @@
 
 ### `地形材质`
 
-- 类型：`Material.Terrain[]`
+- 类型：`list[Material.Terrain]`
 - 默认值：
 
 ```
@@ -41,7 +41,7 @@
     Materials/Terrain/GrassGreen.mat,
     Materials/Terrain/GrassYellow.mat,
     Materials/Terrain/CliffDark.mat,
-    Materials/Terrain/CliffBright.mat
+    Materials/Terrain/CliffBright.mat,
 ]
 ```
 

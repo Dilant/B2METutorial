@@ -48,7 +48,7 @@
 
 ### `Trigger Targets ID`
 
-- Type: `int[]`
+- Type: `list[int]`
 - Default: `[]`
 
 只有列表中的元件可以使触发器生效。

@@ -42,7 +42,7 @@
 
 ### `Materials`
 
-- Type: `Material.PBR[]`
+- Type: `list[Material.PBR]`
 - Default: `[]`
 
 对应关系与建模软件中的设定一致。

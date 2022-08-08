@@ -33,7 +33,7 @@
 
 ### `Terrain Materials`
 
-- Type: `Material.Terrain[]`
+- Type: `list[Material.Terrain]`
 - Default:
 
 ```
@@ -41,7 +41,7 @@
     Materials/Terrain/GrassGreen.mat,
     Materials/Terrain/GrassYellow.mat,
     Materials/Terrain/CliffDark.mat,
-    Materials/Terrain/CliffBright.mat
+    Materials/Terrain/CliffBright.mat,
 ]
 ```
 

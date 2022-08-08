@@ -18,7 +18,7 @@
 
 ### `Targets ID`
 
-- Type: `int[]`
+- Type: `list[int]`
 - Default: `[]`
 
 开始执行时，这些物体会受力 **（无论它们在哪里）**。
@@ -131,7 +131,7 @@
 
 ### `Targets ID`
 
-- Type: `int[]`
+- Type: `list[int]`
 - Default: `[]`
 
 开始执行时，这些关节将断开，所有相关约束解除。

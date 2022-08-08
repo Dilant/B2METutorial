@@ -82,7 +82,7 @@ See: [Start → Preparation → Coordinate System](/en/start/preparation.md#coor
 
 ### `Materials`
 
-- Type: `Material.PBR[]`
+- Type: `list[Material.PBR]`
 - Default: `[]`
 
 See: [Mesh System](/en/advanced/mesh-system.md)

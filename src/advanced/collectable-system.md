@@ -82,7 +82,7 @@
 
 ### `材质`
 
-- 类型：`Material.PBR[]`
+- 类型：`list[Material.PBR]`
 - 默认值：`[]`
 
 参见：[进阶 → 网格系统](/advanced/mesh-system.md)
