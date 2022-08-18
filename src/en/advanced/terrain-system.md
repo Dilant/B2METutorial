@@ -10,7 +10,7 @@
 
 ### `Terrain Quality`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Medium`
 
 ::: danger

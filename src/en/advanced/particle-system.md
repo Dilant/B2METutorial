@@ -84,7 +84,7 @@
 
 ### `Color over Lifetime`
 
-- Type: `Tuple[]<float, float, float, float>`
+- Type: `list[tuple[float, float, float, float]]`
 - Default: `[(1, 1, 1, 1), (1, 0, 0, 0.5), (0, 0, 1, 1)]`
 - Constrain: `(r, g, b, τ): 0 <= r <= 1 and 0 <= g <= 1 and 0 <= b <= 1 and 0 <= τ <= 1`
 
@@ -101,7 +101,7 @@
 
 ### `Alpha over Lifetime`
 
-- Type: `Tuple[]<float, float>`
+- Type: `list[tuple[float, float]]`
 - Default: `[(0, 0), (1, 0.2), (1, 0.7), (0, 1)]`
 - Constrain: `(α, τ) : 0 <= α <= 1 and 0 <= τ <= 1`
 
@@ -111,7 +111,7 @@
 
 ### `Size over Lifetime`
 
-- Type: `Tuple[]<float, float>`
+- Type: `list[tuple[float, float]]`
 - Default: `[(0.3, 0), (1, 1)]`
 - Constrain: `(s, τ): s >= 0 and 0 <= τ <= 1`
 

@@ -258,6 +258,25 @@ module.exports = {
     shikiPlugin({
       theme: "dark-plus",
     }),
-    nextSearchPlugin({}),
+    nextSearchPlugin({
+      locales: {
+        "/": {
+          fullText: true,
+          placeholder: "搜索……",
+          frontmatter: {
+            tag: "标签",
+            category: "分类",
+          },
+        },
+        "/en/": {
+          fullText: true,
+          placeholder: "Search...",
+          frontmatter: {
+            tag: "Tag",
+            category: "Category",
+          },
+        },
+      },
+    }),
   ],
 };

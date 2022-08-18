@@ -6,14 +6,14 @@
 
 ### `Variable Name`
 
-- Type: `String`
+- Type: `str`
 - Default: empty
 
 All internal variables start with `G_` or `C_`, so avoid doing so when you create a variable.
 
 ### `Variable Type`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Int`
 
 ### `Variable Value`

@@ -25,7 +25,7 @@
 
 ### `forceType`
 
-- 类型：`enum{0, 1}`
+- 类型：`Literal`
 - 默认值：`0`
 
 施力类型。
@@ -63,7 +63,7 @@
 
 ### `falloffShape`
 
-- 类型：`enum{0, 1}`
+- 类型：`Literal`
 - 默认值：`0`
 
 判定区形状。`0` 为长方体状，施力方向由 `forceDirectionX` `forceDirectionY` `forceDirectionZ` 决定；`1` 为圆球状，半径由 `Y` 向缩放决定，施力方向固定为离心。
@@ -190,7 +190,7 @@
 
 ### `weatherType` <badge text="必填" type="warning"/>
 
-- 类型：`enum{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}`
+- 类型：`Literal`
 - 默认值：`0`
 
 目标天气编号。

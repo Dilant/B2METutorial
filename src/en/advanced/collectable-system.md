@@ -6,7 +6,7 @@
 
 ### `Name`
 
-- Type: `String`
+- Type: `str`
 - Default: empty
 - Constrain: `s: ascii(s) == true`
 
@@ -50,7 +50,7 @@ Determine whether the collectable is displayed when its number is 0.
 
 ### `Name`
 
-- Type: `String`
+- Type: `str`
 - Default: empty
 - Constrain: `s: ascii(s) == true`
 

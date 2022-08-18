@@ -4,7 +4,7 @@
 
 ### `Trigger Type`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Physics`
 
 ### `Activated`
@@ -41,7 +41,7 @@
 
 ### `Physics Trigger Type`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Enter`
 
 `Enter` 在进入触发器时生效；`Stay` 在停留于触发器中时逐物理帧反复生效；`Exit` 在离开触发器时生效。
@@ -85,12 +85,12 @@
 
 ### `Input Key`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Space`
 
 ### `Input Action`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Down`
 
 `Down` 在按下按键时生效；`Hold` 在按住按键时逐物理帧反复生效；`Up` 在松开按键时生效；`Switch` 在首次按下按键时开始逐物理帧反复生效，再次按下时停止。

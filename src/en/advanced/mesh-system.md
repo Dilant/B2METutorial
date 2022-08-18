@@ -49,7 +49,7 @@
 
 ### `Collider Type`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Mesh`
 
 ::: tip
@@ -103,7 +103,7 @@
 
 ### `Physics Body Type`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Static`
 
 各类型含义为：
@@ -148,14 +148,14 @@
 
 ### `Physics Material`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Stone`
 
 影响弹力、表面摩擦系数等物理性质。
 
 ### `Physics Audio Group`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Stone`
 
 影响碰撞音效等游戏效果。

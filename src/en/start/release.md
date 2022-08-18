@@ -1,8 +1,8 @@
 # Release
 
-## 准备封面
+## Prepare a Cover
 
-### 截图
+### Take a Screenshot
 
 - 进入测图模式：`File → Export BMS → Test Map`
 - 进入截图功能：`F5`
@@ -12,7 +12,7 @@
   - `Enter` 完成截图
 - 截图保存在 `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`
 
-### 自己制作
+### Do it Yourself
 
 你也可以自己制作封面，要求为：
 
@@ -20,7 +20,7 @@
 - 画面比例为 16:9，推荐分辨率为 1920×1080
 - 契合地图主题
 
-## 导入封面
+## Import Cover
 
 在 `Assets → Textures` 面板，点击右栏加号导入封面。
 
@@ -30,7 +30,7 @@
 
 :::
 
-## 导出 `.bms` 文件
+## Export `.bms` File
 
 `File → Export BMS`
 
@@ -61,12 +61,12 @@
 
 ### `Initial Ball Type`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Wooden Ball`
 
 ### `Camera Mode`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Four-directional Camera`
 
 ::: danger
@@ -81,13 +81,13 @@
 - Default: `0`
 - Constrain: `x: 0 <= x <= 10`
 
-难度分级为：
+The difficulty levels are:
 
-- `EASY: 0, 1`
-- `NORMAL: 2, 3, 4`
-- `HARD: 5, 6, 7`
-- `EXPERT: 8, 9`
-- `MASTER: 10`
+- Easy: `0` `1`
+- Normal: `2` `3` `4`
+- Hard: `5` `6` `7`
+- Expert: `8` `9`
+- Master: `10`
 
 ### `Gravity`
 
@@ -104,16 +104,16 @@
 - Type: `int` `int` `int`
 - Default: `0` `0` `0`
 
-~~小编也不知道为什么它能填负数~~
+~~I don't know why but negative integers will work~~
 
 ### `Cover`
 
 - Type: `Texture`
 - Default: empty
 
-将 `Assets → Textures` 面板中的图片拖入此处。
+Drag an image in `Assets → Textures` panel and drop it here.
 
-## 上传到 Steam 创意工坊
+## Upload to Steam Workshop
 
 `File → Upload to Workshop`
 
@@ -121,10 +121,10 @@
 
 ### `Upload Mode`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Create`
 
-此处请选择 `Create`。
+Select `Create` here.
 
 ### `Title`
 
@@ -142,7 +142,7 @@
 
 ### `Tag`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Racing`
 
 ### `Cover`
@@ -150,18 +150,18 @@
 - Type: `Texture`
 - Default: empty
 
-将 `Assets → Textures` 面板中的图片拖入此处。
+Drag an image in `Assets → Textures` panel and drop it here.
 
-## 更新地图
+## Update Level
 
 `File → Upload to Workshop`
 
 ### `Upload Mode`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Create`
 
-此处请选择 `Update`。
+Select `Update` here.
 
 ### `Workshop File ID`
 
@@ -177,21 +177,21 @@
 
 请在此处只填写**英文**。如果没有英文翻译，请只填写源语言。
 
-## 更新其它语言的地图信息
+## Update Level Info in Other Languages
 
 ![](/images/steam-info-localization.jpg)
 
-### 标题与描述
+### Title and Description
 
 - 在创意工坊网页中找到你的地图
-- 点击编辑标题与描述
+- 点击 `Edit title & description`
 - 语言选择简体中文（或待更新的其它语言）
 - 修改并保存
 
-### 改动说明
+### Change Note
 
 - 在创意工坊网页中找到你的地图
-- 点击改动说明
+- 点击 `Change Notes`
 - 点击对应条目的编辑按钮
 - 语言选择简体中文（或待更新的其它语言）
 - 修改并保存

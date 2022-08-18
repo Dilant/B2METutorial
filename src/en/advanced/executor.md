@@ -4,7 +4,7 @@
 
 ### `Executor Type`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Add Force`
 
 ### `Next Executor ID`
@@ -31,7 +31,7 @@
 
 ### `Force Mode`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Append Acceleration`
 
 | 施力模式   | 触发器类型为停留时 | 否则         |
@@ -42,7 +42,7 @@
 
 ### `Force Direction`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `To AxisY`
 
 ### `Force Value`
@@ -63,7 +63,7 @@
 
 ### `Transform Mark`
 
-- Type: `String`
+- Type: `str`
 - Default: empty
 
 ## Follow Way Path
@@ -147,12 +147,12 @@
 
 ### `Target Variable`
 
-- Type: `String`
+- Type: `str`
 - Default: empty
 
 ### `Expression`
 
-- Type: `String`
+- Type: `str`
 - Default: empty
 
 可以使用 `+-*/()` 进行数学运算，使用 `@name ` （注意尾随空格）引用其它变量。
@@ -161,12 +161,12 @@
 
 ### `Variable A`
 
-- Type: `String`
+- Type: `str`
 - Default: empty
 
 ### `Variable B`
 
-- Type: `String`
+- Type: `str`
 - Default: empty
 
 ### `Equal Threshold`
@@ -217,7 +217,7 @@
 
 ### `Player Key`
 
-- Type: `enum`
+- Type: `Literal`
 - Default: `Move Forward`
 
 ## Switch Camera Target

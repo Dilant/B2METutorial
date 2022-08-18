@@ -23,6 +23,6 @@
     "@vuepress/plugin-shiki": "^2.0.0-beta.49",
     "check-md": "git+ssh://git@github.com:Dilant/check-md.git#master",
     "vuepress": "^2.0.0-beta.49",
-    "vuepress-plugin-next-search": "^0.0.5"
+    "vuepress-plugin-next-search": "git+ssh://git@github.com:Dilant/vuepress-plugin-next-search.git#main"
   }
 }
