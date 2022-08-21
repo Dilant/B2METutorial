@@ -1,17 +1,46 @@
 # Ballex² Early Access Status
 
-- The latest version: `0.15.9b1` @ 2022/7/25
+- The latest version: `0.16.0b1` @ 2022/8/21
 - The minimum requirement in theory is Windows 7 x64 (We don't guarantee this, but you can try to copy the executables to Windows 7 and play)
 
 (Refer to the sidebar for configs and changelog)
 
-## Breaking Change
+## Major Change
 
 ::: warning
 
 Since neither game mechanism nor level design is finalized, **the leaderboards would be reset without any prior notice during the early access period.** Remember to record your runs, and don't be crazy about hitting a leaderboard.
 
 :::
+
+### `0.16.0b1 α`
+
+- Add temperature system
+  - 玩家球初始温度为 0，自发趋近环境温度
+  - 温度实际值无上下限，左上角温度条显示范围为 -50 ~ 200
+  - 受冷降温至冰点 -10 时
+    - 冰球以外的球结冰，摩擦力降低至与冰球相同；温度升高到 -10 以上时解除结冰状态
+    - 冰球温度不变，增加质量和体积，半径最大扩大至 200%
+  - 受热升温时
+    - 湿度降低速度随温度升高而提升
+    - 温度高于 190 时，接触 TNT 将直接引爆
+    - 冰球温度不变，减少质量和体积，半径最小缩小至 20%，此时继续受热将损失耐久
+  - 受热升温至燃点 200 时
+    - 纸球和木球点燃，温度瞬时升高为 500，随后趋近 250；温度降低到 200 以下时熄灭
+    - 气球直接爆炸死亡
+    - （未提及的球没有特殊效果）
+  - 得到冰霜补给时
+    - 若已点燃，温度降至 0 并熄灭
+    - 若未点燃但温度高于 0，温度降至 -50
+    - 若温度低于 0，温度降低 -50
+  - 进入水池时，玩家球温度不会高于 200，已点燃的球立即熄灭
+  - 变球或触发检查点时，玩家球温度变为 0，解除结冰或点燃状态
+- Add power mechanism to the sticky ball
+  - 粘球新增电量条，初始电量为 100
+  - 移动将消耗电量值，满电量可支撑粘球全速滚动 25 秒
+  - 电量耗尽时，粘球动力大幅降低，将无法爬墙
+  - 电球不再伤害或击退粘球，改为增加 50 电量值
+  - 粘球触发检查点时电量充满
 
 ### `0.15.8b3`
 

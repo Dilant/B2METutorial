@@ -1,5 +1,20 @@
 # Changelog
 
+## `0.16.0b1` @ 2022/8/21
+
+- Add official level 3-3 E
+- Optimize the performance of snow footprint
+- Leaderboards will show the top 200 scores
+
+## `0.16.0b1 α` `0.16.0b2 α` @ 2022/8/14
+
+- Add temperature system
+- Add power mechanism to the sticky ball
+- Only the attributes that are valuable to the current player ball are displayed in the upper left corner
+- Heavy objects and TNTs should be able to cut off suspension bridges
+- Fix the issue that TNTs can't be detonated by objects other than the player ball
+- Add shadow, screen space ambient occlusion and console options in the setting screen
+
 ## `0.15.9b1` @ 2022/7/25
 
 - Use cache for ghost replays

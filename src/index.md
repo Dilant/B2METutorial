@@ -3,7 +3,7 @@ home: true
 heroText: Ballex² 制图教程
 heroImage: /images/Ballex2Hero.png
 heroImageDark: /images/Ballex2HeroDark.png
-tagline: 基于 Ballex Map Editor Pro 0.15.9b1 编写
+tagline: 基于 Ballex Map Editor Pro 0.16.0b1 编写
 actions:
   - text: 快速上手 →
     link: /start/

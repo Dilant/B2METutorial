@@ -173,7 +173,7 @@
 
 `F5`
 
-截图默认为 1920×1080 .jpg 文件，保存在：`%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`。
+截图默认为 1920×1080 `.jpg` 文件，保存在 `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`。
 
 ### 变量检视器
 

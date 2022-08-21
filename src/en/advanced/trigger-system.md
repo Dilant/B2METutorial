@@ -14,14 +14,6 @@ See: [Advanced → Trigger](/en/advanced/trigger.md)
 
 `Create → Executor`
 
-执行器可以被触发器触发，也可以关联执行器实现链式触发。
+执行器使用 [MiniScript](https://miniscript.org/) 编写，可以实现各类复杂逻辑。
 
 See: [Advanced → Executor](/en/advanced/executor.md)
-
-## Custom Executor
-
-`Create → Custom Executor`
-
-自定义执行器使用 [MiniScript](https://miniscript.org/) 编写，可以实现各类复杂逻辑。
-
-See: [Advanced → Custom Executor](/en/advanced/custom-executor.md)

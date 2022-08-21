@@ -14,14 +14,6 @@
 
 `创建 → 执行器`
 
-执行器可以被触发器触发，也可以关联执行器实现链式触发。
+执行器使用 [MiniScript](https://miniscript.org/) 编写，可以实现各类复杂逻辑。
 
 参见：[进阶 → 执行器](/advanced/executor.md)
-
-## 自定义执行器
-
-`创建 → 自定义执行器`
-
-自定义执行器使用 [MiniScript](https://miniscript.org/) 编写，可以实现各类复杂逻辑。
-
-参见：[进阶 → 自定义执行器](/advanced/custom-executor.md)

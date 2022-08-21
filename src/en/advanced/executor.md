@@ -1,230 +1,444 @@
 # Executor
 
-## Universal Parameters
+## MiniScript Simple Guide
 
-### `Executor Type`
+- MiniScript official site: [https://miniscript.org/](https://miniscript.org/)
+  - Read [official manual](https://miniscript.org/files/MiniScript-Manual.pdf) and [quick start](https://miniscript.org/files/MiniScript-QuickRef.pdf) first
+  - There's an official [playground](https://miniscript.org/tryit/)
+- MiniScript is a weak and dynamic typing language (similar to PHP)
+  - Variables will be converted to another type automatically and implicitly whenever possible, without raising exceptions
+- MiniScript has these variable types: `number` `string` `list` `map`
+- MiniScript **doesn't** have `int` type (similar to JavaScript)
+  - All `number`s are `double`s
+  - No exception of division by zero, and there's `INF` and `nan`
+  - Take care of floating point comparisons
+- MiniScript **doesn't** have `bool` type (similar to C)
+  - `true` is `1`, `false` is `0`
+  - In `if` statements, `0` `""` `[]` `{}` `null` are regarded as false, others as true
+- MiniScript passes everything by reference whenever possible (similar to Python)
+  - When copying a `list`, remember to use syntax like `b = a[:]`
+  - **No** deep copy function, so avoid using complicated data structures
+- The types and signatures below are annotated using Python style
 
-- Type: `Literal`
-- Default: `Add Force`
+## Global Variables
 
-### `Next Executor ID`
+### `globals.TriggerID: int | None`
 
-- Type: `int`
-- Default: `0`
+The trigger's ID which runs the current executor.
 
-同一物理帧内的所有执行器按制图器中的顺序构成树，前序遍历依次执行。
+### `globals.TriggeredItemID: int | None`
 
-## Add Force
+The object's ID which activates the aforementioned trigger.
 
-### `Targets ID`
+## Generic
 
-- Type: `list[int]`
-- Default: `[]`
+### `GetTransform(ID: int) -> Annotated[tuple[float], 10]`
 
-开始执行时，这些物体会受力 **（无论它们在哪里）**。
+Get transform parameters of an object.
 
-::: details 例如可以这样
+- `returns`: transform parameters
+  - `[0:3]`: position's coordinate
+  - `[3:7]`: posture's quaternion
+  - `[7:10]`: scale ratio along each axis
 
-![](/images/executor-add-force.gif)
+### `SetTransform(ID: int, transform: Annotated[tuple[float], 10]) -> None`
 
-:::
+Set transform parameters of an object.
 
-### `Force Mode`
+This method can't be applied to rigid bodies, use `PhysicsSetTransform` instead.
 
-- Type: `Literal`
-- Default: `Append Acceleration`
+- `transform`: transform parameters
+  - `[0:3]`: position's coordinate
+  - `[3:7]`: posture's quaternion
+  - `[7:10]`: scale ratio along each axis
 
-| 施力模式   | 触发器类型为停留时 | 否则         |
-| ---------- | ------------------ | ------------ |
-| 附加恒力   | 恒力场             | 恒冲量发生器 |
-| 设定速度   | 恒速器             | 瞬时变速器   |
-| 附加加速度 | 恒加速度场         | 恒速度附加器 |
+### `SetGravity(gravity: tuple[float, float, float]) -> None`
 
-### `Force Direction`
+- `gravity`: gravity along each axis
 
-- Type: `Literal`
-- Default: `To AxisY`
+### `Instantiate(ID: int, transform: Annotated[tuple[float], 10]) -> int`
 
-### `Force Value`
+Create a new object from a given object template.
 
-- Type: `float`
-- Default: `0`
+- `transform`: transform parameters
+  - `[0:3]`: position's coordinate
+  - `[3:7]`: posture's quaternion
+  - `[7:10]`: scale ratio along each axis
+- `returns`: ID of the new object
 
-负数表示反方向。
+### `SetActive(ID: int, active: bool) -> None`
 
-### `Use Falloff`
+Set the active state of an object. An inactivated object will hide itself and lose its functions.
 
-- Type: `bool`
-- Default: `false`
+- `active`: whether active
 
-勾选此项时，物体离触发器越远受力越小。
+### `Execute(ID: int, delayed_frame: int) -> None`
 
-## Set Spawn Point
+Run another executor.
 
-### `Transform Mark`
+- `delayed_frame`: physics frames to defer
+  - When `delayed_frame == 0`, the current one goes on when the latter one completes (either with or without errors)
+  - When `delayed_frame >= 0`, the scheduled executors run at the beginning of the corresponding physics frame
 
-- Type: `str`
-- Default: empty
+## Physics
 
-## Follow Way Path
+### `PhysicsCheckExist(ID: int) -> bool`
 
-### `Way Path ID`
+Check whether the specified physics object exists.
 
-- Type: `int`
-- Default: `0`
-- Constrain: `i: i > 0`
+- `returns`: whether it exists
 
-### `Targets ID`
+### `PhysicsSetTransform(ID: int, transform: Annotated[tuple[float], 7]) -> None)`
 
-- Type: `int...`
-- Default: empty
-- Constrain: `i: i > 0`
+Set transform parameters of a rigid body.
 
-### `Enable Relative Position`
+To get transform parameters of a rigid body, use `GetTransform`.
 
-- Type: `bool`
-- Default: `false`
+- `transform`: transform parameters
+  - `[0:3]`: position's coordinate
+  - `[3:7]`: posture's quaternion
 
-### `Enable Relative Rotation`
+### `PhysicsGetInverseMass(ID: int) -> float`
 
-- Type: `bool`
-- Default: `false`
+- `returns`: inverse mass
 
-### `Rotation Align Tangent`
+### `PhysicsSetInverseMass(ID: int, inverse_mass: float) -> None`
 
-- Type: `bool`
-- Default: `false`
+- `inverse_mass`: inverse mass
 
-### `Rotation Align Offset`
+### `PhysicsGetLinearDamping(ID: int) -> float`
 
-- Type: `float` `float` `float`
-- Default: `0` `0` `0`
+- `returns`: linear damping
 
-### `Rigidbody Mode`
+### `PhysicsSetLinearDamping(ID: int, damping: float) -> None`
 
-- Type: `bool`
-- Default: `false`
+- `damping`: linear damping
 
-在刚体模式下，存在一个中心由 `Way Path` 控制移动，力度受 `Control Rigidbody Strength` 影响，半径由 `Control Rigidbody Distance` 决定的向心恒力场，`Targets` 刚体在这一恒力场的牵引下运动。
+### `PhysicsGetAngularDamping(ID: int) -> float`
 
-### `Control Rigidbody Strength` <badge text="Rigidbody Mode = true"/>
+- `returns`: angular damping
 
-- Type: `float`
-- Default: `0`
+### `PhysicsSetAngularDamping(ID: int, damping: float) -> None`
 
-### `Control Rigidbody Distance` <badge text="Rigidbody Mode = true"/>
+- `damping`: angular damping
 
-- Type: `float`
-- Default: `0`
-- Constrain: `x: x >= 0`
+### `PhysicsGetLinearVelocity(ID: int) -> tuple[float, float, float]`
 
-刚体超出这一距离时不会受力，回到距离内会继续受力。
+- `returns`: linear velocity along each axis
 
-### `Execute on Life Start`
+### `PhysicsSetLinearVelocity(ID: int, velocity: tuple[float, float, float]) -> None`
 
-- Type: `bool`
-- Default: `false`
+- `velocity`: linear velocity along each axis
 
-生命开始时执行的执行器不需要被触发器绑定。
+### `PhysicsGetAngularVelocity(ID: int) -> tuple[float, float, float]`
 
-## Break Joint
+- `returns`: angular velocity along each axis
 
-### `Targets ID`
+### `PhysicsSetAngularVelocity(ID: int, velocity: tuple[float, float, float]) -> None`
 
-- Type: `list[int]`
-- Default: `[]`
+- `velocity`: angular velocity along each axis
 
-开始执行时，这些关节将断开，所有相关约束解除。
+### `PhysicsCalculateVelocityToTargetPosition(ID: int, target: tuple[float, float, float]) -> tuple[float, float, float]`
 
-## Set Camera Offset
+Calculate the required linear velocity for an object to move to the target position in the next physics frame.
 
-### `Camera Offset`
+- `target`: target position's coordinate
+- `returns`: required linear velocity along each axis
 
-- Type: `float` `float` `float`
-- Default: `0` `4` `-3.5`
+### `PhysicsCalculateVelocityToTargetRotation(ID: int, target: tuple[float, float, float, float]) -> tuple[float, float, float]`
 
-## Set Variable Value
+Calculate the required angular velocity for an object to rotate to the target posture in the next physics frame.
 
-### `Target Variable`
+- `target`: target posture's quaternion
+- `returns`: required angular velocity along each axis
 
-- Type: `str`
-- Default: empty
+### `PhysicsDestroy(ID: int, vfx: bool) -> None`
 
-### `Expression`
+- `vfx`: whether to play destruction animation
 
-- Type: `str`
-- Default: empty
+### `PhysicsBreakJoint(ID: int) -> None`
 
-可以使用 `+-*/()` 进行数学运算，使用 `@name ` （注意尾随空格）引用其它变量。
+## Mesh and Material
 
-## Compare Variables
+### `SetPhysicsObjectRenderMesh(ID: int, mesh: str) -> None`
 
-### `Variable A`
+Set mesh of a physics object.
 
-- Type: `str`
-- Default: empty
+- `mesh`: path to the mesh (reference path to assets in BME Pro)
 
-### `Variable B`
+### `SetPhysicsObjectRenderMaterials(ID: int, materials: list[str]) -> None`
 
-- Type: `str`
-- Default: empty
+Set materials of a physics object.
 
-### `Equal Threshold`
+- `materials`: list of path to the materials
 
-- Type: `float`
-- Default: `0`
+### `SetPhysicsObjectColliderToSphere(ID: int, radius: float, offset: tuple[float, float, float]) -> None`
 
-::: tip
+Set collider of a physics object to sphere.
 
-以下条件分支不会熔断，所有满足的分支连同 `Next Executor` 前序遍历执行。
+- `radius`: radius of the collider
+- `offset`: offset of the collider along each axis
 
-:::
+### `SetPhysicsObjectColliderToBox(ID: int, size: tuple[float, float, float], corner_radius: float, offset: tuple[float, float, float]) -> None`
 
-### `Equal`
+Set collider of a physics object to box.
 
-- Type: `int`
-- Default: `0`
+- `size`: size of the collider along each axis
+- `corner_radius`: corner radius of the collider
+- `offset`: offset of the collider along each axis
 
-`|A - B| <= ε` 时执行该执行器。
+### `SetPhysicsObjectColliderToMesh(ID: int, mesh: str, offset: tuple[float, float, float]) -> None`
 
-### `Not Equal`
+Set collider of a physics object to a given mesh.
 
-- Type: `int`
-- Default: `0`
+- `mesh`: path to the mesh
+- `offset`: offset of the collider along each axis
 
-`|A - B| > ε` 时执行该执行器。
+## Game Process
 
-### `Greater`
+### `TransferPlayer(target_position: tuple[float, float, float]) -> None`
 
-- Type: `int`
-- Default: `0`
+Transfer the player ball to the target position. Its velocity and camera motion are kept unchanged.
 
-`A > B` 时执行该执行器。
+- `target_position`: target position's coordinate
 
-### `Less`
+### `RemoveAllInactiveBalls() -> None`
 
-- Type: `int`
-- Default: `0`
+### `SetSpawnPoint(transform_mark: str) -> None`
 
-`A < B` 时执行该执行器。
+- `transform_mark`: corresponding transform mark of the rebirth point
 
-## Disable Player Key
+### `DisablePlayerKey(key: str, disabled: bool) -> None`
 
-### `Disable Key`
+- `key`:
+- `disabled`: whether to disable
 
-- Type: `bool`
-- Default: `true`
+### `CallLevelComplete(vfx: bool, position: tuple[float, float, float]) -> None`
 
-### `Player Key`
+- `vfx`: whether to play destination animation
+- `position`: if so, the position's coordinate where the player ball will be transferred to
 
-- Type: `Literal`
-- Default: `Move Forward`
+### `CallSuicide() -> None`
 
-## Switch Camera Target
+Back to checkpoint.
 
-### `Camera Target ID`
+### `CallRestart() -> None`
 
-- Type: `int`
-- Default: `0`
+## Camera
 
-仅对物理物体和主球 `ID = -99` 有效。
+### `SetCameraMode(mode: int) -> None`
+
+- `mode`: `0` four-directional mode, `1` free-look mode
+
+### `SetCameraTarget(ID: int) -> None`
+
+### `SetCameraOffset(offset: tuple[float, float, float]) -> None`
+
+- `offset`: the offset vector from the player ball to the camera
+
+## Light
+
+### `SetLightIntensity(ID: int, intensity: float) -> None`
+
+- `intensity`: intensity
+
+### `SetLightColor(ID: int, RGB: tuple[float, float, float]) -> None`
+
+- `RGB`: color, each component with range `0 <= x <= 1`
+
+### `SetLut(lut: str, intensity: float) -> None`
+
+- `lut`: path to the LUT texture
+- `intensity`: intensity
+
+## Skybox
+
+### `SetSkyboxTime(time: float) -> None`
+
+Change time of a procedural skybox.
+
+- `time`: time, with range `0 <= t <= 24`
+
+### `SetFogIntensity(intensity: float, skybox_fog_intensity: float) -> None`
+
+孩子看不懂 雾不会用 救救孩子
+
+### `SetFogColor(RGB: tuple[float, float, float]) -> None`
+
+- `RGB`: color, each component with range `0 <= x <= 1`
+
+### `SetFogDistance(start: float, end: float) -> None`
+
+- `start`: the distance where visibility begins to degrade
+- `end`: the distance where visibility reaches the worst
+
+## Way Path
+
+### `WayPathGetPosition(ID: int, part_index: int, percentage: float) -> tuple[float, float, float]`
+
+Calculate the position of a given point on a way path.
+
+`part_index`: index of the way path segment, counting from `0`
+`percentage`: percentage of progress on this segment, with range `0 <= x <= 1`
+`returns`: calculated position's coordinate
+
+### `WayPathGetRotation(ID: int, part_index: int, percentage: float) -> tuple[float, float, float, float]`
+
+Calculate the posture of a given point on a way path.
+
+`part_index`: index of the way path segment, counting from `0`
+`percentage`: percentage of progress on this segment, with range `0 <= x <= 1`
+`returns`: calculated posture's quaternion
+
+### `GetWayPointInfo(ID: int, point_index: int) -> tuple[float, bool, float, float]`
+
+Get information of a way point on a way path.
+
+- `ID`: way path ID
+- `point_index`: index of the way point (counting from `0`)
+- `returns`: way point information
+  - `[0]`: moving speed towards the next point
+  - `[1]`: whether duration is used instead of moving speed
+  - `[2]`: duration to the next point
+  - `[3]`: stay time at the point
+
+### `RefreshWayPath() -> None`
+
+## Variable System
+
+### `GetIntVariableValue(name: str) -> int`
+
+### `GetFloatVariableValue(name: str) -> float`
+
+### `GetBoolVariableValue(name: str) -> bool`
+
+- `name`: variable name
+- `returns`: variable value
+
+### `SetIntVariableValue(name: str, value: int) -> None`
+
+### `SetFloatVariableValue(name: str, value: float) -> None`
+
+### `SetBoolVariableValue(name: str, value: bool) -> None`
+
+- `name`: variable name
+- `value`: variable value
+
+## Particle System
+
+### `PlayParticle(ID: int) -> None`
+
+### `PauseParticle(ID: int) -> None`
+
+### `StopParticle(ID: int) -> None`
+
+## Audio System
+
+### `PlayAudio(ID: int) -> None`
+
+### `PauseAudio(ID: int) -> None`
+
+### `StopAudio(ID: int) -> None`
+
+### `SetAudioVolume(ID: int, volume: float) -> None`
+
+- `volume`: volume, with range `0 <= v <= 1`
+
+## Miscellaneous
+
+### `QuaternionToEuler(quaternion: tuple[float, float, float, float]) -> tuple[float, float, float]`
+
+- `quaternion`: quaternion
+- `returns`: euler angle
+
+### `EulerToQuaternion(euler: tuple[float, float, float]) -> tuple[float, float, float, float]`
+
+- `euler`: euler angle
+- `returns`: quaternion
+
+### `SaveData(data: list[float]) -> None`
+
+- `data`: game save, with size limit of 1MB
+
+### `LoadData() -> list[float]`
+
+- `returns`: game save
+
+## Code Snippets
+
+### `map`
+
+This function is called `apply`, because `map` is a typing keyword of MiniScript.
+
+<div class="language-miniscript ext-ms line-numbers-mode">
+  <pre
+    class="shiki"
+    style="background-color: #1e1e1e"
+  ><code><span class="line"><span style="color:#DCDCAA;">apply</span><span style="color:#D4D4D4;"> = </span><span style="color:#569CD6;">function</span><span style="color:#DCDCAA;">(</span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;"> = []</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">for</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">in</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">iter</span></span>
+<span class="line"><span style="color:#D4D4D4;">        </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;">.</span><span style="color:#DCDCAA;">push</span><span style="color:#D4D4D4;">(</span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">(</span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;">))</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">for</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">return</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">result</span></span>
+<span class="line"><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#569CD6;">function</span></span>
+<span class="line"></span></code></pre>
+  <div class="line-numbers" aria-hidden="true">
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+  </div>
+</div>
+
+### `reduce`
+
+<div class="language-miniscript ext-ms line-numbers-mode">
+  <pre
+    class="shiki"
+    style="background-color: #1e1e1e"
+  ><code><span class="line"><span style="color:#DCDCAA;">reduce</span><span style="color:#D4D4D4;"> = </span><span style="color:#569CD6;">function</span><span style="color:#DCDCAA;">(</span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;"> = </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">[</span><span style="color:#B5CEA8;">0</span><span style="color:#D4D4D4;">]</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">for</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">in</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">[</span><span style="color:#B5CEA8;">1</span><span style="color:#D4D4D4;">:]</span></span>
+<span class="line"><span style="color:#D4D4D4;">        </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;"> = </span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">(</span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">for</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">return</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">result</span></span>
+<span class="line"><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#569CD6;">function</span></span>
+<span class="line"></span></code></pre>
+  <div class="line-numbers" aria-hidden="true">
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+  </div>
+</div>
+
+### `filter`
+
+<div class="language-miniscript ext-ms line-numbers-mode">
+  <pre
+    class="shiki"
+    style="background-color: #1e1e1e"
+  ><code><span class="line"><span style="color:#DCDCAA;">filter</span><span style="color:#D4D4D4;"> = </span><span style="color:#569CD6;">function</span><span style="color:#D4D4D4;">(</span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">, </span><span style="color:#9CDCFE;">iter</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;"> = []</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">for</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">in</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">iter</span></span>
+<span class="line"><span style="color:#D4D4D4;">        </span><span style="color:#C586C0;">if</span><span style="color:#D4D4D4;"> </span><span style="color:#DCDCAA;">func</span><span style="color:#D4D4D4;">(</span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;">)</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">then</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">result</span><span style="color:#D4D4D4;">.</span><span style="color:#DCDCAA;">push</span><span style="color:#D4D4D4;">(</span><span style="color:#9CDCFE;">x</span><span style="color:#D4D4D4;">)</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#C586C0;">for</span></span>
+<span class="line"><span style="color:#D4D4D4;">    </span><span style="color:#C586C0;">return</span><span style="color:#D4D4D4;"> </span><span style="color:#9CDCFE;">result</span></span>
+<span class="line"><span style="color:#C586C0;">end</span><span style="color:#D4D4D4;"> </span><span style="color:#569CD6;">function</span></span>
+<span class="line"></span></code></pre>
+  <div class="line-numbers" aria-hidden="true">
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+    <div class="line-number"></div>
+  </div>
+</div>

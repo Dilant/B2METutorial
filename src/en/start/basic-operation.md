@@ -173,7 +173,7 @@ For convenience, you can fetch aids from `Assets → Items → TestMapTools`.
 
 `F5`
 
-The screenshot is 1920×1080 in `.jpg` format in default, and saved at: `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`.
+The screenshot is 1920×1080 in `.jpg` format in default, and saved at `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`.
 
 ### Variables Inspector
 

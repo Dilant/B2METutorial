@@ -23,10 +23,7 @@ All internal variables start with `G_` or `C_`, so avoid doing so when you creat
 
 ## Manipulate Variables
 
-See:
-
-- [Advanced → Executor → Set Variable Value](/en/advanced/executor.md#set-variable-value)
-- [Advanced → Executor → Compare Variables](/en/advanced/executor.md#compare-variables)
+See: [Advanced → Executor → Variable System](/en/advanced/executor.md#variable-system)
 
 ## Internal Variables
 

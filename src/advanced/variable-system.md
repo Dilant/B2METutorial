@@ -23,10 +23,7 @@
 
 ## 操纵变量
 
-参见：
-
-- [进阶 → 执行器 → 设置变量值](/advanced/executor.md#设置变量值)
-- [进阶 → 执行器 → 比较变量](/advanced/executor.md#比较变量)
+参见：[进阶 → 执行器 → 变量系统](/advanced/executor.md#变量系统)
 
 ## 内置变量
 
