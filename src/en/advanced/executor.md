@@ -82,7 +82,7 @@ Run another executor.
 
 ## Physics
 
-### `PhysicsCheckExist(ID: int) -> bool`
+### `PhysicsCheckExists(ID: int) -> bool`
 
 Check whether the specified physics object exists.
 
@@ -208,10 +208,30 @@ Transfer the player ball to the target position. Its velocity and camera motion 
 
 - `transform_mark`: corresponding transform mark of the rebirth point
 
-### `DisablePlayerKey(key: str, disabled: bool) -> None`
+### `DisablePlayerKey(key: Literal, disabled: bool) -> None`
 
-- `key`:
+- `key`: player key ID
 - `disabled`: whether to disable
+
+::: details Player key ID
+
+| ID  | Player key                   |
+| --- | ---------------------------- |
+| 0   | Move Forward                 |
+| 1   | Move Backward                |
+| 2   | Move Left                    |
+| 3   | Move Right                   |
+| 4   | View Clockwise Rotate        |
+| 5   | View Counterclockwise Rotate |
+| 6   | Camera Overlook              |
+| 7   | Switch Controlled Ball       |
+| 8   | Free-look Move Forward       |
+| 9   | Free-look Move Backward      |
+| 10  | Free-look Move Left          |
+| 11  | Free-look Move Right         |
+| 12  | Free-look Camera Correction  |
+
+:::
 
 ### `CallLevelComplete(vfx: bool, position: tuple[float, float, float]) -> None`
 
@@ -272,7 +292,9 @@ Change time of a procedural skybox.
 - `start`: the distance where visibility begins to degrade
 - `end`: the distance where visibility reaches the worst
 
-## Way Path
+## ~~Way Path~~
+
+::: details Way path is deprecated
 
 ### `WayPathGetPosition(ID: int, part_index: int, percentage: float) -> tuple[float, float, float]`
 
@@ -303,6 +325,8 @@ Get information of a way point on a way path.
   - `[3]`: stay time at the point
 
 ### `RefreshWayPath() -> None`
+
+:::
 
 ## Variable System
 

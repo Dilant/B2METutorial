@@ -84,11 +84,11 @@
 
 ## 物理
 
-### `PhysicsCheckExist(ID: int) -> bool`
+### `PhysicsCheckExists(ID: int) -> bool`
 
-检测物理物体是否被销毁。
+检测物理物体是否存在。
 
-- `returns`：是否被销毁
+- `returns`：是否存在
 
 ### `PhysicsSetTransform(ID: int, transform: Annotated[tuple[float], 7]) -> None)`
 
@@ -238,12 +238,32 @@
 
 - `transform_mark`：重生点对应的变换标记
 
-### `DisablePlayerKey(key: str, disabled: bool) -> None`
+### `DisablePlayerKey(key: Literal, disabled: bool) -> None`
 
 禁用或启用玩家按键。
 
-- `key`：
+- `key`：玩家按键编号
 - `disabled`：是否禁用
+
+::: details 玩家按键编号
+
+| 编号 | 玩家按键           |
+| ---- | ------------------ |
+| 0    | 向前移动           |
+| 1    | 向后移动           |
+| 2    | 向左移动           |
+| 3    | 向右移动           |
+| 4    | 视野顺时针旋转     |
+| 5    | 视野逆时针旋转     |
+| 6    | 摄像机俯视         |
+| 7    | 切换控制球         |
+| 8    | 自由视角向前移动   |
+| 9    | 自由视角向后移动   |
+| 10   | 自由视角向左移动   |
+| 11   | 自由视角向右移动   |
+| 12   | 自由视角摄像机校正 |
+
+:::
 
 ### `CallLevelComplete(vfx: bool, position: tuple[float, float, float]) -> None`
 
@@ -324,7 +344,9 @@
 - `lut`：LUT 纹理路径
 - `intensity`：强度
 
-## 路径
+## ~~路径~~
+
+::: details 路径已废弃
 
 ### `WayPathGetPosition(ID: int, part_index: int, percentage: float) -> tuple[float, float, float]`
 
@@ -357,6 +379,8 @@
 ### `RefreshWayPath() -> None`
 
 更新所有路径的轨迹。
+
+:::
 
 ## 变量系统
 

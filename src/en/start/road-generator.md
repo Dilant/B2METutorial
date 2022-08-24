@@ -70,7 +70,7 @@ If both ends are covered by other objects, uncheck `Create Cap` to improve perfo
 ## Arc
 
 - Calculate the `Length` according to your desired radius and central angle
-- 将 `Bend Y` 设置为末端方向与起始方向的夹角，单位为角度，右转为正，左转为负
+- Set `Bend Y` as the angle between the end direction and the start. The unit is degree, and right is the positive direction.
 - Set appropriate `Segments` based on the aforementioned angle (`yaw / 7.5` rounded up recommended)
 
 ## Helix
@@ -80,12 +80,12 @@ If both ends are covered by other objects, uncheck `Create Cap` to improve perfo
 
 ## Roller
 
-- 将 `Bend X` 设置为末端方向与起始方向的夹角，单位为角度，下压为正，上抬为负
+- Set `Bend X` as the angle between the end direction and the start. The unit is degree, and down is the positive direction.
 - Others same as arc
 
 ## Twist
 
-- 将 `Bend Z` 设置为末端方向与起始方向的夹角，单位为角度，逆时针扭转为正，顺时针为负
+- Set `Bend Z` as the angle between the end direction and the start. The unit is degree, and counterclockwise is the positive direction.
 - Others same as arc
 
 ::: danger

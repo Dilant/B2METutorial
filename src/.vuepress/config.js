@@ -59,6 +59,10 @@ module.exports = {
             link: "/advanced/",
           },
           {
+            text: "食谱",
+            link: "/cookbook/",
+          },
+          {
             text: "更多",
             children: [
               {
@@ -88,11 +92,7 @@ module.exports = {
               text: "Ballex² 抢先体验进度",
               link: "/early-access-status/",
               collapsable: false,
-              children: [
-                "control-and-functions.md",
-                // "multiplayer.md",
-                "changelog.md",
-              ],
+              children: ["control-and-functions.md", "changelog.md"],
             },
           ],
 
@@ -168,6 +168,10 @@ module.exports = {
             link: "/en/advanced/",
           },
           {
+            text: "Cookbook",
+            link: "/en/cookbook/",
+          },
+          {
             text: "More",
             children: [
               {
@@ -197,11 +201,7 @@ module.exports = {
               text: "Ballex² Early Access Status",
               link: "/en/early-access-status/",
               collapsable: false,
-              children: [
-                "control-and-functions.md",
-                // "multiplayer.md",
-                "changelog.md",
-              ],
+              children: ["control-and-functions.md", "changelog.md"],
             },
           ],
 

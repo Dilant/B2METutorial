@@ -106,6 +106,11 @@ The difficulty levels are:
 
 ~~I don't know why but negative integers will work~~
 
+### `Environment Temperature`
+
+- Type: `float`
+- Default: `0`
+
 ### `Cover`
 
 - Type: `Texture`

@@ -205,7 +205,7 @@
 - Add settings for full screen, FSR and volume
 - A cure supply gives an extra 15 points
 - A life supply gives an extra 100 points
-- The `Follow Way Path` executor can be applied to most assets
+- ~~The `Follow Way Path` executor can be applied to most assets~~
 - Fix the issue that FPS is displayed as NaN in certain cases
 - Now you can't delete an non-empty folder in BME
 - Add `Don't Reset on Death` option to collectables
@@ -265,7 +265,7 @@
 ## `0.9.4b1` @ 2022/3/10
 
 - Road generators take custom section shapes
-- Add `Remove All Inactive Balls` executor
+- ~~Add `Remove All Inactive Balls` executor~~
 - Fix the issue that the sponge ball is immune to lava and deathbox
 - Fix the issue that machinery become inoperative upon accidental activation of executor #0
 
@@ -290,7 +290,7 @@
 ## `0.9.2b6` @ 2022/3/5
 
 - Paper balls turn back to regular spheres
-- The `Disable Player Key` executor can disable 8-way snap function in free-look mode
+- ~~The `Disable Player Key` executor can disable 8-way snap function in free-look mode~~
 - Fix an issue that disabled player keys take effect again after death
 
 ## `0.9.2b5` @ 2022/3/4
@@ -457,10 +457,10 @@
 
 ## `0.7.0b2 α` `0.7.0 β` @ 2021/9/12
 
-- `Switch Camera Target` executor
-  - Fix the issue that camera isn't reset on life start
-  - Fix the issue that camera isn't reset when the target is destroyed
-  - Fix the issue that camera motion is always determined by player ball
+- ~~`Switch Camera Target` executor~~
+  - ~~Fix the issue that camera isn't reset on life start~~
+  - ~~Fix the issue that camera isn't reset when the target is destroyed~~
+  - ~~Fix the issue that camera motion is always determined by player ball~~
 
 ## `0.7.0b1 α` @ 2021/9/12
 
@@ -469,12 +469,12 @@
   - Add `Physics Frame` trigger
   - Add switch mode for `Input` trigger
   - `Input` trigger can refer to player keys
-- Add executors
-  - `Set Camera Offset`
-  - `Set Variable Value`
-  - `Compare Variables`
-  - `Disable Player Key`
-  - `Switch Camera Target`
+- ~~Add executors~~
+  - ~~`Set Camera Offset`~~
+  - ~~`Set Variable Value`~~
+  - ~~`Compare Variables`~~
+  - ~~`Disable Player Key`~~
+  - ~~`Switch Camera Target`~~
 - The game won't freeze when taking screenshots while the save folder does't exist
 - Camera mode setting is moved to export window
 

@@ -16,20 +16,20 @@ Since neither game mechanism nor level design is finalized, **the leaderboards w
 ### `0.16.0b1 α`
 
 - Add temperature system
-  - 玩家球初始温度为 0，自发趋近环境温度
-  - 温度实际值无上下限，左上角温度条显示范围为 -50 ~ 200
-  - 受冷降温至冰点 -10 时
-    - 冰球以外的球结冰，摩擦力降低至与冰球相同；温度升高到 -10 以上时解除结冰状态
-    - 冰球温度不变，增加质量和体积，半径最大扩大至 200%
-  - 受热升温时
-    - 湿度降低速度随温度升高而提升
-    - 温度高于 190 时，接触 TNT 将直接引爆
-    - 冰球温度不变，减少质量和体积，半径最小缩小至 20%，此时继续受热将损失耐久
-  - 受热升温至燃点 200 时
-    - 纸球和木球点燃，温度瞬时升高为 500，随后趋近 250；温度降低到 200 以下时熄灭
-    - 气球直接爆炸死亡
-    - （未提及的球没有特殊效果）
-  - 得到冰霜补给时
+  - The initial temperature of player ball is 0, which spontaneously approaches the environment temperature
+  - While the display range of the temperature bar is from -50 to 200, there's neither upper nor lower limit
+  - When cooled down to -10, the freezing point
+    - Any ball (except the ice ball) will freeze with its friction reduced to the same as the ice ball. The ball unfreezes when its temperature rises above -10
+    - The temperature of ice ball remains unchanged. Instead, its radius increases, with the maximum of 200%, together with its mass and volume
+  - When heated up
+    - The reduction rate of humidity increases with temperature
+    - TNTs will be immediately detonated when the temperature is higher than 190
+    - The temperature of ice ball remains unchanged. Instead, its radius decreases, with the minimum of 20%, together with its mass and volume. It will lose durability if it continues to be heated
+  - When heated up to 200, the igniting point
+    - The paper ball or the wooden ball will ignite. Its temperature rises to 500 instantly and then approaches 250. The ball goes out when its temperature drops below 200
+    - The balloon ball will explode and die
+    - (Balls not mentioned above have no special effect)
+  - When getting a froze supply
     - 若已点燃，温度降至 0 并熄灭
     - 若未点燃但温度高于 0，温度降至 -50
     - 若温度低于 0，温度降低 -50
