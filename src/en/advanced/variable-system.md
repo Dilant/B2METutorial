@@ -55,10 +55,35 @@ Durability value of active ball.
 
 Humidity value of active ball.
 
+::: tip
+
+When the player ball is in the pool, its humidity value may be slightly greater than 100 to prevent ignition. But don't assign a value greater than 100 to this variable。
+
+:::
+
+### `G_Temperature`
+
+- Type: `float`
+
+Temperature value of active ball.
+
+### `G_Power`
+
+- Type: `float`
+- Constrain: `x: 0 <= x <= 100`
+
+Power value of active ball.
+
+### `G_Scale`
+
+- Type: `float`
+- Constrain: `x: 0.2 <= r <= 2`
+
+Radius multiplier of active ball.
+
 ### `G_CameraDirection` <badge text="Four-directional"/>
 
-- Type: `int`
-- Constrain: `x: x in {0, 1, 2, 3}`
+- Type: `Literal[0, 1, 2, 3]`
 
 Current camera direction. Using global reference frame, `0` means direction `Z+`, `1` means direction `X+`, `2` means direction `Z-`, `3` means direction `X-`.
 
@@ -82,12 +107,40 @@ Velocity of active ball.
 
 Coordinate of active ball.
 
+### `G_IsTouchGround`
+
+- Type: `bool`
+
+Detecting whether active ball is touching ground.
+
+### `G_IsTouchWall`
+
+- Type: `bool`
+
+Detecting whether active ball is against the wall.
+
 ### `G_CurrentBallType`
 
-- Type: `int`
-- Constrain: `x: -100 >= x >= -109`
+- Type: `Literal`
 
 Type of active ball.
+
+::: details Mapping from ID to ball type
+
+| ID     | Ball Type    |
+| ------ | ------------ |
+| `-100` | Wooden ball  |
+| `-101` | Stone ball   |
+| `-102` | Paper ball   |
+| `-103` | Ice ball     |
+| `-104` | Steel ball   |
+| `-105` | Rubber ball  |
+| `-106` | Glow ball    |
+| `-107` | Balloon ball |
+| `-108` | Sticky ball  |
+| `-109` | Sponge ball  |
+
+:::
 
 ### `C_Key_Red`
 

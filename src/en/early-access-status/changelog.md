@@ -1,5 +1,18 @@
 # Changelog
 
+## `0.16.1b2` @ 2022/8/27
+
+- Fix the issue that executors on life start are activated twice
+- Fix the issue that the density of fog can't be changed on the fly
+- Fix the issue that materials of an object can't be changed on the fly
+- Fix the issue that variables aren't reset upon restart
+- Fix the issue that particle effects aren't reset after restart
+
+## `0.16.1b1` @ 2022/8/22
+
+- Add initial rotation, angular velocity and custom animation functions to particle emitters
+- Fix the issue that attributes in the top left corner aren't in sync with the current player ball when switching player ball
+
 ## `0.16.0b1` @ 2022/8/21
 
 - Add official level 3-3 E
@@ -40,7 +53,7 @@
 - Add exclusive fullscreen mode
 - The ghost ball is now in sync with player ball
 - Mountains (i.e. terrain system) should behave properly now
-- Volume of some SFXs (e.g. switching ball) are now correctly controlled by master volume
+- Volume of some SFXs (e.g. switching player ball) are now correctly controlled by master volume
 - Fix the background of level 2-3 E
 - Fix the drifting of snow footprint in certain cases
 - Optimize loading time upon death or rebirth in certain levels
