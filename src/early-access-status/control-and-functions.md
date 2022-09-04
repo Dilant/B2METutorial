@@ -15,6 +15,6 @@
 
 ## 测图功能
 
+- 快速变球：`0` ~ `9`
 - 截图：`F5`，保存在 `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`
 - 变量检视器：`F6`
-- 快速变球：`0` - `9`

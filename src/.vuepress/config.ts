@@ -116,7 +116,6 @@ export default defineUserConfig({
               children: [
                 "mesh-system.md",
                 "material-system.md",
-                "joint-system.md",
                 "trigger-system.md",
                 "trigger.md",
                 "executor.md",
@@ -126,6 +125,14 @@ export default defineUserConfig({
                 "audio-system.md",
                 "collectable-system.md",
               ],
+            },
+          ],
+
+          "/cookbook/": [
+            {
+              text: "食谱",
+              link: "/cookbook/",
+              children: ["joint-system-examples.md"],
             },
           ],
 
@@ -219,7 +226,6 @@ export default defineUserConfig({
               children: [
                 "mesh-system.md",
                 "material-system.md",
-                "joint-system.md",
                 "trigger-system.md",
                 "trigger.md",
                 "executor.md",
@@ -231,6 +237,15 @@ export default defineUserConfig({
               ],
             },
           ],
+
+          "/en/cookbook/": [
+            {
+              text: "Cookbook",
+              link: "/cookbook/",
+              children: ["joint-system-examples.md"],
+            },
+          ],
+
           "/en/": [""],
         },
       },

@@ -169,6 +169,23 @@ For convenience, you can fetch aids from `Assets → Items → TestMapTools`.
 
 :::
 
+### Ball Hot-switch
+
+`0` ~ `9`
+
+| Key | Switch to    |
+| --- | ------------ |
+| `0` | Wooden ball  |
+| `1` | Stone ball   |
+| `2` | Paper ball   |
+| `3` | Ice ball     |
+| `4` | Steel ball   |
+| `5` | Rubber ball  |
+| `6` | Glow ball    |
+| `7` | Balloon ball |
+| `8` | Sticky ball  |
+| `9` | Sponge ball  |
+
 ### Screenshot
 
 `F5`

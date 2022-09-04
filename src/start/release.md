@@ -7,7 +7,7 @@
 - 进入测图模式：`文件 → 导出 BMS → 测图`
 - 进入截图功能：`F5`
   - `鼠标` 转动视角
-  - `WASD` 移动，`Q` 上升，`E` 下降
+  - `W` `A` `S` `D` 移动，`Q` 上升，`E` 下降
   - 按住 `Shift` 可加速移动
   - `Enter` 完成截图
 - 截图保存在 `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`

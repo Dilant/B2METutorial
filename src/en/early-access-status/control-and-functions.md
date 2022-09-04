@@ -13,8 +13,8 @@ View and edit control keys via `Settings → Control` panel.
 - Back to main screen: `F9`
 - Temporary unlock all levels: `M + Enter` in main screen
 
-## Map Test Functions
+## Test Map Functions
 
+- Ball hot-switch: `0` ~ `9`
 - Screenshot: `F5`, saved at `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`
 - Variables inspector: `F6`
-- Ball hot-switch: `0` - `9`

@@ -4,29 +4,29 @@
 
 ### Take a Screenshot
 
-- 进入测图模式：`File → Export BMS → Test Map`
-- 进入截图功能：`F5`
-  - `Mouse` 转动视角
-  - `WASD` 移动，`Q` 上升，`E` 下降
-  - 按住 `Shift` 可加速移动
-  - `Enter` 完成截图
-- 截图保存在 `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`
+- Enter test map mode: `File → Export BMS → Test Map`
+- Enter screenshot function: `F5`
+  - `Mouse` to rotate your view
+  - `W` `A` `S` `D` to move, `Q` to go up and `E` down
+  - Hold `Shift` to dash
+  - `Enter` to take a screenshot
+- Screenshots are saved at `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`
 
 ### Do it Yourself
 
-你也可以自己制作封面，要求为：
+You can also design a custom cover, providing that:
 
-- `.png` 或 `.jpg` 格式
-- 画面比例为 16:9，推荐分辨率为 1920×1080
-- 契合地图主题
+- `.png` or `.jpg` format
+- 16:9 ratio, 1920×1080 recommended
+- It fits the level theme
 
 ## Import Cover
 
-在 `Assets → Textures` 面板，点击右栏加号导入封面。
+In `Assets → Textures` panel, click the plus sign in the right column to import the cover.
 
 ::: warning
 
-导入的图片无法再导出，如有必要，请自己留存源文件。
+You can't re-export the imported files, so keep the source files if necessary.
 
 :::
 
@@ -50,14 +50,14 @@
 - Type: `str`
 - Default: empty
 
-请在此处只填写**源语言**。例如中文为源语言、英文为翻译时，只填写中文。
+Please write in **source language** only.
 
 ### `Level Description`
 
 - Type: `str`
 - Default: empty
 
-请在此处只填写**源语言**。例如中文为源语言、英文为翻译时，只填写中文。
+Please write in **source language** only.
 
 ### `Initial Ball Type`
 
@@ -71,7 +71,7 @@
 
 ::: danger
 
-驾驶视角模式正在制作，目前请勿使用。
+We're still working on the driving camera mode, don't use it now.
 
 :::
 
@@ -136,14 +136,14 @@ Select `Create` here.
 - Type: `str`
 - Default: empty
 
-请在此处只填写**英文**。如果没有英文翻译，请只填写源语言。
+Please write in **English** only, or source language instead.
 
 ### `Description`
 
 - Type: `str`
 - Default: empty
 
-请在此处只填写**英文**。如果没有英文翻译，请只填写源语言。
+Please write in **English** only, or source language instead.
 
 ### `Tag`
 
@@ -173,14 +173,14 @@ Select `Update` here.
 - Type: `int`
 - Default: empty
 
-在创意工坊网页中找到你的地图，点击分享，链接中 `id=` 后面的数字即为文件 ID。
+Find your map in the workshop website, click the share button, and copy the number after `id=` in the link.
 
 ### `Change Note`
 
 - Type: `str`
 - Default: empty
 
-请在此处只填写**英文**。如果没有英文翻译，请只填写源语言。
+Please write in **English** only, or source language instead.
 
 ## Update Level Info in Other Languages
 
@@ -188,15 +188,15 @@ Select `Update` here.
 
 ### Title and Description
 
-- 在创意工坊网页中找到你的地图
-- 点击 `Edit title & description`
-- 语言选择简体中文（或待更新的其它语言）
-- 修改并保存
+- Find your map in the workshop website
+- Click `Edit title & description`
+- Choose the language you want to update
+- Edit and save
 
 ### Change Note
 
-- 在创意工坊网页中找到你的地图
-- 点击 `Change Notes`
-- 点击对应条目的编辑按钮
-- 语言选择简体中文（或待更新的其它语言）
-- 修改并保存
+- Find your map in the workshop website
+- Click `Change Notes`
+- Click the edit button of the corresponding note
+- Choose the language you want to update
+- Edit and save
