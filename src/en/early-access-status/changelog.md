@@ -1,5 +1,31 @@
 # Changelog
 
+## `0.16.3b4` @ 2022/9/24
+
+- Fix the issue that lower snow footprint is projected onto the upper road
+- Add rounded corner style to some UI elements
+
+## `0.16.3b3` @ 2022/9/21
+
+- Reduce difficulty of official level 1-2 E & 1-3 E
+- Fix the issue that volume of sounds can't be changed on the fly
+- Fix the issue that the angular spring is not when breaking a joint
+- Add lots of built-in assets
+- Add flip option to custom skyboxes
+- Remove weather option from custom skyboxes
+- Support using `\n` to break lines in custom UI texts
+- Add aspect mode and ratio settings to custom UI images and buttons
+
+## `0.16.2b6` @ 2022/9/12
+
+- Bring back the next level button in evaluation screen of level 3-2 E
+- Add custom UI system
+- Add turnstile, fragile board and custom camera
+- Add UV offset speed parameter to materials
+- External variables starting with `ID_` in executors will be automatically linked to ID of child items
+- Every kind of player ball is scalable using executors
+- The rendered mesh of decoration objects are no longer automatically optimized
+
 ## `0.16.1b2` @ 2022/8/27
 
 - Fix the issue that executors on life start are activated twice
@@ -166,7 +192,7 @@
 - Fix the misbehaving navigation bar when switching language in level
 - Fix the issue that quick suiciding with `F1` neglects the checkpoint cool-down
 - ~~Fix the issue that quick restarting with `F2` during pause leaves player at pause screen~~
-- Remove `Thickness` parameter of wooden boards
+- Remove `Thickness` parameter from wooden boards
 
 ## `0.11.4b1` @ 2022/5/3
 
