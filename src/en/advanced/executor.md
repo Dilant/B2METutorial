@@ -368,6 +368,55 @@ Get information of a way point on a way path.
 
 - `volume`: volume, with range `0 <= v <= 1`
 
+## UI 系统
+
+### `HideGameUI(hide: bool) -> None`
+
+- `hide`: whether to hide
+
+### `UIGetTransform(ID: int) -> tuple[float, float, float, float, float]`
+
+- `returns`: transform parameters
+  - `[0:2]`: position's coordinate
+  - `[2]`: angle of rotation, unit is degree, counterclockwise is the positive direction
+  - `[3:5]`: scale ratio along each axis
+
+### `UISetPosition(ID: int, position: tuple[float, float]) -> None`
+
+- `position`: position's coordinate
+
+### `UISetRotation(ID: int, rotation: float)`
+
+- `rotation`: angle of rotation
+
+### `UISetScale(ID: int, scale: tuple[float, float]) -> None`
+
+- `scale`: scale ratio along each axis
+
+### `UISetSize(ID: int, size: tuple[float, float]) -> None`
+
+- `size`: length and width
+
+### `UISetTexture(ID: int, texture: str) -> None`
+
+Set texture of a UI image or button element.
+
+- `texture`: path to the texture
+
+### `UISetText(ID: int, text: str) -> None`
+
+Set content of a UI text element.
+
+- `text`: content of text
+
+### `UIGetColor(ID: int) -> tuple[float, float, float, float]`
+
+- `returns`: color with alpha, each component with range `0 <= x <= 1`
+
+### `UISetColor(ID: int, RGBA: tuple[float, float, float, float]) -> None`
+
+- `RGBA`: color with alpha, each component with range `0 <= x <= 1`
+
 ## Miscellaneous
 
 ### `QuaternionToEuler(quaternion: tuple[float, float, float, float]) -> tuple[float, float, float]`

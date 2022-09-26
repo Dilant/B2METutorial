@@ -440,6 +440,69 @@
 
 - `volume`：音量，范围为 `0 <= v <= 1`
 
+## UI 系统
+
+### `HideGameUI(hide: bool) -> None`
+
+隐藏游戏界面。
+
+- `hide`：是否隐藏
+
+### `UIGetTransform(ID: int) -> tuple[float, float, float, float, float]`
+
+读取 UI 元素变换参数。
+
+- `returns`：变换参数
+  - `[0:2]`：位置坐标
+  - `[2]`：旋转角，单位为角度，逆时针为正
+  - `[3:5]`：沿两轴的缩放比例
+
+### `UISetPosition(ID: int, position: tuple[float, float]) -> None`
+
+改变 UI 元素位置。
+
+- `position`：位置坐标
+
+### `UISetRotation(ID: int, rotation: float)`
+
+改变 UI 元素旋转。
+
+- `rotation`：旋转角
+
+### `UISetScale(ID: int, scale: tuple[float, float]) -> None`
+
+改变 UI 元素缩放。
+
+- `scale`：沿两轴的缩放比例
+
+### `UISetSize(ID: int, size: tuple[float, float]) -> None`
+
+改变 UI 元素尺寸。
+
+- `size`：尺寸长宽
+
+### `UISetTexture(ID: int, texture: str) -> None`
+
+改变 UI 图片或按钮元素的纹理。
+
+- `texture`：纹理路径
+
+### `UISetText(ID: int, text: str) -> None`
+
+改变 UI 文字元素的内容。
+
+- `text`：文字内容
+
+### `UIGetColor(ID: int) -> tuple[float, float, float, float]`
+
+读取 UI 元素颜色。
+
+- `returns`：带透明度的颜色，各项范围为 `0 <= x <= 1`
+
+### `UISetColor(ID: int, RGBA: tuple[float, float, float, float]) -> None`
+
+- `RGBA`：带透明度的颜色，各项范围为 `0 <= x <= 1`
+
 ## 杂项
 
 ### `QuaternionToEuler(quaternion: tuple[float, float, float, float]) -> tuple[float, float, float]`
