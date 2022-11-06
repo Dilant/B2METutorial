@@ -6,10 +6,7 @@ Launch it via Steam and choose the 2nd option `Launch Game Editor`.
 
 ::: tip
 
-Ballex² and BME Pro can be launched from local directory. Ensure that:
-
-- Steam is launched and logged in
-- Manually relaunch Steam if it's launched automatically by other tools (for example Steam++ or SteamCommunity302)
+Ballex² and BME Pro can be launched from local directory. Ensure that Steam is launched and logged in.
 
 :::
 
@@ -41,7 +38,7 @@ Power save mode will restrict frame rate of the scene. Frame rate of editor UI i
 
 `Settings → Set Ballex² Path`
 
-It should end in `Ballex².exe`, either stable or beta version. When you enter maptest mode, it will launch automatically.
+It should end in `Ballex².exe`, either stable or beta version. When you enter test map mode, it will launch automatically.
 
 ### Change Layout
 

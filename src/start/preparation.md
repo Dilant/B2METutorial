@@ -6,10 +6,7 @@
 
 ::: tip
 
-Ballex² 和 BME Pro 均可从本地目录直接双击启动，打开前请确保：
-
-- Steam 已经启动并登录
-- 如果使用 Steam++、SteamCommunity302 或类似工具自动启动了 Steam，请关闭 Steam 并手动重启
+Ballex² 和 BME Pro 均可从本地目录直接双击启动，打开前请确保 Steam 已经启动并登录。
 
 :::
 

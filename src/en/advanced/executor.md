@@ -368,7 +368,7 @@ Get information of a way point on a way path.
 
 - `volume`: volume, with range `0 <= v <= 1`
 
-## UI 系统
+## UI System
 
 ### `HideGameUI(hide: bool) -> None`
 
