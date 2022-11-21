@@ -160,17 +160,17 @@ Calculate the required angular velocity for an object to rotate to the target po
 
 ## Mesh and Material
 
-### `SetPhysicsObjectRenderMesh(ID: int, mesh: str) -> None`
+### `SetPhysicsObjectRenderMesh(ID: int, mesh_ref: str) -> None`
 
 Set mesh of a physics object.
 
-- `mesh`: path to the mesh (reference path to assets in BME Pro)
+- `mesh_ref`: asset reference to the mesh
 
-### `SetPhysicsObjectRenderMaterials(ID: int, materials: list[str]) -> None`
+### `SetPhysicsObjectRenderMaterials(ID: int, material_refs: list[str]) -> None`
 
 Set materials of a physics object.
 
-- `materials`: list of path to the materials
+- `material_refs`: list of asset references to the materials
 
 ### `SetPhysicsObjectColliderToSphere(ID: int, radius: float, offset: tuple[float, float, float]) -> None`
 
@@ -187,11 +187,11 @@ Set collider of a physics object to box.
 - `corner_radius`: corner radius of the collider
 - `offset`: offset of the collider along each axis
 
-### `SetPhysicsObjectColliderToMesh(ID: int, mesh: str, offset: tuple[float, float, float]) -> None`
+### `SetPhysicsObjectColliderToMesh(ID: int, mesh_ref: str, offset: tuple[float, float, float]) -> None`
 
 Set collider of a physics object to a given mesh.
 
-- `mesh`: path to the mesh
+- `mesh_ref`: asset reference to the mesh
 - `offset`: offset of the collider along each axis
 
 ## Game Process
@@ -266,9 +266,9 @@ Back to checkpoint.
 
 - `RGB`: color, each component with range `0 <= x <= 1`
 
-### `SetLut(lut: str, intensity: float) -> None`
+### `SetLut(lut_ref: str, intensity: float) -> None`
 
-- `lut`: path to the LUT texture
+- `lut_ref`: asset reference to the LUT texture
 - `intensity`: intensity
 
 ## Skybox
@@ -397,11 +397,11 @@ Get information of a way point on a way path.
 
 - `size`: length and width
 
-### `UISetTexture(ID: int, texture: str) -> None`
+### `UISetTexture(ID: int, texture_ref: str) -> None`
 
 Set texture of a UI image or button element.
 
-- `texture`: path to the texture
+- `texture_ref`: asset reference to the texture
 
 ### `UISetText(ID: int, text: str) -> None`
 

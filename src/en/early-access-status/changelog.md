@@ -1,5 +1,10 @@
 # Changelog
 
+## `0.17.0b1` @ 2022/11/20
+
+- Add official level 3-4 E and 4-1 E
+- Temporary shut down the online multiplayer server
+
 ## `0.16.3b4` @ 2022/9/24
 
 - Fix the issue that lower snow footprint is projected onto the upper road

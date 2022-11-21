@@ -186,17 +186,17 @@
 
 ## 网格和材质
 
-### `SetPhysicsObjectRenderMesh(ID: int, mesh: str) -> None`
+### `SetPhysicsObjectRenderMesh(ID: int, mesh_ref: str) -> None`
 
 改变物理物体网格。
 
-- `mesh`：网格路径（制图器内对素材的引用路径）
+- `mesh_ref`：网格素材引用
 
-### `SetPhysicsObjectRenderMaterials(ID: int, materials: list[str]) -> None`
+### `SetPhysicsObjectRenderMaterials(ID: int, material_refs: list[str]) -> None`
 
 改变物理物体材质。
 
-- `materials`：材质路径列表
+- `material_refs`：材质素材引用列表
 
 ### `SetPhysicsObjectColliderToSphere(ID: int, radius: float, offset: tuple[float, float, float]) -> None`
 
@@ -213,11 +213,11 @@
 - `corner_radius`：碰撞箱圆角半径
 - `offset`：碰撞箱沿三轴的偏移
 
-### `SetPhysicsObjectColliderToMesh(ID: int, mesh: str, offset: tuple[float, float, float]) -> None`
+### `SetPhysicsObjectColliderToMesh(ID: int, mesh_ref: str, offset: tuple[float, float, float]) -> None`
 
 改变物理物体碰撞箱为给定网格。
 
-- `mesh`：网格路径
+- `mesh_ref`：网格素材引用
 - `offset`：碰撞箱沿三轴的偏移
 
 ## 游戏流程
@@ -337,11 +337,11 @@
 - `start`：可见度开始变差的距离
 - `end`：可见的达到最差的距离
 
-### `SetLut(lut: str, intensity: float) -> None`
+### `SetLut(lut_ref: str, intensity: float) -> None`
 
 设置 LUT。
 
-- `lut`：LUT 纹理路径
+- `lut_ref`：LUT 纹理素材引用
 - `intensity`：强度
 
 ## ~~路径~~
@@ -481,11 +481,11 @@
 
 - `size`：尺寸长宽
 
-### `UISetTexture(ID: int, texture: str) -> None`
+### `UISetTexture(ID: int, texture_ref: str) -> None`
 
 改变 UI 图片或按钮元素的纹理。
 
-- `texture`：纹理路径
+- `texture_ref`：纹理素材引用
 
 ### `UISetText(ID: int, text: str) -> None`
 
