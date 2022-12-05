@@ -3,7 +3,7 @@ import { defineUserConfig } from "vuepress";
 import { theme } from "./theme";
 
 import { shikiPlugin } from "@vuepress/plugin-shiki";
-import { searchPlugin } from "@vuepress/plugin-search";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 
 export default defineUserConfig({
   head: [["link", { rel: "icon", href: "/ballex2.ico" }]],
@@ -30,15 +30,8 @@ export default defineUserConfig({
     shikiPlugin({
       theme: "dark-plus",
     }),
-    searchPlugin({
-      locales: {
-        "/": {
-          placeholder: "搜索",
-        },
-        "/en/": {
-          placeholder: "Search",
-        },
-      },
+    searchProPlugin({
+      indexContent: true,
     }),
   ],
 });

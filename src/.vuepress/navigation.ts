@@ -31,10 +31,6 @@ export const navbarZh = [
           },
         ],
       },
-      {
-        text: "彩蛋",
-        children: [{ text: "404 页面", link: "/404/" }],
-      },
     ],
   },
 ];
@@ -53,7 +49,6 @@ export const sidebarZh = {
       text: "起步",
       link: "/start/",
       children: [
-        "how-to-read.md",
         "preparation.md",
         "basic-operation.md",
         "alignment.md",
@@ -127,10 +122,6 @@ export const navbarEn = [
           },
         ],
       },
-      {
-        text: "Easter Egg",
-        children: [{ text: "404 Page", link: "/en/404/" }],
-      },
     ],
   },
 ];
@@ -149,7 +140,6 @@ export const sidebarEn = {
       text: "Start",
       link: "/en/start/",
       children: [
-        "how-to-read.md",
         "preparation.md",
         "basic-operation.md",
         "alignment.md",

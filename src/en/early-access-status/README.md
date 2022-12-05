@@ -1,6 +1,6 @@
 # Ballex² Early Access Status
 
-- The latest version: `0.16.3b4` @ 2022/9/24
+- The latest version: `0.17.1b1 α` @ 2022/12/2
 - The minimum requirement in theory is Windows 7 x64 (We don't guarantee this, but you can try to copy the executables to Windows 7 and play)
 
 (Refer to the sidebar for configs and changelog)
@@ -12,6 +12,12 @@
 Since neither game mechanism nor level design is finalized, **the leaderboards would be reset without any prior notice during the early access period.** Remember to record your runs, and don't be crazy about hitting a leaderboard.
 
 :::
+
+### `0.17.0b1`
+
+- Change mechanisms related to inactive balls
+  - When an inactive ball activates checkpoints, destination, switchers or appenders, it will turn to be the active ball and trigger the corresponding event
+  - An inactive ball won't activate switchers or appenders during an existing ball switching animation
 
 ### `0.16.0b1 α`
 
@@ -30,11 +36,11 @@ Since neither game mechanism nor level design is finalized, **the leaderboards w
     - The balloon ball will explode and die
     - (Balls not mentioned above have no special effect)
   - When getting a froze supply
-    - 若已点燃，温度降至 0 并熄灭
-    - 若未点燃但温度高于 0，温度降至 -50
-    - 若温度低于 0，温度降低 -50
-  - 进入水池时，玩家球温度不会高于 200，已点燃的球立即熄灭
-  - 变球或触发检查点时，玩家球温度变为 0，解除结冰或点燃状态
+    - if the player ball is already igniting, it goes out and its temperature drops to 0
+    - if its temperature is above 0, the temperature drops to -50
+    - if its temperature is below 0, the temperature decreases by 50
+  - When entering a pool, the temperature of the player ball won't be higher than 200, and an igniting ball goes out immediately
+  - When switching ball or activating a checkpoint, the temperature of the player ball is set to 0, and its freezing or igniting state is cancelled
 - Add power mechanism to the sticky ball
   - 粘球新增电量条，初始电量为 100
   - 移动将消耗电量值，满电量可支撑粘球全速滚动 25 秒
@@ -74,7 +80,7 @@ Since neither game mechanism nor level design is finalized, **the leaderboards w
 ### `0.9.1b3`
 
 - Change mechanisms related to inactive balls
-  - An inactive ball will be destroyed upon activating checkpoints, destination, switchers or appenders
+  - ~~An inactive ball will be destroyed upon activating checkpoints, destination, switchers or appenders~~
   - All inactive ball will be destroyed when the active ball activates checkpoints or destination
 
 ### `0.9.0`
