@@ -1,6 +1,6 @@
 # Ballex² Early Access Status
 
-- The latest version: `0.17.1b1 α` @ 2022/12/2
+- The latest version: `0.17.1b1` @ 2022/12/6
 - The minimum requirement in theory is Windows 7 x64 (We don't guarantee this, but you can try to copy the executables to Windows 7 and play)
 
 (Refer to the sidebar for configs and changelog)
@@ -40,13 +40,13 @@ Since neither game mechanism nor level design is finalized, **the leaderboards w
     - if its temperature is above 0, the temperature drops to -50
     - if its temperature is below 0, the temperature decreases by 50
   - When entering a pool, the temperature of the player ball won't be higher than 200, and an igniting ball goes out immediately
-  - When switching ball or activating a checkpoint, the temperature of the player ball is set to 0, and its freezing or igniting state is cancelled
+  - When switching ball or activating a checkpoint, the temperature of the player ball is set to 0, and its frozen or igniting state is cancelled
 - Add power mechanism to the sticky ball
-  - 粘球新增电量条，初始电量为 100
-  - 移动将消耗电量值，满电量可支撑粘球全速滚动 25 秒
-  - 电量耗尽时，粘球动力大幅降低，将无法爬墙
-  - 电球不再伤害或击退粘球，改为增加 50 电量值
-  - 粘球触发检查点时电量充满
+  - The sticky ball has a power bar, and its initial power is 100
+  - Any movement consumes power, and a full power bar allows it rolling at full speed for 25 seconds
+  - It rolls much slower and will be unable to climb up walls when it runs out of power
+  - An electric supply won't damage it or kick it away, instead it restores 50 power
+  - Its power will be filled up to 100 upon activating a checkpoint
 
 ### `0.15.8b3`
 

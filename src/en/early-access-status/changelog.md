@@ -1,16 +1,16 @@
 # Changelog
 
-## `0.17.1b1 α` @ 2022/12/2
+## `0.17.1b1` @ 2022/12/6
 
-- 玩家球结冰时湿度不会改变
-- 粘球变球器可以给粘球充电
-- 加大变球器竖直方向判定范围
-- 按键判定移入物理帧中，降低输入延迟
-- 新增无边框水池
-- 制图器场景窗口变更为 HDR 渲染
-- 天空盒新增 SSGI 和 LUT 选项
-- 天空盒不再自带粒子效果
-- 导出窗口新增视距设置
+- The humidity of the player ball is locked when the it's frozen
+- A sticky ball switcher or appender can charge the sticky ball
+- Enlarge the vertical effective area of appenders
+- Input handlings are moved into physics frames to reduce input delay
+- Add borderless pools
+- BME now uses HDR rendering in the `Scene` window
+- Add screen space global illumination (SSGI) and LUT options to skyboxes
+- Particle effects are separated from skyboxes
+- View distance setting is added to export window
 
 ## `0.17.0b1` @ 2022/11/20
 
@@ -69,7 +69,7 @@
 - Only the attributes that are valuable to the current player ball are displayed in the upper left corner
 - Heavy objects and TNTs should be able to cut off suspension bridges
 - Fix the issue that TNTs can't be detonated by objects other than the player ball
-- Add shadow, screen space ambient occlusion and console options in the setting screen
+- Add shadow, screen space ambient occlusion (SSAO) and console options in the setting screen
 
 ## `0.15.9b1` @ 2022/7/25
 
@@ -421,7 +421,7 @@
 
 ## `0.8.0 β` @ 2021/11/10
 
-- Optimize rendering effect of screen space reflection
+- Optimize rendering effect of SSR
 - Custom terrain brushes should work now
 
 ## `0.8.0b2 α` @ 2021/11/9
@@ -436,7 +436,7 @@
 ## `0.8.0b1 α` @ 2021/11/7
 
 - Address the game freeze issue upon exit
-- Add screen space reflection support
+- Add screen space reflection (SSR) support
 - Object ID will show in `Hierarchy` window
 - Add terrain system and particle system
 - Replace audio manager
