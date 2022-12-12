@@ -1,5 +1,11 @@
 # Trigger
 
+::: tip
+
+Triggers should be used together with executors, please read [Trigger System](/en/advanced/trigger-system.md) first.
+
+:::
+
 ## Universal Parameters
 
 ### `Trigger Type`

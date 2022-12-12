@@ -1,5 +1,11 @@
 # Executor
 
+::: tip
+
+Executors should be used together with triggers, please read [Trigger System](/en/advanced/trigger-system.md) first.
+
+:::
+
 ## MiniScript Simple Guide
 
 - MiniScript official site: [https://miniscript.org/](https://miniscript.org/)
@@ -243,6 +249,66 @@ Transfer the player ball to the target position. Its velocity and camera motion 
 Back to checkpoint.
 
 ### `CallRestart() -> None`
+
+### `ShowTip(tip_id: int, content: str) -> None`
+
+- `tip_id`: tip ID, allocated and managed by you
+- `content`: tip content
+
+### `HideTip(tip_id: int) -> None`
+
+- `tip_id`: tip ID
+
+## Keyboard Input
+
+### `CheckKeyDown(key_ID: Literal) -> bool`
+
+Check whether a key is pressed down in the current physics frame.
+
+### `CheckKeyUp(key_ID: Literal) -> bool`
+
+Check whether a key is lifted up in the last physics frame.
+
+### `CheckKeyHold(key_ID: Literal) -> bool`
+
+Check whether a key is being held in the current physics frame.
+
+- `key_ID`: key ID
+- `returns`: whether the corresponding event happens
+
+::: details Mapping table for keys and IDs
+
+| ID  | Key     | ID  | Key          | ID  | Key           | ID  | Key       |
+| --- | ------- | --- | ------------ | --- | ------------- | --- | --------- |
+| 0   | None    | 27  | `M`          | 54  | `RightAlt`    | 81  | `Numpad-` |
+| 1   | `Space` | 28  | `N`          | 55  | `Ctrl`        | 82  | `Numpad.` |
+| 2   | `Enter` | 29  | `O`          | 56  | `RightCtrl`   | 83  | `Numpad=` |
+| 3   | `Tab`   | 30  | `P`          | 57  | `Win`         | 84  | `Numpad0` |
+| 4   | `` ` `` | 31  | `Q`          | 58  | `RightWin`    | 85  | `Numpad1` |
+| 5   | `'`     | 32  | `R`          | 59  | `Menu`        | 86  | `Numpad2` |
+| 6   | `;`     | 33  | `S`          | 60  | `Esc`         | 87  | `Numpad3` |
+| 7   | `,`     | 34  | `T`          | 61  | `←`           | 88  | `Numpad4` |
+| 8   | `.`     | 35  | `U`          | 62  | `→`           | 89  | `Numpad5` |
+| 9   | `/`     | 36  | `V`          | 63  | `↑`           | 90  | `Numpad6` |
+| 10  | `\`     | 37  | `W`          | 64  | `↓`           | 91  | `Numpad7` |
+| 11  | `[`     | 38  | `X`          | 65  | `Backspace`   | 92  | `Numpad8` |
+| 12  | `]`     | 39  | `Y`          | 66  | `PageDown`    | 93  | `Numpad9` |
+| 13  | `-`     | 40  | `Z`          | 67  | `PageUp`      | 94  | `F1`      |
+| 14  | `=`     | 41  | `1`          | 68  | `Home`        | 95  | `F2`      |
+| 15  | `A`     | 42  | `2`          | 69  | `End`         | 96  | `F3`      |
+| 16  | `B`     | 43  | `3`          | 70  | `Insert`      | 97  | `F4`      |
+| 17  | `C`     | 44  | `4`          | 71  | `Delete`      | 98  | `F5`      |
+| 18  | `D`     | 45  | `5`          | 72  | `CapsLock`    | 99  | `F6`      |
+| 19  | `E`     | 46  | `6`          | 73  | `NumLock`     | 100 | `F7`      |
+| 20  | `F`     | 47  | `7`          | 74  | `PrintScreen` | 101 | `F8`      |
+| 21  | `G`     | 48  | `8`          | 75  | `ScrollLock`  | 102 | `F9`      |
+| 22  | `H`     | 49  | `9`          | 76  | `Pause`       | 103 | `F10`     |
+| 23  | `I`     | 50  | `0`          | 77  | `NumpadEnter` | 104 | `F11`     |
+| 24  | `J`     | 51  | `Shift`      | 78  | `Numpad/`     | 105 | `F12`     |
+| 25  | `K`     | 52  | `RightShift` | 79  | `Numpad*`     |     |           |
+| 26  | `L`     | 53  | `Alt`        | 80  | `Numpad+`     |     |           |
+
+:::
 
 ## Camera
 

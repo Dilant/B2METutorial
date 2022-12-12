@@ -1,5 +1,11 @@
 # 执行器
 
+::: tip
+
+执行器需要配合触发器一起使用，请先阅读[触发器系统](/advanced/trigger-system.md)。
+
+:::
+
 ## MiniScript 简要说明
 
 - MiniScript 官方网站：[https://miniscript.org/](https://miniscript.org/)
@@ -279,6 +285,70 @@
 ### `CallRestart() -> None`
 
 重开关卡。
+
+### `ShowTip(tip_id: int, content: str) -> None`
+
+显示提示。
+
+- `tip_id`：提示编号，由你分配并管理
+- `content`：提示内容
+
+### `HideTip(tip_id: int) -> None`
+
+隐藏提示。
+
+- `tip_id`：提示编号
+
+## 按键输入
+
+### `CheckKeyDown(key_ID: Literal) -> bool`
+
+检测当前物理帧某个按键是否恰好按下。
+
+### `CheckKeyUp(key_ID: Literal) -> bool`
+
+检测上一个物理帧某个按键是否恰好抬起。
+
+### `CheckKeyHold(key_ID: Literal) -> bool`
+
+检测当前物理帧某个按键是否按住。
+
+- `key_ID`：按键编号
+- `returns`：是否发生了对应事件
+
+::: details 按键与编号的对应关系
+
+| 编号 | 按键    | 编号 | 按键         | 编号 | 按键          | 编号 | 按键      |
+| ---- | ------- | ---- | ------------ | ---- | ------------- | ---- | --------- |
+| 0    | 空      | 27   | `M`          | 54   | `RightAlt`    | 81   | `Numpad-` |
+| 1    | `Space` | 28   | `N`          | 55   | `Ctrl`        | 82   | `Numpad.` |
+| 2    | `Enter` | 29   | `O`          | 56   | `RightCtrl`   | 83   | `Numpad=` |
+| 3    | `Tab`   | 30   | `P`          | 57   | `Win`         | 84   | `Numpad0` |
+| 4    | `` ` `` | 31   | `Q`          | 58   | `RightWin`    | 85   | `Numpad1` |
+| 5    | `'`     | 32   | `R`          | 59   | `Menu`        | 86   | `Numpad2` |
+| 6    | `;`     | 33   | `S`          | 60   | `Esc`         | 87   | `Numpad3` |
+| 7    | `,`     | 34   | `T`          | 61   | `←`           | 88   | `Numpad4` |
+| 8    | `.`     | 35   | `U`          | 62   | `→`           | 89   | `Numpad5` |
+| 9    | `/`     | 36   | `V`          | 63   | `↑`           | 90   | `Numpad6` |
+| 10   | `\`     | 37   | `W`          | 64   | `↓`           | 91   | `Numpad7` |
+| 11   | `[`     | 38   | `X`          | 65   | `Backspace`   | 92   | `Numpad8` |
+| 12   | `]`     | 39   | `Y`          | 66   | `PageDown`    | 93   | `Numpad9` |
+| 13   | `-`     | 40   | `Z`          | 67   | `PageUp`      | 94   | `F1`      |
+| 14   | `=`     | 41   | `1`          | 68   | `Home`        | 95   | `F2`      |
+| 15   | `A`     | 42   | `2`          | 69   | `End`         | 96   | `F3`      |
+| 16   | `B`     | 43   | `3`          | 70   | `Insert`      | 97   | `F4`      |
+| 17   | `C`     | 44   | `4`          | 71   | `Delete`      | 98   | `F5`      |
+| 18   | `D`     | 45   | `5`          | 72   | `CapsLock`    | 99   | `F6`      |
+| 19   | `E`     | 46   | `6`          | 73   | `NumLock`     | 100  | `F7`      |
+| 20   | `F`     | 47   | `7`          | 74   | `PrintScreen` | 101  | `F8`      |
+| 21   | `G`     | 48   | `8`          | 75   | `ScrollLock`  | 102  | `F9`      |
+| 22   | `H`     | 49   | `9`          | 76   | `Pause`       | 103  | `F10`     |
+| 23   | `I`     | 50   | `0`          | 77   | `NumpadEnter` | 104  | `F11`     |
+| 24   | `J`     | 51   | `Shift`      | 78   | `Numpad/`     | 105  | `F12`     |
+| 25   | `K`     | 52   | `RightShift` | 79   | `Numpad*`     |      |           |
+| 26   | `L`     | 53   | `Alt`        | 80   | `Numpad+`     |      |           |
+
+:::
 
 ## 摄像机
 
