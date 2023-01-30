@@ -2,6 +2,7 @@
 
 [![](https://img.shields.io/badge/Steam-Ballex%C2%B2:%20The%20Hanging%20Gardens-235?style=flat-square)](https://store.steampowered.com/app/1383570/)
 [![](<https://img.shields.io/badge/Steam-Ballex%C2%B2%20--%20Map%20Editor%20(BME%20Pro)-235?style=flat-square>)](https://store.steampowered.com/app/1809190/)
+[![](https://img.shields.io/badge/QQ%20%E7%BE%A4-797934847-09f?style=flat-square)](https://jq.qq.com/?_wv=1027&k=q6AligU2)
 [![](https://img.shields.io/badge/QQ%20%E9%A2%91%E9%81%93-ai010xr4h9-09f?style=flat-square)](https://qun.qq.com/qqweb/qunpro/share?inviteCode=29ZiTd)
 [![](https://img.shields.io/badge/Discord-5NygdBmksE-56e?style=flat-square)](https://discord.gg/5NygdBmksE/)
 [![](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-f73?style=flat-square)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -19,13 +20,13 @@
 
 ## 本地部署 / Local Setup
 
-确保你安装了最新版本的 Node.js 和 Yarn。
+确保你安装了最新版本的 Node.js 和 pnpm。（也可使用 Yarn 或其它包管理器）
 
-Make sure you've installed the latest version of Node.js and Yarn.
+Make sure you've installed the latest version of Node.js and pnpm. (You can also use Yarn or other package managers)
 
-```shell
-yarn install  # 安装依赖 / install dependencies
-yarn run dev  # 启动服务器 / spin up a live server
+```sh
+pnpm i        # 安装依赖 / install dependencies
+pnpm run dev  # 启动服务器 / spin up a live server
 ```
 
 本教程会频繁更新，不建议以此法离线阅读。
@@ -34,7 +35,9 @@ This tutorial is updated frequently, so I don't recommend doing this to read it 
 
 ## 贡献 / Contribution
 
-- 如果你在 [Ballex² 官方 QQ 频道 `ai010xr4h9`](https://qun.qq.com/qqweb/qunpro/share?inviteCode=29ZiTd)，可以直接@我。
+- 如果你在 Ballex² 官方 [QQ 群 `797934847`](https://jq.qq.com/?_wv=1027&k=q6AligU2) 或 [QQ 频道 `ai010xr4h9`](https://qun.qq.com/qqweb/qunpro/share?inviteCode=29ZiTd)，可以直接@我。
 - If you are in the [Ballex² official discord server `5NygdBmksE`](https://discord.gg/5NygdBmksE/), you can directly ping me.
 - 如果你熟悉相关流程，也可以在此提交 issue 或 pull request。
 - If you are familiar with the routines, you can create issues or pull requests here.
+  - 提交 pull request 前，建议先运行 `check-markdown-link` 和 `check-format` 脚本。
+  - It's recommended to run `check-markdown-link` and `check-format` scripts before submitting a pull request.

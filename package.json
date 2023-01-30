@@ -4,7 +4,7 @@
   "description": "Ballex² 制图教程的 VuePress 源码",
   "engines": {
     "node": ">=19",
-    "yarn": ">=1.22"
+    "pnpm": ">=7.26"
   },
   "homepage": "https://ballex2.dilant.cn/",
   "repository": {
@@ -14,15 +14,20 @@
   "license": "CC-BY-NC-SA-4.0",
   "private": "true",
   "scripts": {
-    "check-md": "check-md -p vuepress -c src",
+    "check-markdown-link": "check-md -p vuepress -c src",
+    "check-format": "prettier -c .",
+    "format": "prettier -w .",
     "dev": "vuepress dev src",
     "build": "vuepress build src",
     "deploy": "sh deploy.sh"
   },
   "devDependencies": {
-    "@vuepress/plugin-shiki": "2.0.0-beta.53",
+    "@vuepress/client": "2.0.0-beta.60",
+    "@vuepress/plugin-shiki": "2.0.0-beta.60",
     "check-md": "git+ssh://git@github.com:Dilant/check-md.git#master",
-    "vuepress": "2.0.0-beta.53",
-    "vuepress-plugin-search-pro": "^2.0.0-beta.130"
+    "prettier": "^2.8.3",
+    "vue": "^3.2.45",
+    "vuepress": "2.0.0-beta.60",
+    "vuepress-plugin-search-pro": "^2.0.0-beta.169"
   }
 }

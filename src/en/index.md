@@ -9,7 +9,7 @@ actions:
   - text: Quick Start →
     link: /en/start/
     type: primary
-footer: 2022 Dilant
+footer: 2023 Dilant
 ---
 
 > Thanks [Swung 0x48](https://github.com/Swung0x48) for part of localization!

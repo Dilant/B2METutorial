@@ -1,6 +1,7 @@
 node_modules/
-src/.vuepress/dist
-src/.vuepress/.cache
-src/.vuepress/.temp
-deploy.sh
+src/.vuepress/dist/
+src/.vuepress/.cache/
+src/.vuepress/.temp/
+
 .vscode/
+deploy.sh
