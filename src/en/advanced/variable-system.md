@@ -85,14 +85,21 @@ Radius multiplier of active ball.
 
 - Type: `Literal[0, 1, 2, 3]`
 
-Current camera direction. Using global reference frame, `0` means direction `Z+`, `1` means direction `X+`, `2` means direction `Z-`, `3` means direction `X-`.
+Current direction of camera. Using global reference frame, `0` means direction `Z+`, `1` means direction `X+`, `2` means direction `Z-`, `3` means direction `X-`.
 
 ### `G_CameraAngle` <badge text="Free-look"/>
 
 - Type: `float`
 - Constrain: `θ: 0 <= θ < 360`
 
-Current camera angle. Using global reference frame, `0` means direction `Z+`, which increases clockwise.
+Current yaw angle of camera. Using global reference frame, `0` means direction `Z+`, which increases clockwise. The unit is degree.
+
+### `G_CameraPitch` <badge text="Free-look"/>
+
+- Type: `float`
+- Constrain: `x: 0 <= x <= 1`
+
+Current pitch state of camera. `0` means the minimum looking-down angle, and `1` means the maximum.
 
 ### `G_PlayerVelocity` <badge text="Readonly" type="warning"/>
 
@@ -141,6 +148,12 @@ Type of active ball.
 | `-109` | Sponge ball  |
 
 :::
+
+### `G_IsSwitching`
+
+- Type: `bool`
+
+Whether player ball is switching to or appending another ball.
 
 ### `C_Key_Red`
 

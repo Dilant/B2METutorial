@@ -10,7 +10,6 @@ View and edit control keys via `Settings → Control` panel.
 ## Universal Functions
 
 - Hide UI elements: `F7`
-- Back to main screen: `F9`
 - Temporary unlock all levels: `M + Enter` in main screen
 
 ## Test Map Functions

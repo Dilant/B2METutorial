@@ -1,6 +1,6 @@
 {
   "name": "b2me-tutorial",
-  "version": "0.17.1b1",
+  "version": "0.18.0b1",
   "description": "Ballex² 制图教程的 VuePress 源码",
   "engines": {
     "node": ">=19",
@@ -24,10 +24,10 @@
   "devDependencies": {
     "@vuepress/client": "2.0.0-beta.60",
     "@vuepress/plugin-shiki": "2.0.0-beta.60",
-    "check-md": "git+ssh://git@github.com:Dilant/check-md.git#master",
-    "prettier": "^2.8.3",
-    "vue": "^3.2.45",
+    "check-md": "github:Dilant/check-md#master",
+    "prettier": "^2.8.4",
+    "vue": "^3.2.47",
     "vuepress": "2.0.0-beta.60",
-    "vuepress-plugin-search-pro": "^2.0.0-beta.169"
+    "vuepress-plugin-search-pro": "2.0.0-beta.176"
   }
 }

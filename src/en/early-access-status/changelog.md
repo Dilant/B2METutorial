@@ -1,5 +1,12 @@
 # Changelog
 
+## `0.18.0b1` @ 2022/2/14
+
+- Add official level 4-3 E
+- Add option to hide tips
+- Improve clarity of water
+- Terrain textures are now correctly applied to non-terrain assets
+
 ## `0.17.1b1` @ 2022/12/6
 
 - The humidity of the player ball is locked when the it's frozen
