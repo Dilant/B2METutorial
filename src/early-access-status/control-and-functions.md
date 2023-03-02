@@ -17,3 +17,9 @@
 - 快速变球：`0` ~ `9`
 - 截图：`F5`，保存在 `%USERPROFILE%\AppData\LocalLow\Mushreb\Ballex²\Screenshots\`
 - 变量检视器：`F6`
+
+::: tip
+
+如果按 `F6` 没有反应，请检查 QQ 的快捷键设置。
+
+:::

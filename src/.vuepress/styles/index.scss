@@ -4,8 +4,11 @@
 
   --c-tip: hsl(153, 50%, 50%);
   --c-tip-bg: hsl(153, 50%, 95%);
+  --c-tip-bg-light: hsl(153, 50%, 90%);
   --c-tip-title: hsl(153, 50%, 35%);
   --c-tip-text: hsl(153, 50%, 25%);
+  --c-tip-text-light: hsl(153, 50%, 40%);
+  --c-tip-text-accent: hsl(153, 70%, 40%);
 
   --c-warning: hsl(50, 100%, 45%);
   --c-warning-bg: hsl(50, 100%, 95%);
@@ -25,8 +28,11 @@ html.dark {
 
   --c-tip: hsl(153, 100%, 30%);
   --c-tip-bg: hsl(153, 15%, 20%);
+  --c-tip-bg-light: hsl(153, 35%, 20%);
   --c-tip-title: hsl(153, 100%, 40%);
   --c-tip-text: hsl(153, 60%, 40%);
+  --c-tip-text-light: hsl(153, 30%, 60%);
+  --c-tip-text-accent: hsl(153, 70%, 50%);
 
   --c-warning: hsl(50, 100%, 35%);
   --c-warning-bg: hsl(50, 15%, 20%);
@@ -35,7 +41,7 @@ html.dark {
 
   --c-danger: hsl(0, 100%, 40%);
   --c-danger-bg: hsl(0, 15%, 20%);
-  --c-danger-title: hsl(0, 100%, 50%);
+  --c-danger-title: hsl(0, 90%, 55%);
   --c-danger-text: hsl(0, 70%, 45%);
 
   .badge {
@@ -64,14 +70,9 @@ div[class*="language-"].ext-ms:before {
   content: "ms";
 }
 
-.custom-container {
-  &.warning a {
-    color: var(--c-brand);
-  }
-
-  &.danger a {
-    color: var(--c-brand);
-  }
+.custom-container.tip code {
+  color: var(--c-tip-text-light);
+  background-color: var(--c-tip-bg-light);
 }
 
 @media print {

@@ -2,7 +2,7 @@
 
 ::: warning
 
-This section includes critical strategies that contributes to a productive workflow for quality map making. It is recommended to try the techniques out as you read. DO NOT SKIP THIS SECTION!
+This chapter includes critical strategies that contributes to a productive workflow for quality map making. It is recommended to try the techniques out as you read. DO NOT SKIP THIS CHAPTER!
 
 :::
 
@@ -12,7 +12,7 @@ All roads, rails and wooden boards in Ballex² consist of road generators.
 
 `Create → Road Generator`
 
-The start part will only introduce common usages and parameters. The crucial parameters are:
+The start section will only introduce common usages and parameters. The crucial parameters are:
 
 - `Generator Type`
 - `Length`
@@ -24,7 +24,7 @@ The start part will only introduce common usages and parameters. The crucial par
 
 ::: tip
 
-The start part won't include any content regarding road generators with a `Custom Shape`.
+The start section won't include any content regarding road generators with a `Custom Shape`.
 
 :::
 
