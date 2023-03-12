@@ -18,8 +18,8 @@ All internal variables start with `G_` or `C_`, so avoid doing so when you creat
 
 ### `Variable Value`
 
-- Type: `int | float | bool`
-- Default: `0 | 0 | false`
+- Type: `int | float | bool | list[float]`
+- Default: `0 | 0 | false | []`
 
 ## Manipulate Variables
 

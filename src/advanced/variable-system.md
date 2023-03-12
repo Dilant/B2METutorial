@@ -18,8 +18,8 @@
 
 ### `变量值`
 
-- 类型：`int | float | bool`
-- 默认值：`0 | 0 | false`
+- 类型：`int | float | bool | list[float]`
+- 默认值：`0 | 0 | false | []`
 
 ## 操纵变量
 

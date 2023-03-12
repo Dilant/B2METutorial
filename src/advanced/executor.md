@@ -166,6 +166,19 @@
 
 - `velocity`：角速度沿三轴的分量
 
+::: warning
+
+由于一个 bug，你不能在同一物理帧内同时使用 `PhysicsSetLinearVelocity` 和 `PhysicsSetAngularVelocity`，否则其中一个会失效。如果要同时更改线速度和角速度，请使用 `PhysicsSetVelocity`。
+
+:::
+
+### `PhysicsSetVelocity(ID: int, linear: tuple[float, float, float], angular: tuple[float, float, float]) -> None`
+
+改变物体速度。
+
+- `linear`：线速度沿三轴的分量
+- `angular`：角速度沿三轴的分量
+
 ### `PhysicsCalculateVelocityToTargetPosition(ID: int, target: tuple[float, float, float]) -> tuple[float, float, float]`
 
 计算物体下一物理帧平动到指定位置需要的线速度。
@@ -189,6 +202,26 @@
 ### `PhysicsBreakJoint(ID: int) -> None`
 
 断开关节。
+
+### `PhysicsRaycast(origin: tuple[float, float, float], direction: tuple[float, float, float]) -> list[tuple[int, float, float, float, float, float, float]]`
+
+从给定点向给定方向发出射线，不考虑遮挡，返回所有照射点的信息。
+
+- `origin`：射线原点
+- `direction`：射线方向
+- `returns`：照射点信息
+  - `[*][0]`：照射到的元件 ID
+  - `[*][1:4]`：照射点坐标
+  - `[*][4:7]`：反射法线沿三轴的分量
+
+### `PhysicsMouseRaycast() -> list[tuple[int, float, float, float, float, float, float]]`
+
+从摄像机向鼠标指针方向发出射线，不考虑遮挡，返回所有照射点的信息。
+
+- `returns`：照射点信息
+  - `[*][0]`：照射到的元件 ID
+  - `[*][1:4]`：照射点坐标
+  - `[*][4:7]`：反射法线沿三轴的分量
 
 ## 网格和材质
 
@@ -299,24 +332,24 @@
 
 - `tip_id`：提示编号
 
-## 按键输入
+## 外设输入
 
 ### `CheckKeyDown(key_ID: Literal) -> bool`
 
-检测当前物理帧某个按键是否恰好按下。
+检测当前物理帧某个键盘按键是否恰好按下。
 
 ### `CheckKeyUp(key_ID: Literal) -> bool`
 
-检测上一个物理帧某个按键是否恰好抬起。
+检测上一个物理帧某个键盘按键是否恰好抬起。
 
 ### `CheckKeyHold(key_ID: Literal) -> bool`
 
-检测当前物理帧某个按键是否按住。
+检测当前物理帧某个键盘按键是否按住。
 
 - `key_ID`：按键编号
 - `returns`：是否发生了对应事件
 
-::: details 按键与编号的对应关系
+::: details 键盘按键与编号的对应关系
 
 | 编号 | 按键    | 编号 | 按键         | 编号 | 按键          | 编号 | 按键      |
 | ---- | ------- | ---- | ------------ | ---- | ------------- | ---- | --------- |
@@ -349,6 +382,43 @@
 | 26   | `L`     | 53   | `Alt`        | 80   | `Numpad+`     |      |           |
 
 :::
+
+### `CheckMouseDown(button: Literal) -> bool`
+
+检测当前物理帧某个鼠标按键是否恰好按下。
+
+### `CheckMouseUp(button: Literal) -> bool`
+
+检测上一个物理帧某个鼠标按键是否恰好抬起。
+
+### `CheckMouseHold(button: Literal) -> bool`
+
+检测当前物理帧某个鼠标按键是否按住。
+
+- `button`：鼠标按键
+- `returns`：是否发生了对应事件
+
+::: details 鼠标按键与编号的对应关系
+
+| 编号 | 按键       |
+| ---- | ---------- |
+| `0`  | `鼠标左键` |
+| `1`  | `鼠标中键` |
+| `2`  | `鼠标右键` |
+
+:::
+
+### `GetMouseMoveDelta() -> tuple[int, int]`
+
+检测当前物理帧的鼠标指针位移。
+
+- `returns`：位移沿两轴的分量，单位为像素，向右向上为正
+
+### `GetMouseScrollDelta() -> tuple[int, int]`
+
+检测当前物理帧的鼠标滚轮滚动量。
+
+- `returns`：滚动量沿两轴的分量，单位为像素，向右向上为正
 
 ## 摄像机
 
@@ -460,6 +530,8 @@
 
 ### `GetBoolVariableValue(name: str) -> bool`
 
+### `GetNumberListVariableValue(name: str) -> list[float]`
+
 读取变量系统中变量的值。
 
 - `name`：变量名
@@ -470,6 +542,8 @@
 ### `SetFloatVariableValue(name: str, value: float) -> None`
 
 ### `SetBoolVariableValue(name: str, value: bool) -> None`
+
+### `SetNumberListVariableValue(name: str, value: list[float]) -> None`
 
 写入变量系统中变量的值。
 

@@ -144,6 +144,17 @@ To get transform parameters of a rigid body, use `GetTransform`.
 
 - `velocity`: angular velocity along each axis
 
+::: warning
+
+Due to a bug, you can't use `PhysicsSetLinearVelocity` and `PhysicsSetAngularVelocity` in the same physical frame, or either of them does't take effect. Use `PhysicsSetVelocity` if you want to change both linear and angular velocity.
+
+:::
+
+### `PhysicsSetVelocity(ID: int, linear: tuple[float, float, float], angular: tuple[float, float, float]) -> None`
+
+- `linear`: linear velocity along each axis
+- `angular`: angular velocity along each axis
+
 ### `PhysicsCalculateVelocityToTargetPosition(ID: int, target: tuple[float, float, float]) -> tuple[float, float, float]`
 
 Calculate the required linear velocity for an object to move to the target position in the next physics frame.
@@ -163,6 +174,26 @@ Calculate the required angular velocity for an object to rotate to the target po
 - `vfx`: whether to play destruction animation
 
 ### `PhysicsBreakJoint(ID: int) -> None`
+
+### `PhysicsRaycast(origin: tuple[float, float, float], direction: tuple[float, float, float]) -> list[tuple[int, float, float, float, float, float, float]]`
+
+从给定点向给定方向发出射线，不考虑遮挡，返回所有照射点的信息。
+
+- `origin`: 射线原点
+- `direction`: 射线方向
+- `returns`: 照射点信息
+  - `[*][0]`: 照射到的元件 ID
+  - `[*][1:4]`: 照射点坐标
+  - `[*][4:7]`: 反射法线沿三轴的分量
+
+### `PhysicsMouseRaycast() -> list[tuple[int, float, float, float, float, float, float]]`
+
+从摄像机向鼠标指针方向发出射线，不考虑遮挡，返回所有照射点的信息。
+
+- `returns`: 照射点信息
+  - `[*][0]`: 照射到的元件 ID
+  - `[*][1:4]`: 照射点坐标
+  - `[*][4:7]`: 反射法线沿三轴的分量
 
 ## Mesh and Material
 
@@ -259,24 +290,24 @@ Back to checkpoint.
 
 - `tip_id`: tip ID
 
-## Keyboard Input
+## Peripheral Input
 
 ### `CheckKeyDown(key_ID: Literal) -> bool`
 
-Check whether a key is pressed down in the current physics frame.
+Check whether a keyboard key is pressed down in the current physics frame.
 
 ### `CheckKeyUp(key_ID: Literal) -> bool`
 
-Check whether a key is lifted up in the last physics frame.
+Check whether a keyboard key is lifted up in the last physics frame.
 
 ### `CheckKeyHold(key_ID: Literal) -> bool`
 
-Check whether a key is being held in the current physics frame.
+Check whether a keyboard key is being held in the current physics frame.
 
 - `key_ID`: key ID
 - `returns`: whether the corresponding event happens
 
-::: details Mapping table for keys and IDs
+::: details Mapping table for keyboard keys and IDs
 
 | ID  | Key     | ID  | Key          | ID  | Key           | ID  | Key       |
 | --- | ------- | --- | ------------ | --- | ------------- | --- | --------- |
@@ -309,6 +340,43 @@ Check whether a key is being held in the current physics frame.
 | 26  | `L`     | 53  | `Alt`        | 80  | `Numpad+`     |     |           |
 
 :::
+
+### `CheckMouseDown(button: Literal) -> bool`
+
+Check whether a mouse button is pressed down in the current physics frame.
+
+### `CheckMouseUp(button: Literal) -> bool`
+
+Check whether a mouse button is lifted up in the last physics frame.
+
+### `CheckMouseHold(button: Literal) -> bool`
+
+Check whether a mouse button is being held in the current physics frame.
+
+- `button`: mouse button
+- `returns`: whether the corresponding event happens
+
+::: details Mapping table for mouse buttons and IDs
+
+| ID  | Key          |
+| --- | ------------ |
+| `0` | `MouseLeft`  |
+| `1` | `MouseWheel` |
+| `2` | `MouseRight` |
+
+:::
+
+### `GetMouseMoveDelta() -> tuple[int, int]`
+
+Check the movement of the mouse pointer in the current physics frame.
+
+- `returns`: movement along each axis, unit is pixel, right and up are the positive directions
+
+### `GetMouseScrollDelta() -> tuple[int, int]`
+
+Check the movement of the mouse wheel in the current physics frame.
+
+- `returns`: movement along each axis, unit is pixel, right and up are the positive directions
 
 ## Camera
 
@@ -402,6 +470,8 @@ Get information of a way point on a way path.
 
 ### `GetBoolVariableValue(name: str) -> bool`
 
+### `GetNumberListVariableValue(name: str) -> list[float]`
+
 - `name`: variable name
 - `returns`: variable value
 
@@ -410,6 +480,8 @@ Get information of a way point on a way path.
 ### `SetFloatVariableValue(name: str, value: float) -> None`
 
 ### `SetBoolVariableValue(name: str, value: bool) -> None`
+
+### `SetNumberListVariableValue(name: str, value: list[float]) -> None`
 
 - `name`: variable name
 - `value`: variable value

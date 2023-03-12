@@ -88,7 +88,7 @@ If both ends are covered by other objects, uncheck `Create Cap` to improve perfo
 - Set `Bend Z` as the angle between the end direction and the start. The unit is degree, and counterclockwise is the positive direction.
 - Others same as arc
 
-::: danger
+::: warning
 
 To avoid getting weird results:
 
