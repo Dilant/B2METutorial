@@ -22,7 +22,7 @@
 ## `0.17.0b1` @ 2022/11/20
 
 - Add official level 3-4 E and 4-1 E
-- Temporary shut down the online multiplayer server
+- ~~Temporary shut down the online multiplayer server~~
 
 ## `0.16.3b4` @ 2022/9/24
 
@@ -33,7 +33,7 @@
 
 - Reduce difficulty of official level 1-2 E & 1-3 E
 - Fix the issue that volume of sounds can't be changed on the fly
-- Fix the issue that the angular spring is not when breaking a joint
+- Fix the issue that the angular spring is not unhooked when breaking a joint
 - Add lots of built-in assets
 - Add flip option to custom skyboxes
 - Remove weather option from custom skyboxes

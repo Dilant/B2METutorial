@@ -14,18 +14,15 @@
 
 为了提升性能，网格建议三角化面。
 
-推荐使用 Cinema 4D 建模，新手也可从 Inventor 或 SOLIDWORKS 入手。但由于多位玩家的翻车经历，请谨慎使用 3ds Max。
+推荐使用 Cinema 4D 建模，新手也可从 SOLIDWORKS 或 Inventor 入手。但由于多位玩家的翻车经历，请谨慎使用 3ds Max。
 
 对于不支持导出 `.fbx` 的建模软件，可导出其它格式的模型，导入 Cinema 4D 后再导出 `.fbx`。
 
 已经确认可用的软件：
 
-- Maxon Cinema 4D (R25, R24, ..., R17)
-- Blender (3.1, 3.0, 2.93)
+- Maxon Cinema 4D (R26, R25, ..., R17)
+- Blender (3.3, 2.93)
 - SketchUp
-- Autodesk Inventor (2020, `.obj`)
-- Autodesk 3ds Max (2020, `.fbx`)
-  - 3ds Max 导出的 `.fbx` 无法使用，但导入 Cinema 4D 后直接再导出就神奇地好了
 
 :::
 

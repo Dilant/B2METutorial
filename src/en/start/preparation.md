@@ -22,23 +22,17 @@ Ballex² and BME Pro can be launched from local directory. Ensure that Steam is 
 
 Auto mode will select 200% if resolution width is greater than 1920, or 100% instead.
 
-::: tip
-
-For Windows, if you encounter performance issues while using high scale rate, try setting high DPI scaling override: Right-click `BME Pro.exe` → Properties → Compatibility → Change settings for all users → Change high DPI settings → High DPI scaling override → System.
-
-:::
-
 ### Change Power Save Mode
 
 `Settings → Power Save Mode`
 
-Power save mode will restrict frame rate of the scene. Frame rate of editor UI is not affected.
+Power save mode will clamp the frame rate of the scene. Frame rate of editor UI is not affected.
 
 ### Set Ballex² Path
 
 `Settings → Set Ballex² Path`
 
-It should end in `Ballex².exe`, either stable or beta version. When you enter test map mode, it will launch automatically.
+It should end in `Ballex².exe`. When you enter test map mode, it will launch automatically.
 
 ### Change Layout
 
@@ -48,7 +42,7 @@ Drag to resize or move them. Closed windows can be called out in `Window` menu, 
 
 ### `Scene`
 
-Show the map graphically. Most operations are done here.
+Show the map visually. Most operations are done here.
 
 ### `Inspector`
 
@@ -62,12 +56,12 @@ List all objects with their hierarchical relationships.
 
 Categorize and display all assets. There're 6 panels:
 
-- `Scenes`: List all source files of maps
-- `Items`: List all available elements
-- `Meshes`: List all imported meshes
-- `Textures`: List all imported texture pictures
-- `Materials`: List all available materials
-- `Audios`: List all imported audios
+- `Scenes`: list all source files of maps
+- `Items`: list all available elements
+- `Meshes`: list all imported meshes
+- `Textures`: list all imported texture pictures
+- `Materials`: list all available materials
+- `Audios`: list all imported audios
 
 ## Coordinate System
 
@@ -75,5 +69,5 @@ BME Pro uses a left-handed coordinate system same as Unity3D and Cinema 4D.
 
 - `X+` axis goes right, `Y+` up and `Z+` front
 - The order of quaternion is `X` `Y` `Z` `W`
-- The euler angle uses `Y` `X` `Z` as rotation order and degree as unit
+- The euler angle uses `Y` `X` `Z` (yaw, pitch, roll) as rotation order and degree as unit
 - Grid length is 1 meter in the sense of modeling softwares

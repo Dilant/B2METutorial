@@ -1,8 +1,8 @@
 # Mesh System
 
-如果内置的元件无法满足你的制图需求，你可以考虑自行建模。
+If the built-in assets don't meet your needs, consider modeling them yourself.
 
-## 导入网格
+## Import Mesh
 
 在三维软件建模后，将网格导出为 `.fbx` 格式。
 
@@ -10,26 +10,23 @@
 
 ::: tip
 
-参见：[Start → Preparation → Coordinate System](/en/start/preparation.md#coordinate-system)
+See: [Start → Preparation → Coordinate System](/en/start/preparation.md#coordinate-system)
 
 为了提升性能，网格建议三角化面。
 
-推荐使用 Cinema 4D 建模，新手也可从 Inventor 或 SOLIDWORKS 入手。但由于多位玩家的翻车经历，请谨慎使用 3ds Max。
+推荐使用 Cinema 4D 建模，新手也可从 SOLIDWORKS 或 Inventor 入手。但由于多位玩家的翻车经历，请谨慎使用 3ds Max。
 
 对于不支持导出 `.fbx` 的建模软件，可将导出的其它格式模型，导入 Cinema 4D 后再导出 `.fbx`。
 
 已经确认可用的软件：
 
-- Maxon Cinema 4D (R25, R24, ..., R17)
-- Blender (3.1, 3.0, 2.93)
+- Maxon Cinema 4D (R26, R25, ..., R17)
+- Blender (3.3, 2.93)
 - SketchUp
-- Autodesk Inventor (2020, `.obj`)
-- Autodesk 3ds Max (2020, `.fbx`)
-  - 3ds Max 导出的 `.fbx` 无法使用，但导入 Cinema 4D 后直接再导出就神奇地好了
 
 :::
 
-## 使用网格
+## Use Mesh
 
 从 `Assets → Meshes` 面板将网格直接拖入场景即可，在 `Hierarchy` 窗口中可添加材质并指定更多参数。
 
