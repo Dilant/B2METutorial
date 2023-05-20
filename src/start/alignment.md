@@ -20,7 +20,7 @@
 
 常用于路块、木板、木箱等棱角方正的元件对齐，以及钢轨间衔接。
 
-![顶点对齐示意图](/images/vertex-alignment-example.gif)
+![](/images/vertex-alignment-example.gif)
 
 ::: tip
 

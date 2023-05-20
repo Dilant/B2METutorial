@@ -20,7 +20,7 @@ Often applied on irregular shaped objects such as decorations or machinery.
 
 Often used when aligning block-shaped objects such as road, boards, boxes, and concatenating iron rails.
 
-![A gif showing how to perform a vertex alignment](/images/vertex-alignment-example.gif)
+![](/images/vertex-alignment-example.gif)
 
 ::: tip
 
