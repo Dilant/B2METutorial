@@ -36,7 +36,7 @@
 - Type: `list[Material.Terrain]`
 - Default:
 
-```
+```txt
 [
     Materials/Terrain/GrassGreen.mat,
     Materials/Terrain/GrassYellow.mat,

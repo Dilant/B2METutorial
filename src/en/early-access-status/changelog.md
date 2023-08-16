@@ -1,6 +1,14 @@
 # Changelog
 
-## `0.18.0b1` @ 2022/2/14
+## `0.19.0b1` @ 2023/8/5
+
+- Add official level 4-4 E
+- Add mush ball easteregg
+- Activated checkpoints can be re-activated now
+- Fix screenshot function of test map mode
+- Fix the issue that, at the start of section #3 of official level 4-3 E in multiplayer mode, trigger area of the quick savepoint is smaller than checkpoint
+
+## `0.18.0b1` @ 2023/2/14
 
 - Add official level 4-3 E
 - Add option to hide tips

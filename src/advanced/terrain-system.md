@@ -36,7 +36,7 @@
 - 类型：`list[Material.Terrain]`
 - 默认值：
 
-```
+```txt
 [
     Materials/Terrain/GrassGreen.mat,
     Materials/Terrain/GrassYellow.mat,
