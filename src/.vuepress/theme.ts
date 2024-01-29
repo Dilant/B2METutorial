@@ -1,4 +1,4 @@
-import { defaultTheme } from "vuepress";
+import { defaultTheme } from "@vuepress/theme-default";
 import { navbarZh, navbarEn, sidebarZh, sidebarEn } from "./navigation";
 
 export const theme = defaultTheme({

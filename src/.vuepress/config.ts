@@ -1,5 +1,7 @@
 import { defineUserConfig } from "vuepress";
 
+import { viteBundler } from "@vuepress/bundler-vite";
+
 import { theme } from "./theme";
 
 import { shikiPlugin } from "@vuepress/plugin-shiki";
@@ -8,6 +10,9 @@ import { searchProPlugin } from "vuepress-plugin-search-pro";
 import { cut } from "nodejs-jieba";
 
 export default defineUserConfig({
+  bundler: viteBundler(),
+  theme: theme,
+
   head: [["link", { rel: "icon", href: "/ballex2.ico" }]],
   locales: {
     "/": {
@@ -25,8 +30,6 @@ export default defineUserConfig({
   markdown: {
     breaks: true,
   },
-
-  theme: theme,
 
   plugins: [
     shikiPlugin({
