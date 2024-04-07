@@ -4,7 +4,6 @@
 [![](<https://img.shields.io/badge/Steam-Ballex%C2%B2%20--%20Map%20Editor%20(BME%20Pro)-235?style=flat-square>)](https://store.steampowered.com/app/1809190/)
 
 [![](https://img.shields.io/badge/QQ%20%E7%BE%A4-797934847-09f?style=flat-square)](https://qm.qq.com/q/2mIPnK8JIk)
-[![](https://img.shields.io/badge/QQ%20%E9%A2%91%E9%81%93-ai010xr4h9-09f?style=flat-square)](https://pd.qq.com/s/80rmg7h1d)
 [![](https://img.shields.io/badge/Discord-5NygdBmksE-56e?style=flat-square)](https://discord.gg/5NygdBmksE/)
 
 [![](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-f73?style=flat-square)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -31,9 +30,9 @@ pnpm run dev  # 启动服务器
 
 ## 贡献
 
-- 如果你在 Ballex² 官方 [QQ 群 `797934847`](https://qm.qq.com/q/2mIPnK8JIk) 或 [QQ 频道 `ai010xr4h9`](https://pd.qq.com/s/80rmg7h1d)，可以直接 `@迪兰特`。
+- 如果你在 Ballex² 官方 [QQ 群 `797934847`](https://qm.qq.com/q/2mIPnK8JIk)，可以直接 `@迪兰特`。
 - 如果你熟悉相关流程，也可以在此提交 issue 或 pull request。
-  - 提交 pull request 前，建议先运行 `check-markdown-link` 和 `check-format` 脚本。
+  - 提交 pull request 前，建议先运行 `check-format` 脚本。
 
 ## Introduction
 
@@ -59,4 +58,4 @@ This tutorial is updated frequently, so I don't recommend doing this to read it 
 
 - If you are in the [Ballex² official discord server `5NygdBmksE`](https://discord.gg/5NygdBmksE/), you can directly `@Dilant`.
 - If you are familiar with the routines, you can create issues or pull requests here.
-  - It's recommended to run `check-markdown-link` and `check-format` scripts before submitting a pull request.
+  - It's recommended to run `check-format` script before submitting a pull request.
