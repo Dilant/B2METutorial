@@ -22,14 +22,15 @@
   },
   "devDependencies": {
     "@lint-md/cli": "^2.0.0",
-    "@vuepress/bundler-vite": "2.0.0-rc.9",
-    "@vuepress/plugin-links-check": "2.0.0-rc.21",
-    "@vuepress/plugin-shiki": "2.0.0-rc.21",
-    "@vuepress/theme-default": "2.0.0-rc.21",
+    "@vuepress/bundler-vite": "2.0.0-rc.15",
+    "@vuepress/plugin-links-check": "2.0.0-rc.47",
+    "@vuepress/plugin-shiki": "2.0.0-rc.47",
+    "@vuepress/theme-default": "2.0.0-rc.49",
     "nodejs-jieba": "^0.1.2",
-    "prettier": "^3.2.5",
-    "vue": "^3.4.21",
-    "vuepress": "2.0.0-rc.9",
-    "vuepress-plugin-search-pro": "2.0.0-rc.34"
+    "prettier": "^3.3.3",
+    "sass-embedded": "^1.79.3",
+    "vue": "^3.5.8",
+    "vuepress": "2.0.0-rc.15",
+    "vuepress-plugin-search-pro": "2.0.0-rc.54"
   }
 }
