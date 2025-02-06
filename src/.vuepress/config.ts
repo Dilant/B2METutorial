@@ -5,7 +5,7 @@ import { viteBundler } from "@vuepress/bundler-vite";
 import { theme } from "./theme";
 
 import { shikiPlugin } from "@vuepress/plugin-shiki";
-import { searchProPlugin } from "vuepress-plugin-search-pro";
+import { slimsearchPlugin } from "@vuepress/plugin-slimsearch";
 
 import { cut } from "nodejs-jieba";
 
@@ -35,10 +35,10 @@ export default defineUserConfig({
     shikiPlugin({
       theme: "dark-plus",
     }),
-    searchProPlugin({
+    slimsearchPlugin({
       indexContent: true,
       searchDelay: 1000,
-      autoSuggestions: false,
+      suggestion: false,
       hotKeys: [],
       indexLocaleOptions: {
         "/": {
