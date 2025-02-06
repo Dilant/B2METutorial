@@ -17,7 +17,11 @@
 
 ## 本地部署
 
-确保你安装了最新版本的 Node.js 和 包管理器。
+确保你安装了最新版本的以下组件：
+
+- Node.js
+- 包管理器
+- Visual Studio 生成工具（使用 C++ 的桌面开发）
 
 以 pnpm 为例：
 
@@ -26,7 +30,7 @@ pnpm i        # 安装依赖
 pnpm run dev  # 启动服务器
 ```
 
-本教程会频繁更新，不建议以此法离线阅读。
+本教程更新时，你需要重做这些步骤，因此不建议以此法离线阅读。（虽然你也可以选择直接阅读 markdown 文件）
 
 ## 贡献
 
@@ -43,7 +47,11 @@ pnpm run dev  # 启动服务器
 
 ## Local Setup
 
-Make sure you've installed the latest version of Node.js and package manager.
+Make sure you've installed the latest version of these components:
+
+- Node.js
+- a package manager
+- Visual Studio Build Tools (Desktop development with C++)
 
 Taking pnpm as an example:
 
@@ -52,7 +60,7 @@ pnpm i        # install dependencies
 pnpm run dev  # spin up a live server
 ```
 
-This tutorial is updated frequently, so I don't recommend doing this to read it offline.
+You need to do these steps again whenever this tutorial is updated, so I don't recommend doing a local setup merely to read it offline. (You can always directly read the markdown files though)
 
 ## Contribution
 
